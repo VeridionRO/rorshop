@@ -1,0 +1,2046 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Home",
+				"HomePage"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"TRACE",
+				"TRACE_Db::query	TRACE query"
+			],
+			[
+				"updated",
+				"updated_on"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"fa",
+				"fake_fav_products"
+			],
+			[
+				"ar",
+				"anrb	and_return with block"
+			],
+			[
+				"moc",
+				"moc	mock"
+			],
+			[
+				"as",
+				"asg	assert(var = assigns(:var))"
+			],
+			[
+				"fav",
+				"favorite_products"
+			],
+			[
+				"st",
+				"stu	stub"
+			],
+			[
+				"shs",
+				"shbs	should be_success"
+			],
+			[
+				"shrt",
+				"shrt	should render_template"
+			],
+			[
+				"w",
+				"wia	with args"
+			],
+			[
+				"prod",
+				"product"
+			],
+			[
+				"it",
+				"it	it (does something)"
+			],
+			[
+				"v",
+				"vis	visit \"url\""
+			],
+			[
+				"sc",
+				"scenario	Scenario"
+			],
+			[
+				"be",
+				"bef	before"
+			],
+			[
+				"cus",
+				"customer"
+			],
+			[
+				"miha",
+				"mihai_vinaga"
+			],
+			[
+				"fil",
+				"fil	fill(range) { |i| .. }"
+			],
+			[
+				"def",
+				"def	Ruby/Rails Method"
+			],
+			[
+				"old",
+				"old_value"
+			],
+			[
+				"new",
+				"new_value"
+			],
+			[
+				"comment_ch",
+				"comment_change"
+			],
+			[
+				"vers",
+				"versions"
+			],
+			[
+				"PTF",
+				"ProjectTracking_FormHistory"
+			],
+			[
+				"comment_c",
+				"comment_changes"
+			],
+			[
+				"if",
+				"if	if …"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"comment",
+				"comment_id"
+			],
+			[
+				"eq",
+				"equal	expect equal"
+			],
+			[
+				"pass",
+				"password_hash"
+			],
+			[
+				"exp",
+				"exp	expect(subject).to something"
+			],
+			[
+				"comme",
+				"comment_id"
+			],
+			[
+				"at",
+				"ActiveRecord"
+			],
+			[
+				"wif",
+				"wif	When I follow"
+			],
+			[
+				"se",
+				"scenario	Scenario"
+			],
+			[
+				"ex",
+				"exp	expect(subject).to something"
+			],
+			[
+				"p",
+				"php	<?php … ?>"
+			],
+			[
+				"getUser",
+				"getUserId  (function)"
+			],
+			[
+				"log",
+				"logRows  (function)"
+			],
+			[
+				"document",
+				"document_val"
+			],
+			[
+				"load",
+				"loadBatch  (function)"
+			],
+			[
+				"rename",
+				"renameTable"
+			],
+			[
+				"e",
+				"elif	elif …"
+			],
+			[
+				"customer",
+				"customer"
+			],
+			[
+				"cust",
+				"customer-password"
+			],
+			[
+				"fe",
+				"feature	Behat / Feature"
+			],
+			[
+				"s",
+				"sc	Scenario: \"\""
+			],
+			[
+				"fill",
+				"fill	fill_in \"id_or_name_or_label\", :with => \"value\""
+			],
+			[
+				"cla",
+				"cla	Create controller class"
+			],
+			[
+				"c",
+				"click	When I follow #link"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"gr",
+				"group"
+			],
+			[
+				"gi",
+				"giha	Given I Have A ..."
+			],
+			[
+				"delete",
+				"deleteDocumentValHistory"
+			],
+			[
+				"deleteDoc",
+				"deleteDocumentVal"
+			],
+			[
+				"form",
+				"form_id"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"ea",
+				"ea	each { |e| .. }"
+			],
+			[
+				"cl",
+				"cla	Create controller class"
+			],
+			[
+				"TRAE",
+				"TRACE_Db::query	TRACE query"
+			],
+			[
+				"comm",
+				"comment_id"
+			],
+			[
+				"com",
+				"comment_id"
+			],
+			[
+				"curre",
+				"current_version"
+			],
+			[
+				"per",
+				"per_result"
+			],
+			[
+				"getUpdate",
+				"getUpdatedById"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"cell",
+				"cell_class_name"
+			],
+			[
+				"clas",
+				"class_name"
+			],
+			[
+				"changes",
+				"changes_count"
+			],
+			[
+				"row",
+				"rowspan_first_cell"
+			],
+			[
+				"req",
+				"req1	require_once …"
+			],
+			[
+				"pft",
+				"p_form_types"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "features/home/index.feature",
+			"settings":
+			{
+				"buffer_size": 574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/step_definitions/index_steps.rb",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/products_controller.rb",
+			"settings":
+			{
+				"buffer_size": 109,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 140.0,
+		"selected_items":
+		[
+			[
+				"guard",
+				"Guard: Start Guard"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rspec",
+				"Set Syntax: RSpec"
+			],
+			[
+				"capy",
+				"Snippet: RSpec Capybara fill_in with"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"stac",
+				"Stackoverflow: Search from Input"
+			],
+			[
+				"stack",
+				"Stackoverflow: Search from Input"
+			],
+			[
+				"format",
+				"Format Code"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"add folder",
+				"Project: Add Folder"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"restore",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"xdebug st",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdebug cl",
+				"Xdebug: Clear All Breakpoints"
+			],
+			[
+				"xdebug start",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"resto",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"return",
+				"Snippet: and_return with args"
+			],
+			[
+				"assign",
+				"Snippet: assert(var = assigns(:var))"
+			],
+			[
+				"render",
+				"Snippet: should render_template"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"xdebug res",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"xdebug cle",
+				"Xdebug: Clear Watch Expressions"
+			],
+			[
+				"xdebug re",
+				"Xdebug: Remove Watch Expression"
+			],
+			[
+				"wath",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"wathc",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"xdebug wa",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"xdebug clear",
+				"Xdebug: Clear Watch Expressions"
+			],
+			[
+				"clear",
+				"Xdebug: Clear Watch Expressions"
+			],
+			[
+				"xdebug ",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"xdeub re",
+				"Xdebug: Remove Watch Expression"
+			],
+			[
+				"wat",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"wa",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"rest",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"xdebug  st",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"watch",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"xdeubg start",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"add ",
+				"Project: Add Folder"
+			],
+			[
+				"xdebg st",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdeubg st",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdebug rest",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"xdebug",
+				"Xdebug: Clear Watch Expressions"
+			],
+			[
+				"start de",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"push",
+				"Git: Push Tags"
+			],
+			[
+				"tag",
+				"Git: New Tag"
+			],
+			[
+				"git in",
+				"Git: Init"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"gitpus",
+				"Git: Push"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"dd fol",
+				"Project: Add Folder"
+			],
+			[
+				"fomat",
+				"Format Code"
+			],
+			[
+				"xdebug restart",
+				"Xdebug: Restart Session"
+			],
+			[
+				"start",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"haml",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"rails ",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"sethtml",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"add fo",
+				"Project: Add Folder"
+			],
+			[
+				"git push",
+				"Git: Push Tags"
+			],
+			[
+				"git tag",
+				"Git: New Tag"
+			],
+			[
+				"behat",
+				"Set Syntax: Behat"
+			],
+			[
+				"cucu",
+				"Set Syntax: Cucumber Steps"
+			],
+			[
+				"add pro",
+				"Package Control: Add Repository"
+			],
+			[
+				"cucum",
+				"Set Syntax: Cucumber Steps"
+			],
+			[
+				"feature",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"scena",
+				"Snippet: Scenario"
+			],
+			[
+				"rspe",
+				"Set Syntax: RSpec"
+			],
+			[
+				"add f",
+				"Project: Add Folder"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"beha",
+				"Set Syntax: Behat"
+			],
+			[
+				"be",
+				"Set Syntax: Behat"
+			],
+			[
+				"xdebug clea",
+				"Xdebug: Clear Watch Expressions"
+			],
+			[
+				"watc",
+				"Xdebug: Set Watch Expression"
+			],
+			[
+				"resti",
+				"Rot13 Selection"
+			],
+			[
+				"xdebug s",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdebug stop",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"brea",
+				"Xdebug: Add/Remove Breakpoint"
+			],
+			[
+				"xdebug sett",
+				"Preferences: Xdebug Settings – User"
+			],
+			[
+				"xdebug set",
+				"Preferences: Xdebug Settings – Default"
+			],
+			[
+				"xdeub",
+				"Xdebug: Restore Layout"
+			],
+			[
+				"add fol",
+				"Project: Add Folder"
+			]
+		],
+		"width": 263.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/constant.css",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/template.css",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/virtuemart.css",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/session_store.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/controllers/products_controller_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config.ru",
+		"/home/mvinaga/Dropbox/sites/rorshop/Guardfile",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/routes.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile",
+		"/home/mvinaga/Dropbox/sites/rorshop/features/support/env.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/filter_parameter_logging.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/secret_token.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/spec_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/products.css.scss",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/products.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/products_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/products_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/environments/production.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/welcome.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/log/test.log",
+		"/home/mvinaga/Dropbox/sites/virtue-mart/Jewelry Online.html",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/wrap_parameters.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/database.yml",
+		"/home/mvinaga/Dropbox/sites/rorshop/.rspec",
+		"/home/mvinaga/Dropbox/sites/rorshop/rorshop.sublime-project",
+		"/home/mvinaga/Dropbox/docs/patches/review/B0783 dropdown status BugFix v3.patch",
+		"/home/mvinaga/Dropbox/sites/rorshop/README.rdoc",
+		"/home/mvinaga/Dropbox/sites/trace_dev/TRACE.sublime-project",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/BasicTable.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/Writer/Word2007/Base.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/Style/Cell.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/docs/code.xml",
+		"/tmp/B0783 dropdown statuses BugFix v2.patch",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/scripts/wrfw/base.js",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/filters/BatchUpdateForms.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/ProjectTracking/Value.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/scripts/calendar/lang/calendar-el.js",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/xsl/charset-error.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/Section.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/Object.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/Template.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/Template.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/Text.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/AdvancedTable.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/Section/TextBreak.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/text.patch",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/TabError.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/_staticDocParts/fontTable.xml",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/IOFactory.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/Section/Table.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/Template.docx",
+		"/home/mvinaga/Dropbox/sites/trace_dev/upgrades/1_3_4_new.php",
+		"/home/mvinaga/Downloads/Template (1).php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/PHPWord/Section.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/ProjectTracking/Template.php",
+		"/home/mvinaga/Downloads/Template.php",
+		"/home/mvinaga/Downloads/report (5).doc",
+		"/home/mvinaga/Downloads/AdvancedTable.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/AddComment.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/prep_admins.php",
+		"/home/mvinaga/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/DateController.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/FormController.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/form-history.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/ProjectTracking/FormResult.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/uploads/22/21/file52e7d02c2659e-OLAPqueries.sql",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/admin/field.css",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/SaveForm.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/tasks/scripts/search.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/filters/search.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/HistoryController.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/help/help/topics/UserTasks.html",
+		"/home/mvinaga/Dropbox/sites/trace_dev/tasks/scripts/toggle_user_active_state.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/tree-editor-action.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/prep_search.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/admin/sequence-action.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/release-scripts/svn-export.sh",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/edit-action.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/filters/edit-action.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/edit.css",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/ProjectTracking/FormHistoryChangeDeleted.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/admin/formtype-search.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/forms.css",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/filters/edit.css",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/admin/editlist.js",
+		"/home/mvinaga/Dropbox/sites/trace_dev/EXTERNAL",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/TitleTOC.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/Textrun.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/BasicTable.docx",
+		"/home/mvinaga/Dropbox/sites/trace_dev/upgrades/1_3_4.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/Examples/AdvancedTable.docx",
+		"/home/mvinaga/Downloads/-tmp-xyzlRYqVz.docx",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/test/test.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/docs/template.xml",
+		"/home/mvinaga/Dropbox/sites/trace_dev/help/WebTemplate/Searchable/TRACE/Frame.html",
+		"/home/mvinaga/Dropbox/sites/trace_dev/help/WebTemplate/Searchable/TRACE/Header.html",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/basic_login.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/ProjectHistoryChangeProject.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/projects/project-history.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/package.sh",
+		"/home/mvinaga/Downloads/KoolGridExport.doc",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/convert/ImportData.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/ProjectTracking/Comment.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/ResultsController.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/wrfw/Utility/UpgradeScript.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/upgrades/1_0_0.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/results.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/BatchUpdate.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/filters/batch-update.css",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/filters/batch-update-action.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/blank.txt",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/index.js",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/forms/form-history.thtml.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/ImportController.php",
+		"/home/mvinaga/Dropbox/docs/patches/patch/B0778_V2.patch",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/FieldController.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/Trace/DashboardController.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/convert/import.css",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/convert/images.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/lib/wrfw/Cron/HttpJob.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/api/forms/CreateRecord.php",
+		"/home/mvinaga/Dropbox/sites/trace_dev/html/api/forms/UpdateForm.php",
+		"/home/mvinaga/Downloads/uB0001-update.xml",
+		"/home/mvinaga/Downloads/uB0001-new.xml",
+		"/home/mvinaga/Dropbox/sites/trace_dev/help/help/topics/CreatingFilters.html",
+		"/home/mvinaga/Dropbox/sites/trace_dev/tmp/counter_report.txt"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"/home/mvinaga/Dropbox/sites/rorshop, *.css",
+			"/home/mvinaga/Dropbox/sites/rorshop",
+			"/home/mvinaga/Dropbox/sites/trace_dev/, *.js",
+			"/home/mvinaga/Dropbox/sites/trace_dev/, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev/html/reports, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev/html/reports",
+			"/home/mvinaga/Dropbox/sites/trace_dev/",
+			"/home/mvinaga/Dropbox/sites/trace_dev/, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev/upgrades/, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev/, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev/, *.js",
+			"/home/mvinaga/Dropbox/sites/trace_dev/",
+			"/home/mvinaga/Dropbox/sites/trace_dev/lib",
+			"/home/mvinaga/.config/sublime-text-3/Packages/sublime-behat-snippets-master",
+			"/home/mvinaga/.config/sublime-text-3/Packages/sublime-behat-snippets",
+			"/home/mvinaga/Dropbox/sites/trace_dev/, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev/upgrades",
+			"/home/mvinaga/Dropbox/sites/trace_dev",
+			"/home/mvinaga/Dropbox/sites/trace_dev, *.php",
+			"/home/mvinaga/Dropbox/sites/trace_dev"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"have_content",
+			"topmenu",
+			"News",
+			"NEWS",
+			"Acasa",
+			" hover",
+			".addtocart_button",
+			"hover ",
+			" hover",
+			".button: hover",
+			"a:hover",
+			"a: hover",
+			"products",
+			"table",
+			"Must",
+			"projects",
+			"proj",
+			"../images",
+			"images",
+			"images/",
+			"next.png",
+			"arrow",
+			"../images",
+			"images",
+			"gif",
+			"%link",
+			"%script",
+			"script",
+			".jpg",
+			"img",
+			"png",
+			"pmg",
+			"./Jewelry Online_files/",
+			"http://cms.template-help.com/",
+			"./Jewelry Online_files/",
+			"Product01_resized.png",
+			"welcome",
+			"products",
+			"'",
+			"password:",
+			"#",
+			"<li",
+			"type=\"hidden\"",
+			"hidden",
+			"moduleInput",
+			"<li",
+			"http://cms.template-help.com/virtuemart_32184/index.php",
+			"table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\"",
+			"tr",
+			"vLine hLine",
+			"Cherished Promise Collection",
+			"tr",
+			"Cherished Promise Collection",
+			"svn",
+			"getAlign",
+			"setStyleValue",
+			"_align",
+			"_gridSpan",
+			" == true",
+			"_writeCellStyle",
+			"cols",
+			"styleCell",
+			"addTableStyle",
+			"styleFirstRow",
+			"PHPWord",
+			"width",
+			"$this->_documentXML = $this->_documentXMLSEQ;",
+			"$this->_documentXMLFINAL .= $this->_documentXML;",
+			"add",
+			"AddPage",
+			"file",
+			"filename",
+			"document",
+			"filename",
+			"myOwnTableStyle",
+			"center",
+			"__run__",
+			"2000",
+			"Word2003",
+			"DirectoryIterator",
+			"formatDate",
+			"DirectoryIterator",
+			"curr",
+			"802985",
+			"this->copy",
+			"copy",
+			"form",
+			"to_index",
+			"indexForm",
+			"500",
+			"2000",
+			"size",
+			"width",
+			"100",
+			"1750",
+			"3",
+			"400",
+			"20",
+			"200",
+			"700",
+			"500",
+			"1000",
+			"2000",
+			"66BBFF",
+			"styleFirstRow",
+			"styleTable",
+			"\n$",
+			"PHPWord",
+			"Input",
+			"out",
+			"Mysam",
+			"InnoDB",
+			"query",
+			"\"",
+			"insertCommentsFirstVersion",
+			"pase",
+			"This",
+			"alterCommentHistoryOld",
+			"InnoDB",
+			"'",
+			"InnoDB",
+			"type",
+			"InnoDB",
+			"yes",
+			"();\n",
+			"ProjectTracking_Comment",
+			"parseDat",
+			"Comment"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<scope>source.feature</scope>\n</description>",
+			"nwhere",
+			"getUserId"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "features/home/index.feature",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Behat/Syntaxes/Behat.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "features/step_definitions/index_steps.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "app/controllers/products_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								109,
+								109
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"history_list_is_closing": true,
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.66,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 423.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 185.0
+	},
+	"output.guard":
+	{
+		"height": 207.0
+	},
+	"output.xdebug":
+	{
+		"height": 142.0
+	},
+	"project": "rorshop.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				".css",
+				"app/assets/stylesheets/template.css"
+			],
+			[
+				"guar",
+				"Guardfile"
+			],
+			[
+				"env",
+				"features/support/env.rb"
+			],
+			[
+				"proudct",
+				"spec/controllers/products_controller_spec.rb"
+			],
+			[
+				"templates",
+				"app/assets/stylesheets/template.css"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"welcom",
+				"app/views/products/welcome.html.haml"
+			],
+			[
+				"product_",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"database",
+				"config/database.yml"
+			],
+			[
+				"spec_",
+				"spec/spec_helper.rb"
+			],
+			[
+				"rspec",
+				".rspec"
+			],
+			[
+				"sylecell.php",
+				"html/test/PHPWord/Style/Cell.php"
+			],
+			[
+				"base.php",
+				"html/test/PHPWord/Writer/Word2007/Base.php"
+			],
+			[
+				"cell.php",
+				"html/test/PHPWord/Style/Cell.php"
+			],
+			[
+				"textb",
+				"html/test/PHPWord/Section/TextBreak.php"
+			],
+			[
+				"template.php",
+				"html/test/PHPWord/Template.php"
+			],
+			[
+				"advance",
+				"html/test/Examples/AdvancedTable.php"
+			],
+			[
+				"formcontr",
+				"lib/Trace/FormController.php"
+			],
+			[
+				"historycontroller.php",
+				"lib/Trace/HistoryController.php"
+			],
+			[
+				"test",
+				"html/test.php"
+			],
+			[
+				"taskssear",
+				"tasks/scripts/search.php"
+			],
+			[
+				"search.php",
+				"html/filters/search.php"
+			],
+			[
+				"formsedit-ac",
+				"html/forms/edit-action.php"
+			],
+			[
+				"edit-act",
+				"html/filters/edit-action.php"
+			],
+			[
+				"template.doc",
+				"html/test/Examples/Template.docx"
+			],
+			[
+				"basictab",
+				"html/test/Examples/BasicTable.php"
+			],
+			[
+				"phpw",
+				"html/test/PHPWord.php"
+			],
+			[
+				"1_3_4",
+				"upgrades/1_3_4.php"
+			],
+			[
+				"formc",
+				"lib/Trace/FormController.php"
+			],
+			[
+				"resultsc",
+				"lib/Trace/ResultsController.php"
+			],
+			[
+				"batchup",
+				"html/filters/BatchUpdateForms.php"
+			],
+			[
+				"importdata",
+				"html/convert/ImportData.php"
+			],
+			[
+				"historycontr",
+				"lib/Trace/HistoryController.php"
+			],
+			[
+				"form-hist",
+				"html/forms/form-history.thtml.php"
+			],
+			[
+				"create",
+				"html/api/forms/CreateRecord.php"
+			],
+			[
+				"apiupdate",
+				"html/api/forms/UpdateForm.php"
+			],
+			[
+				"formcontroll",
+				"lib/Trace/FormController.php"
+			],
+			[
+				"trace",
+				"trace.ini"
+			],
+			[
+				"index.",
+				"html/index.js"
+			],
+			[
+				"trace.",
+				"trace.ini"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"product_c",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"step",
+				"features/step_definitions/home/products_steps.rb"
+			],
+			[
+				"",
+				"features/home/products.feature"
+			],
+			[
+				"feauter",
+				"features/step_definitions/home/products_steps.rb"
+			],
+			[
+				"feaute",
+				"features/home/products.feature"
+			],
+			[
+				"home",
+				"app/controllers/home_controller.rb"
+			],
+			[
+				"rote",
+				"config/routes.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"spec",
+				"spec/spec_helper.rb"
+			],
+			[
+				"guard",
+				"Guardfile"
+			],
+			[
+				"gemfi",
+				"Gemfile"
+			],
+			[
+				"index",
+				"lib/templates/haml/scaffold/index.html.haml"
+			],
+			[
+				".rspec",
+				".rspec"
+			],
+			[
+				"speccus",
+				"spec/controllers/customers_controller_spec.rb"
+			],
+			[
+				"feature",
+				"features/step_definitions/registration_steps.rb"
+			],
+			[
+				"customer_c",
+				"app/controllers/customers_controller.rb"
+			],
+			[
+				"customer",
+				"app/models/customer.rb"
+			],
+			[
+				"model",
+				"spec/models/customer_spec.rb"
+			],
+			[
+				"trace.ini",
+				"trace.ini"
+			],
+			[
+				"fhu",
+				"lib/ProjectTracking/FormHistoryUpdateComment.php"
+			],
+			[
+				"forms/fields-comm",
+				"html/forms/fields-common.thtml.php"
+			],
+			[
+				"form-history",
+				"html/forms/form-history.thtml.php"
+			],
+			[
+				"historyco",
+				"lib/Trace/HistoryController.php"
+			],
+			[
+				"historc",
+				"lib/Trace/HistoryController.php"
+			],
+			[
+				"addcomme",
+				"html/forms/AddComment.php"
+			],
+			[
+				"formcotn",
+				"lib/Trace/FormController.php"
+			],
+			[
+				"saveres",
+				"html/forms/SaveResults.php"
+			],
+			[
+				"historycontro",
+				"lib/Trace/HistoryController.php"
+			],
+			[
+				"gefi",
+				"rorshop/Gemfile"
+			],
+			[
+				"add_f",
+				"rorshop/db/migrate/20140220181648_add_fields_to_customers2.rb"
+			],
+			[
+				"customer.r",
+				"rorshop/app/models/customer.rb"
+			],
+			[
+				"speccustomer",
+				"rorshop/spec/models/customer_spec.rb"
+			],
+			[
+				"logi",
+				"html/Login.php"
+			],
+			[
+				"prefcontr",
+				"lib/Trace/PrefsController.php"
+			],
+			[
+				"form-history.thtml.php",
+				"html/forms/form-history.thtml.php"
+			],
+			[
+				"fc.php",
+				"lib/Trace/FormController.php"
+			],
+			[
+				"fields-comm",
+				"html/forms/fields-common.thtml.php"
+			],
+			[
+				"fields-c",
+				"html/forms/fields-common.thtml.php"
+			],
+			[
+				"delete-co",
+				"html/forms/delete-comment.php"
+			],
+			[
+				"fields-common.thtml.php",
+				"html/forms/fields-common.thtml.php"
+			],
+			[
+				"upgrades",
+				"upgrades/1_1_11.php"
+			],
+			[
+				"1_2",
+				"upgrades/1_2_2.php"
+			],
+			[
+				"histor",
+				"lib/Trace/HistoryController.php"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"dbmi",
+				"db/migrate/20140219220516_add_fields_to_customers.rb"
+			],
+			[
+				"speccontr",
+				"spec/controllers/customers_controller_spec.rb"
+			],
+			[
+				"login",
+				"html/Login.php"
+			],
+			[
+				"staff.php",
+				"trace_dev/html/projects/staff.php"
+			],
+			[
+				"spec/contr",
+				"rorshop/spec/controllers/customers_controller_spec.rb"
+			],
+			[
+				"delete_for",
+				"trace_dev/upgrades/delete_form.php"
+			],
+			[
+				"delete",
+				"trace_dev/upgrades/delete_document.php"
+			],
+			[
+				"haml",
+				"rorshop/app/views/customers/new.html.haml"
+			],
+			[
+				"upgrades1_3_4",
+				"upgrades/1_3_4.php"
+			],
+			[
+				"formindex.thtml",
+				"html/forms/index.thtml.php"
+			],
+			[
+				"resultsthtml",
+				"html/forms/results.thtml.php"
+			],
+			[
+				"resultsphp",
+				"html/forms/results.php"
+			],
+			[
+				"addcomment",
+				"html/forms/AddComment.php"
+			],
+			[
+				"saveform",
+				"html/forms/SaveForm.php"
+			],
+			[
+				"viewcustomer",
+				"spec/views/customers/new.html.haml_spec.rb"
+			],
+			[
+				"migr",
+				"db/migrate/20140218222946_create_customers.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"customer_",
+				"spec/models/customer_spec.rb"
+			],
+			[
+				"customerco",
+				"app/controllers/customers_controller.rb"
+			],
+			[
+				"new",
+				"app/views/customers/new.html.haml"
+			],
+			[
+				"commeh-",
+				"html/forms/comment-history.php"
+			],
+			[
+				"form-historytht",
+				"html/forms/form-history.thtml.php"
+			],
+			[
+				"delete_d",
+				"upgrades/delete_document.php"
+			],
+			[
+				"form-histtht",
+				"html/forms/form-history.thtml.php"
+			],
+			[
+				"comment-",
+				"html/forms/comment-history.php"
+			],
+			[
+				"form-histor",
+				"html/forms/form-history.php"
+			],
+			[
+				"login.",
+				"html/Login.php"
+			],
+			[
+				"delete_",
+				"upgrades/delete_document.php"
+			],
+			[
+				"settingsth",
+				"html/projects/settings.thtml.php"
+			],
+			[
+				"formcont",
+				"lib/Trace/FormController.php"
+			],
+			[
+				"settingst",
+				"html/projects/settings.thtml.php"
+			],
+			[
+				"delete_f",
+				"upgrades/delete_form.php"
+			],
+			[
+				"cusomer",
+				"app/controllers/customers_controller.rb"
+			],
+			[
+				"viewrsp",
+				"spec/views/customers/new.html.slim_spec.rb"
+			],
+			[
+				"customers",
+				"app/controllers/customers_controller.rb"
+			],
+			[
+				"inde",
+				"app/views/welcome/index.html.slim"
+			],
+			[
+				"datab",
+				"config/database.yml"
+			],
+			[
+				"steps",
+				"features/step_definitions/registration_steps.rb"
+			],
+			[
+				"registr",
+				"features/step_definitions/registration_steps.rb"
+			],
+			[
+				"env.rb",
+				"features/support/env.rb"
+			],
+			[
+				"gua",
+				"Guardfile"
+			],
+			[
+				"env.r",
+				"features/support/env.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 98.0,
+		"selected_items":
+		[
+			[
+				"addpage",
+				"addPageBreak"
+			],
+			[
+				"loadComment",
+				"loadCommentForVersion"
+			],
+			[
+				"readFull",
+				"readFullCommentHistory"
+			],
+			[
+				"readF",
+				"readFullCommentHistory"
+			]
+		],
+		"width": 512.0
+	},
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"134":
+				{
+					"group": 1,
+					"index": 0
+				},
+				"69":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.426684636119,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 443.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
