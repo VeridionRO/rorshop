@@ -42,6 +42,7 @@ group :test do
   gem 'database_cleaner'
   gem 'growl'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test, :development do

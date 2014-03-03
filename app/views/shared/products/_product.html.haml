@@ -1,0 +1,19 @@
+%td.vLine.hLine{width: "11%"}
+  .featuredIndent
+    .product_image_container
+      %a{href: "#", title: product.name}
+        %img{alt: product.name, border: "0", height: "204", src: "/assets/Product01_resized.png", width: "218"}/
+    .product-options
+      .product_name
+        %a.product_name{href: "#", title: product.name} #{product.name}
+      .box_product_price
+        %span.product-Old-Price
+          $205.00
+        %span.productPrice
+          $197.98
+      .clear
+        .product_buttons
+          %form#addtocart{action: "#", method: "post", name: "addtocart"}
+            %input.addtocart_button{title: "Add to Cart", type: "submit", value: "Add to Cart"}/
+        .product_details_container
+          %a.details{href: "#", title: product.name} Details

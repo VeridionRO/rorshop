@@ -30,14 +30,14 @@ describe ProductsController do
       get :welcome
       response.should render_template(:welcome)
     end
-    
+
     it "should call the model method favorite_products" do
       Product.should_receive(:favorite_products)
       get :welcome
     end
 
     it "should assign products to the welcome view" do
-      products = FactoryGirl.create_list(:product1, 3)
+      products = FactoryGirl.build_list(:valid_product, 3)
       Product.stub(:favorite_products).and_return(products)
       get :welcome
       expect(assigns[:products]).to eql(products)

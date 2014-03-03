@@ -1,6 +1,6 @@
 FactoryGirl.define do
-	factory :product1, class: Product do
-    name        "Product 1"
+	factory :valid_product, class: Product do
+    name        Faker::Commerce.product_name
     description "Description 1"
   end
 end
