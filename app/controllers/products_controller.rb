@@ -6,6 +6,6 @@ class ProductsController < ApplicationController
   end
 
   def welcome
-  	@products = Product.favorite_products
+    @products = Product.favorite_products
   end
 end

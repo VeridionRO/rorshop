@@ -1,11 +1,13 @@
-%td.vLine.hLine{width: "11%"}
+- image = (product.image_id ? product.image : product.default_image)
+- product_class = (!product.image_id ? "default-image" : "")
+%td.vLine.hLine{width: "11%", id: "product-cell-#{product.id}"}
   .featuredIndent
     .product_image_container
-      %a{href: "#", title: product.name}
-        %img{alt: product.name, border: "0", height: "204", src: "/assets/Product01_resized.png", width: "218"}/
+      %a{href: "/products/#{product.id}", title: product.name}
+        %img{alt: product.name, class: product_class, border: "0", height: "204", src: "/assets/#{image.uri}", width: "218"}/
     .product-options
       .product_name
-        %a.product_name{href: "#", title: product.name} #{product.name}
+        %a.product_name{href: "/products/#{product.id}", title: product.name} #{product.name}
       .box_product_price
         %span.product-Old-Price
           $205.00

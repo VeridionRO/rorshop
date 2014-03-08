@@ -43,6 +43,7 @@ group :test do
   gem 'growl'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'shoulda-matchers', '1.4.1' 
 end
 
 group :test, :development do
