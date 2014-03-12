@@ -1,0 +1,25 @@
+!!!
+%html{dir: "ltr", lang: "en-gb", "xml:lang" => "en-gb", xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = yield :title
+    = yield :head_extra
+  %body
+    = yield :body
+  %body#body
+    #header
+      = yield :header
+    .main
+      #wrapper
+        .clear
+          #left
+            .clear
+              = yield :sidebar
+          .container
+            .module-new
+              .boxIndent
+                = yield :content
+                
+      = render :partial => 'shared/footer'

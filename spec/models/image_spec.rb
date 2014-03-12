@@ -5,22 +5,22 @@ describe Image do
     #shoulda (gem) method validate_uniqueness_of needs to have one object 
     #in the database or it will give a sql error for NOT NULL columns
     valid_image = FactoryGirl.create(:valid_image)
-    should validate_uniqueness_of(:product_id)
-      .scoped_to(:default_img)
-      .with_message(/product_id and default_img must be unique/)
+    should validate_uniqueness_of(:product)
+      .scoped_to(:default_image)
+      .with_message(/product_id and default_image must be unique/)
   end
 
-  [:title, :uri, :product_id].each do |attribute|
+  [:title, :uri].each do |attribute|
     it "is invalid without an/a #{attribute}" do
-        invalid_image = FactoryGirl.build(:valid_image, attribute => nil)
-        invalid_image.should_not be_valid
-        invalid_image.errors.should have_key(attribute)
+      invalid_image = FactoryGirl.build(:valid_image, attribute => nil)
+      invalid_image.should_not be_valid
+      invalid_image.errors.should have_key(attribute)
     end
   end
 
-  it "has a default true value on default_img" do
+  it "has a default true value on default_image" do
     valid_image = FactoryGirl.build(:valid_image)
-    valid_image.default_img.should == true
+    valid_image.default_image.should == true
   end
 
   it "belongs_to" do

@@ -11,28 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305223140) do
+ActiveRecord::Schema.define(version: 20140309164515) do
 
   create_table "images", force: true do |t|
-    t.string   "title",                      null: false
-    t.string   "uri",                        null: false
-    t.boolean  "default_img", default: true, null: false
-    t.integer  "product_id",                 null: false
+    t.integer  "product_id",                   null: false
+    t.boolean  "default_image", default: true
+    t.string   "title",                        null: false
+    t.string   "uri",                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "images", ["product_id", "default_img"], name: "index_images_on_product_id_and_default_img", unique: true, using: :btree
+  add_index "images", ["product_id", "default_image"], name: "index_images_on_product_id_and_default_image", unique: true, using: :btree
   add_index "images", ["product_id"], name: "index_images_on_product_id", using: :btree
 
   create_table "products", force: true do |t|
-    t.integer  "image_id"
     t.string   "name",        null: false
     t.string   "description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "products", ["image_id"], name: "index_products_on_image_id", using: :btree
 
 end

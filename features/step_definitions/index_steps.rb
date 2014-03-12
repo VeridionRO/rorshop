@@ -28,12 +28,13 @@ Then(/^I should see the Header buttons$/) do
 end
 
 Given(/^I have products with images$/) do
-  @products = [FactoryGirl.create(:valid_product_with_image)]
+  @products = [FactoryGirl.create(:valid_product, 
+    :images => [FactoryGirl.create(:valid_image)])]
 end
 
 Then(/^I should see the products$/) do
   @products.each do |product|
     page.find("#product-cell-#{product.id}").should have_content(product.name)
+    page.find("#product-cell-#{product.id}").should have_link(product.name)
   end
-  page.should_not have_selector(".default-image")
 end

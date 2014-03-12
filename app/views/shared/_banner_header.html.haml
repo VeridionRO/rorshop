@@ -1,0 +1,27 @@
+.banners-bg
+  .main
+    .clear
+      .moduletable
+        .bannergroup
+          .banneritem
+            %a{href: "#"}
+              %img{alt: "Banner", src: "/assets/banner1.jpg"}/
+            .clr
+      .moduletable
+        .slide-box
+          .anythingSlider
+            .wrapper{style: "overflow: hidden;"}
+              %ul
+                %li.slide1
+                  %a.product-name{href: "#"}
+                %li.slide2
+                  %a.product-name{href: "#"}
+                %li.slide3
+                  %a.product-name{href: "#"}
+            %a.arrow.forward >
+            %a.arrow.back <
+            #thumbNav
+              %a{href: "#"} 1
+              %a.cur{href: "#"} 2
+              %a{href: "#"} 3
+            %a#start-stop.playing{href: "#"} Stop

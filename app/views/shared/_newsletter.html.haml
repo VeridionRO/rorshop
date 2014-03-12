@@ -1,0 +1,12 @@
+.module
+  %h3
+    %span Newsletter
+  .boxIndent
+    %form#subscribeFormModule{action: "#", method: "post", name: "subscribeFormModule"}
+      .newslatter
+        .width
+          %span enter your e-mail
+          %br/
+          %input#email.moduleInput{maxlength: "250", name: "email", size: "10", type: "text", value: ""}/
+          %input.button{name: "Submit", type: "submit", value: "Submit"}/
+          %a{href: "#"} Unsubscribe

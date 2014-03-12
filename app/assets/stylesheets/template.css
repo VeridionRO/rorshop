@@ -626,9 +626,6 @@ dl.contentpane .button-field {
 .module-specials div.product_name, .module-new div.product_name {
     padding: 10px 0 0 0px;
 }
-.module-specials .product_name:hover, .module-new .product_name:hover{
-    color: #000;
-}
 .module_menu {
     margin: 0px 0px 6px 0px;
     padding: 24px 0 0 26px;

@@ -1,19 +1,41 @@
 FactoryGirl.define do
-  factory :valid_image, class: Image do
-    product_id 1
-    title      "test"
-    uri        "Product01_resized.png"
-  end
-  
+
   factory :valid_product, class: Product do
     name        "test"
     description "Description 1"
   end
 
-  factory :valid_product_with_image, class: Product do
+
+  factory :valid_image, class: Image do
+    title      "test"
+    uri        "Product01_resized.png"
+    product    FactoryGirl.create(:valid_product)
+  end
+
+  factory :image, class: Image do
+    title   "test"
+    uri     "Product01_resized.png"
+    product 
+  end
+
+  factory :valid_image_hash do
+    title "test"
+    uri   "Description 1"
+  end
+
+  factory :product, class: Product do
     name        "test"
     description "Description 1"
-    image_id    1
-    image       FactoryGirl.build(:valid_image)
+
+    factory :product_with_images do
+      ignore do
+        posts_count 1
+      end
+
+      after(:create) do |product, evaluator|
+        FactoryGirl.create_list(:image, evaluator.posts_count, product: product)
+      end
+    end
   end
+
 end

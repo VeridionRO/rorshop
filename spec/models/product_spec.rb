@@ -15,18 +15,8 @@ describe Product do
       product.description.should eq('description 1')
     end
 
-    it 'responds to image' do
-      image = FactoryGirl.build(:valid_image)
-      product.image = image
-      product.image.should eq(image)
-    end
-
     it 'has_many images' do
       should have_many(:images)
-    end
-
-    it 'has_one image' do
-       should have_one(:image)
     end
 
   end
@@ -39,50 +29,34 @@ describe Product do
     end
   end
 
-
   it 'is invalid without a name or description' do
-    [:name, :description].each do |attribute|
+    [:name, :description, :image].each do |attribute|
       invalid_product = FactoryGirl.build(:valid_product, attribute => nil)
       invalid_product.should_not be_valid
       invalid_product.errors.should have_key(attribute)
     end
   end
 
-  it 'is valid without a image' do
-    [:image].each do |attribute|
-      valid_product = FactoryGirl.build(:valid_product, attribute => nil)
-      valid_product.should be_valid
-    end
+  it "image should be a Hash" do
+    p = Product.new
+    p.image.should be_a_kind_of(Hash)
   end
 
-  it 'has a default_img class object' do
-    image = FactoryGirl.build(:valid_image)
-    Product.stub(:default_img).and_return(image)
-    Product.default_img.should == image
+  it "image is the default_image when the image_id is nil" do
+    p = Product.new
+    p.image.should == Product.default_img
   end
 
-  it 'default_img method returns a Image object' do
-    Product.default_img.should be_a_kind_of(Image)
+  it "image is not the default_image when the image_id is not nil" do
+    p = Product.new(:images => [FactoryGirl.build(:valid_image)])
+    p.image.should_not == Product.default_img
   end
 
-  it 'default_img method returns a valid Image object' do
-    Product.default_img.should be_valid
-  end
-
-  context 'when image_id' do
-    context 'is nil' do
-      it 'default_image shoud not be nil' do
-        product = Product.new
-        product.default_image.should == Product.default_img
-      end
-    end
-
-    context 'is not nil' do
-      it 'default_image shoud be nil' do
-        product = Product.new(:image_id => 1)
-        product.default_image.should == nil
-      end
-    end
+  it "image is the first image from the Product images array" do
+    img1 = FactoryGirl.build(:valid_image)
+    img2 = FactoryGirl.build(:valid_image)
+    p = Product.new(:images => [img1,img2])
+    p.image.should == img1
   end
 
 end

@@ -1,0 +1,13 @@
+.menu-bg
+  .main
+    .clear
+      #topmenu
+        %ul.menu-nav
+          = render :partial => 'shared/menus'
+      #search
+        .moduletable
+          %h3 search:
+          %form{action: "#", method: "post"}
+            .search
+              %input#mod_search_searchword.inputbox{alt: "Search", maxlength: "20", name: "searchword", onblur: "if(this.value=='') this.value='search...';", onfocus: "if(this.value=='search...') this.value='';", size: "20", type: "text", value: "search..."}/
+              %input.button{onclick: "this.form.searchword.focus();", src: "/assets/searchButton.gif", type: "image", value: "Search"}/

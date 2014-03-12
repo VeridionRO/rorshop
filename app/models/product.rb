@@ -1,29 +1,31 @@
 class Product < ActiveRecord::Base
-  validates :name, :description, presence: true
+
   has_many :images
-  has_one :image
 
-  after_initialize :assign_default_image
+  after_initialize :add_image
+  
+  validates :name, :description, :image, presence: true
 
-  @@default_img = nil
+  @@default_img = {
+    :title => "Imagine Default", 
+    :uri => "default_img.jpg"
+  }
 
-  attr_accessor :default_image
+  attr_accessor :image
 
   def self.favorite_products
     Product.order('id DESC').limit(9)
   end
 
   def self.default_img
-    if !@@default_img
-      @@default_img = Image.new(:title => "Imagine Default", 
-        :uri => "default_img.jpg", :product_id => 0)
-    end
     @@default_img
   end
 
-  def assign_default_image
-    if !image_id
-      @default_image = Product.default_img
+  def add_image
+    if images.empty?
+      @image = @@default_img
+    else
+      @image = images[0]
     end
   end
 

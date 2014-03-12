@@ -1,2 +1,6 @@
-%h1 Products#show
-%p Find me in app/views/products/show.html.haml
+- content_for(:title, 'My title')
+- content_for(:head) do
+  = javascript_include_tag :foo
+
+- content_for(:body) do
+  %h1 My view!
