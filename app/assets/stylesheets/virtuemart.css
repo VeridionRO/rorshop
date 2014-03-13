@@ -211,13 +211,11 @@ div.buttons_heading img {
 a.product_name, h1.product_name, .vader .ui-widget-content a.product_name {
     color: #817a7a;
     font: normal 12px/16px Arial, Helvetica, sans-serif;
-    text-decoration: none;
     display: inline-block;
     width: auto;
 }
 a.product_name:hover {
     color: #cb0abb;
-    text-decoration: none;
 }
 .vader a.product_name {
     color: #161616!important;

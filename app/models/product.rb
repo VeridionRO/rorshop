@@ -22,6 +22,7 @@ class Product < ActiveRecord::Base
   end
 
   def add_image
+    debugger
     if images.empty?
       @image = @@default_img
     else

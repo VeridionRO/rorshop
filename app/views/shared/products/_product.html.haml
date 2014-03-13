@@ -1,21 +1,55 @@
-- image = product.image
-- product_class = (product.images.empty? ? "default-image" : "")
-%td.vLine.hLine{width: "11%", id: "product-cell-#{product.id}"}
-  .featuredIndent
-    .product_image_container
-      %a{href: "/products/#{product.id}", title: product.name}
-        %img{alt: product.name, class: product_class, border: "0", height: "204", src: "/assets/#{image[:uri]}", width: "218"}/
-    .product-options
-      .product_name
-        %a.product_name{href: "/products/#{product.id}", title: product.name} #{product.name}
-      .box_product_price
-        %span.product-Old-Price
-          $205.00
-        %span.productPrice
-          $197.98
-      .clear
-        .product_buttons
-          %form#addtocart{action: "#", method: "post", name: "addtocart"}
-            %input.addtocart_button{title: "Add to Cart", type: "submit", value: "Add to Cart"}/
-        .product_details_container
-          %a.details{href: "#", title: product.name} Details
+.clear
+  .buttons_heading
+    .buttons_heading
+      %a{href: "#", onclick: "#", title: "PDF"}
+        %img{align: "middle", alt: "PDF", border: "0", name: "PDF", src: "/assets/pdf_button.png"}/
+      %a{href: "#", onclick: "#", title: "Print"}
+        %img{align: "middle", alt: "Print", border: "0", name: "Print", src: "/assets/printButton.png"}/
+      %a{href: "#", onclick: "#", title: "E-mail"}
+        %img{align: "middle", alt: "E-mail", border: "0", name: "E-mail", src: "/assets/emailButton.png"}/
+  %a.previous_page{href: "#"} !!!TODO Here Previous
+  %a.next_page{href: "#"} !!!TODO Here Next
+.clear.indent
+  .browseProductImageContainer
+    .browseProductImage
+      %a{href: "#", rel: "lightbox[product1]", title: "#{@product.name}"}
+        %img{alt: "#{@product.name}", border: "0", height: "204", src: "/assets/#{@product.image[:uri]}", width: "218"}/
+    %br/
+    %br/
+  .floatElement
+    %h2.browseProductTitle
+      %a.product_name{href: "#", title: "#{@product.name}"}
+        = @product.name
+    .browsePriceContainer
+      %span.product-Old-Price
+        $205.00
+      %span.productPrice
+        $197.98
+    %div
+    .ask_seller.nobutton
+      %a.button{href: "#"} Ask a question about this product
+    %div
+      = @product.description
+    %div
+      .vmCartContainer
+        %form#addtocart_5321f87b5569e.addtocart_form{action: "#", method: "post", name: "addtocart"}
+          .vmCartDetails
+          %div{style: "width:auto; float:left; padding-right:10px;"}
+            .quantity
+              %label.quantity_box{for: "quantity1"} Quantity: 
+              %input#quantity1.inputboxquantity{name: "quantity[]", size: "4", type: "text", value: "1"}/
+              %input.quantity_box_button.quantity_box_button_up.png{onclick: "#", type: "button"}/
+              %input.quantity_box_button.quantity_box_button_down.png{onclick: "#", type: "button"}/
+          %input.addtocart_button{title: "Add to Cart", type: "submit", value: "Add to Cart"}/
+      %div
+%div
+  %div
+    %h3.Title
+      %span Customer Reviews:
+    %br/
+    There are yet no reviews for this product.
+    = succeed "Please" do
+      %br/
+  %br/
+%div
+#statusBox{style: "text-align:center;display:none;visibility:hidden;"}

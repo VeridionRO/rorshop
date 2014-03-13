@@ -1,6 +1,11 @@
-- content_for(:title, 'My title')
-- content_for(:head) do
-  = javascript_include_tag :foo
-
-- content_for(:body) do
-  %h1 My view!
+- content_for(:title) do
+  %title Magazin bijuterii
+- content_for(:header) do
+  = render :partial => 'shared/top_header'
+  = render :partial => 'shared/menu_header'
+- content_for(:sidebar) do
+  = render :partial => 'shared/categories'
+  = render :partial => 'shared/login_box'
+  = render :partial => 'shared/newsletter'
+- content_for(:content) do
+  = render :partial => 'shared/products/product'
