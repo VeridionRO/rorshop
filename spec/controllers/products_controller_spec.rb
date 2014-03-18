@@ -42,9 +42,11 @@ describe ProductsController do
 
     before(:each) do
       @product = FactoryGirl.create(:product_with_images)
+      Product.stub(:find).and_return(@product)
+      @product.stub(:get_neighbours).and_return({})
     end
 
-    it "GET '/product/:id'" do
+    it "success" do
       get :show, :id => @product.id
       response.should be_success
     end
@@ -59,12 +61,16 @@ describe ProductsController do
       get :show, :id => @product.id
     end
 
+    it "calls the Product.get_neighbours method" do
+      @product.should_receive(:get_neighbours)
+      get :show, :id => @product.id
+    end
+
     it "assigns the @product variable to the template" do
-      Product.stub(:find).and_return(@product)
       get :show, :id => @product.id
       expect(assigns[:product]).to eql(@product)
     end
-    
+
   end
 
 end

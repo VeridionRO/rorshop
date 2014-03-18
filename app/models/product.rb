@@ -11,23 +11,38 @@ class Product < ActiveRecord::Base
     :uri => "default_img.jpg"
   }
 
-  attr_accessor :image
-
-  def self.favorite_products
-    Product.order('id DESC').limit(9)
-  end
-
-  def self.default_img
-    @@default_img
-  end
-
+  attr_accessor :image, :neighbours
+  
   def add_image
-    debugger
     if images.empty?
       @image = @@default_img
     else
       @image = images[0]
     end
+  end
+
+  def get_neighbours
+    raise ProductException::CannotHaveNeighbours, 
+      "Unsaved product cannot have neighbours" unless id
+    previous_product = Product.where("id < #{id}").order('id DESC').first
+    next_product = Product.where("id > #{id}").first
+    @neighbours = {:previous => previous_product, :next => next_product}
+  end
+
+  def neighbour which
+    get_neighbours unless neighbours
+    @neighbours[which] if @neighbours && @neighbours[which]
+
+  end
+
+  ### Class methods ###
+  def self.favorite_products
+    Product.order('id DESC')
+           .limit(9)
+  end
+
+  def self.default_img
+    @@default_img
   end
 
 end

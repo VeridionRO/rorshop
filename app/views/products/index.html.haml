@@ -1,2 +1,11 @@
-%h1 Products#index
-%p Find me in app/views/products/index.html.haml
+- content_for(:title) do
+  %title Magazin bijuterii
+- content_for(:header) do
+  = render :partial => 'shared/top_header'
+  = render :partial => 'shared/menu_header'
+- content_for(:sidebar) do
+  = render :partial => 'shared/categories'
+  = render :partial => 'shared/login_box'
+  = render :partial => 'shared/newsletter'
+- content_for(:content) do
+  = render :partial => 'shared/products/index'

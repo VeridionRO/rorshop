@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @product.get_neighbours
   end
 
   def welcome

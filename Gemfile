@@ -37,17 +37,16 @@ group :test do
   gem 'spork-rails', :github => 'sporkrb/spork-rails'
   gem 'guard-spork'
   gem 'guard-rspec'
-  gem 'cucumber-rails', :require => false
-  gem 'guard-cucumber'
   gem 'database_cleaner'
   gem 'growl'
-  gem 'factory_girl_rails'
   gem 'faker'
   gem 'shoulda-matchers', '1.4.1' 
 end
 
 group :test, :development do
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 # Use ActiveModel has_secure_password

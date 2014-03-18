@@ -7,8 +7,14 @@
         %img{align: "middle", alt: "Print", border: "0", name: "Print", src: "/assets/printButton.png"}/
       %a{href: "#", onclick: "#", title: "E-mail"}
         %img{align: "middle", alt: "E-mail", border: "0", name: "E-mail", src: "/assets/emailButton.png"}/
-  %a.previous_page{href: "#"} !!!TODO Here Previous
-  %a.next_page{href: "#"} !!!TODO Here Next
+  - previous_neighbour = @product.neighbour(:previous)
+  - next_neighbour = @product.neighbour(:next)
+  - if previous_neighbour
+    %a.previous_page{href: "/product/#{previous_neighbour.id}"} 
+      = previous_neighbour.name
+  - if next_neighbour
+    %a.next_page{href: "/product/#{next_neighbour.id}"}
+      = next_neighbour.name
 .clear.indent
   .browseProductImageContainer
     .browseProductImage

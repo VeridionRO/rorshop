@@ -1,0 +1,3 @@
+class Mama
+
+end
