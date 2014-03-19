@@ -1,0 +1,34 @@
+.clear
+  = yield(:buttons_heading)
+.clear.indent
+  .browseProductImageContainer
+    .browseProductImage
+      %a{href: "/product/#{product.id}", rel: "lightbox[product1]", title: "#{product.name}"}
+        %img{alt: "#{product.name}", border: "0", height: "204", src: "/assets/#{product.image[:uri]}", width: "218"}/
+    %br/
+    %br/
+  .floatElement
+    %h2.browseProductTitle
+      %a.product_name{href: "/product/#{product.id}", title: "#{product.name}"}
+        = product.name
+    .browsePriceContainer
+      %span.product-Old-Price
+        $205.00
+      %span.productPrice
+        $197.98
+    %div
+    .ask_seller.nobutton
+      %a.button{href: "#"} Ask a question about this product
+    %div
+      = product.description
+    %div
+      .vmCartContainer
+        %form#addtocart_5321f87b5569e.addtocart_form{action: "#", method: "post", name: "addtocart"}
+          .vmCartDetails
+          %div{style: "width:auto; float:left; padding-right:10px;"}
+            .quantity
+              %label.quantity_box{for: "quantity1"} Quantity: 
+              %input#quantity1.inputboxquantity{name: "quantity[]", size: "4", type: "text", value: "1"}/
+              %input.quantity_box_button.quantity_box_button_up.png{onclick: "#", type: "button"}/
+              %input.quantity_box_button.quantity_box_button_down.png{onclick: "#", type: "button"}/
+          %input.addtocart_button{title: "Add to Cart", type: "submit", value: "Add to Cart"}/

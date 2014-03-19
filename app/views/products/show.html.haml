@@ -8,4 +8,4 @@
   = render :partial => 'shared/login_box'
   = render :partial => 'shared/newsletter'
 - content_for(:content) do
-  = render :partial => 'shared/products/product'
+  = render :partial => 'shared/products/product', :locals => {:product => @product}

@@ -5,9 +5,6 @@ describe Product do
   describe 'attribute' do
     let(:product) { Product.new }
 
-    it { should respond_to(:neighbour) }
-    it { should respond_to(:get_neighbours) }
-
     it 'responds to name' do
       product.name = 'name 1'
       product.name.should eq('name 1')
@@ -34,7 +31,17 @@ describe Product do
 
   end
 
+  describe "class method" do
+    it { Product.should respond_to(:favorite_products) }
+    it { Product.should respond_to(:default_img) }
+    it { Product.should respond_to(:get_page) }
+  end
+
   describe 'method' do
+
+    it { should respond_to(:neighbour) }
+    it { should respond_to(:get_neighbours) }
+    it { should respond_to(:add_image) }
 
     it 'favorite_products' do
       products = FactoryGirl.create_list(:valid_product, 18)
@@ -120,6 +127,17 @@ describe Product do
         product = Product.new(:id => 1)
         product.stub(:get_neighbours)
         expect(product.neighbour(:invalid_neighbour)).to be_nil
+      end
+
+    end
+
+    describe "get_page" do
+
+      it "returns the last 10/20/30... elements" do
+        products = Product.order('created_at DESC').limit(10).offset(0)
+        expect(Product.get_page(0)).to eq(products)
+        products = Product.order('created_at DESC').limit(10).offset(10)
+        expect(Product.get_page(1)).to eq(products)
       end
 
     end

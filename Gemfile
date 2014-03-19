@@ -39,11 +39,11 @@ group :test do
   gem 'guard-rspec'
   gem 'database_cleaner'
   gem 'growl'
-  gem 'faker'
   gem 'shoulda-matchers', '1.4.1' 
 end
 
 group :test, :development do
+  gem 'faker'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'capybara'

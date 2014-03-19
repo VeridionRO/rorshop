@@ -1,31 +1,31 @@
 FactoryGirl.define do
 
   factory :valid_product, class: Product do
-    name        "test"
-    description "Description 1"
+    name        Faker::Commerce.product_name
+    description Faker::Lorem.paragraph
   end
 
 
   factory :valid_image, class: Image do
-    title      "test"
+    title      Faker::Commerce.department
     uri        "Product01_resized.png"
     product    FactoryGirl.create(:valid_product)
   end
 
   factory :image, class: Image do
-    title   "test"
+    title   Faker::Commerce.department
     uri     "Product01_resized.png"
     product 
   end
 
   factory :valid_image_hash do
-    title "test"
-    uri   "Description 1"
+    title Faker::Commerce.department
+    uri   Faker::Lorem.paragraph
   end
 
   factory :product, class: Product do
-    name        "test"
-    description "Description 1"
+    name        Faker::Commerce.product_name
+    description Faker::Lorem.paragraph
 
     factory :product_with_images do
       ignore do

@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+    @products = Product.get_page 0
   end
 
   def show

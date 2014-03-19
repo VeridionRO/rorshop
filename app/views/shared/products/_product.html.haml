@@ -1,53 +1,6 @@
-.clear
-  .buttons_heading
-    .buttons_heading
-      %a{href: "#", onclick: "#", title: "PDF"}
-        %img{align: "middle", alt: "PDF", border: "0", name: "PDF", src: "/assets/pdf_button.png"}/
-      %a{href: "#", onclick: "#", title: "Print"}
-        %img{align: "middle", alt: "Print", border: "0", name: "Print", src: "/assets/printButton.png"}/
-      %a{href: "#", onclick: "#", title: "E-mail"}
-        %img{align: "middle", alt: "E-mail", border: "0", name: "E-mail", src: "/assets/emailButton.png"}/
-  - previous_neighbour = @product.neighbour(:previous)
-  - next_neighbour = @product.neighbour(:next)
-  - if previous_neighbour
-    %a.previous_page{href: "/product/#{previous_neighbour.id}"} 
-      = previous_neighbour.name
-  - if next_neighbour
-    %a.next_page{href: "/product/#{next_neighbour.id}"}
-      = next_neighbour.name
-.clear.indent
-  .browseProductImageContainer
-    .browseProductImage
-      %a{href: "#", rel: "lightbox[product1]", title: "#{@product.name}"}
-        %img{alt: "#{@product.name}", border: "0", height: "204", src: "/assets/#{@product.image[:uri]}", width: "218"}/
-    %br/
-    %br/
-  .floatElement
-    %h2.browseProductTitle
-      %a.product_name{href: "#", title: "#{@product.name}"}
-        = @product.name
-    .browsePriceContainer
-      %span.product-Old-Price
-        $205.00
-      %span.productPrice
-        $197.98
-    %div
-    .ask_seller.nobutton
-      %a.button{href: "#"} Ask a question about this product
-    %div
-      = @product.description
-    %div
-      .vmCartContainer
-        %form#addtocart_5321f87b5569e.addtocart_form{action: "#", method: "post", name: "addtocart"}
-          .vmCartDetails
-          %div{style: "width:auto; float:left; padding-right:10px;"}
-            .quantity
-              %label.quantity_box{for: "quantity1"} Quantity: 
-              %input#quantity1.inputboxquantity{name: "quantity[]", size: "4", type: "text", value: "1"}/
-              %input.quantity_box_button.quantity_box_button_up.png{onclick: "#", type: "button"}/
-              %input.quantity_box_button.quantity_box_button_down.png{onclick: "#", type: "button"}/
-          %input.addtocart_button{title: "Add to Cart", type: "submit", value: "Add to Cart"}/
-      %div
+- content_for(:buttons_heading) do
+  = render :partial => 'shared/products/buttons_heading', :locals => {:product => @product}
+= render :partial => 'shared/products/product_details', :locals => {:product => product}
 %div
   %div
     %h3.Title

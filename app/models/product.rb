@@ -11,6 +11,8 @@ class Product < ActiveRecord::Base
     :uri => "default_img.jpg"
   }
 
+  @@pagination = 10
+
   attr_accessor :image, :neighbours
   
   def add_image
@@ -32,7 +34,6 @@ class Product < ActiveRecord::Base
   def neighbour which
     get_neighbours unless neighbours
     @neighbours[which] if @neighbours && @neighbours[which]
-
   end
 
   ### Class methods ###
@@ -43,6 +44,10 @@ class Product < ActiveRecord::Base
 
   def self.default_img
     @@default_img
+  end
+
+  def self.get_page page
+    Product.order('created_at DESC').limit(@@pagination).offset(page * 10)
   end
 
 end

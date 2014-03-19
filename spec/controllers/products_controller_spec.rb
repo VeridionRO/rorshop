@@ -12,6 +12,24 @@ describe ProductsController do
       response.should be_success
     end
 
+    it "renders the welcome template" do
+      get :index
+      response.should render_template(:index)
+    end
+
+    it "should call get_page" do
+      Product.should_receive(:get_page).with(0)
+      get :index
+    end
+
+    it "should assign the @products variable to the view" do
+      # products = Product.order("created_at DESC").limit(9)
+      products = [Product.new]
+      Product.stub(:get_page).and_return(products)
+      get :index
+      expect(assigns[:products]).to eql(products)
+    end
+
   end
 
   describe "GET 'welcome'" do
