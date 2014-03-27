@@ -2,25 +2,51 @@ require 'spec_helper'
 
 describe "Products" do
 
-  before(:each) do
-    visit products_index_path
-  end
+  describe "/products/index" do
+    before(:each) do
+      visit products_index_path
+    end
 
-  it "displays products page"do
-    page.should have_select("Sorteaza dupa", 
-      :with_options => ["Cele mai noi", "Pret", "Nume"])
-    has_header_menus
-    page.should have_css(".module-categories")
-    page.should have_css(".orderby_form")
-  end
+    it "displays products page"do
+      page.should have_select("Sorteaza dupa", 
+        :with_options => ["Cele mai noi", "Pret", "Nume"])
+      has_header_menus
+      page.should have_css(".module-categories")
+      page.should have_css(".orderby_form")
+    end
 
-  it "displays products order by date on product page" do
-    products = Product.order('created_at DESC').limit(10)
-    counter = 1
-    products.each do |product|
-      page.find("//div[@id='product_list']/*[#{counter}]").should have_content(
-        product.name)
-      counter += 1
+    it "displays products order by date on product page" do
+      products = Product.order('created_at DESC').limit(Product::PAG)
+      filter_page_has_products products
     end
   end
+
+  describe "displays" do
+
+    let(:products) { FactoryGirl.build_list(:product,3) }
+    let(:categories) { FactoryGirl.build_list(:category,3) }
+
+    before(:each) do
+      Product.stub(:get_page).and_return(products)
+      Category.stub(:all).and_return(categories)
+    end
+
+    it "products from category" do
+      visit products_index_path
+      filter_page_has_products products
+    end
+
+    it "categories" do
+      visit products_index_path
+      has_categories categories
+    end
+
+    it "types" do
+      types = FactoryGirl.create_list(:type_with_values, 3, type_values_count: 3)
+      visit products_index_path
+      has_types types
+    end    
+
+  end
+
 end

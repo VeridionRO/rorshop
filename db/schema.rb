@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140309164515) do
+ActiveRecord::Schema.define(version: 20140327185755) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_products", id: false, force: true do |t|
+    t.integer "product_id",  null: false
+    t.integer "category_id", null: false
+  end
+
+  create_table "filters", force: true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", force: true do |t|
     t.integer  "product_id",                   null: false
@@ -27,7 +45,27 @@ ActiveRecord::Schema.define(version: 20140309164515) do
 
   create_table "products", force: true do |t|
     t.string   "name",        null: false
-    t.string   "description", null: false
+    t.text     "description", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products_type_values", id: false, force: true do |t|
+    t.integer "product_id",    null: false
+    t.integer "type_value_id", null: false
+  end
+
+  add_index "products_type_values", ["product_id", "type_value_id"], name: "index_products_type_values_on_product_id_and_type_value_id", unique: true, using: :btree
+
+  create_table "type_values", force: true do |t|
+    t.integer  "type_id",    null: false
+    t.string   "value",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", force: true do |t|
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

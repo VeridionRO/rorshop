@@ -10,7 +10,7 @@
     Diamond Rings
 .orderby_form
   = label_tag('sort_item', "Sorteaza dupa: ")
-  = select(:sort, :item, {"Cele mai noi" => 1, "Pret" => 2, "Nume" => 3}, {include_blank: true })
+  = select(:sort, :item, {"Cele mai noi" => 1, "Pret" => 2, "Nume" => 3})
   #product_list
     - @products.each do |product|
       .leftPosition{style: "width: 100%"}

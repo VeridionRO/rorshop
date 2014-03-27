@@ -1,3 +1,19 @@
+def has_categories categories
+  categories.each do |category|
+    page.find(".module-categories").should have_content(category.name)
+    page.should have_xpath("//a[@href='/products/index?category_id=#{category.id}']")
+  end
+end
+
+def has_types types
+  types.each do |type|
+    page.find("#type-#{type.id}").should have_content(type.name)
+    type.type_values.each do |type_value|
+      page.find("#value-#{type_value.id}").should have_content(type_value.value)
+    end
+  end
+end
+
 def has_header_menus
   page.find("#topmenu").should have_content("Acasa")
   page.find("#topmenu").should have_content("Magazin Online")
@@ -36,3 +52,17 @@ def has_neighbours product
     page.should_not have_css('.next_page')
   end
 end
+
+def filter_page_has_products products
+  counter = 1
+  products.each do |product|
+    filter_page_has_product(product, counter)
+    counter += 1
+  end
+end
+
+def filter_page_has_product(product, counter)
+  page.find("//div[@id='product_list']/*[#{counter}]").should have_content(
+    product.name)
+end
+

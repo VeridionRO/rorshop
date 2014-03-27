@@ -2,13 +2,18 @@ require 'spec_helper'
 
 describe ProductsController do
 
+  let!(:categories) { [Category.new] }
+  let!(:types) { [Type.new] }
+
   before(:each) do
-    Product.stub(:favorite_products)
+    Category.stub(:all).and_return(categories)
+    Type.stub(:all).and_return(types)
   end
 
   describe "GET 'index'" do
+
     it "returns http success" do
-      get 'index'
+      get :index
       response.should be_success
     end
 
@@ -18,23 +23,61 @@ describe ProductsController do
     end
 
     it "should call get_page" do
-      Product.should_receive(:get_page).with(0)
+      Product.should_receive(:get_page).with({:page => '1', :category_id => '1'})
+      get :index, :page => 1, :category_id => 1
+    end
+
+    it "should call get_page" do
+      Product.should_receive(:get_page).with({:page => '1', :category_id => '1'})
+      get :index, :page => 1, :category_id => 1
+    end
+
+    it "should call Category.all" do
+      Product.stub(:get_page)
+      Category.should_receive(:all)
       get :index
     end
 
-    it "should assign the @products variable to the view" do
-      # products = Product.order("created_at DESC").limit(9)
-      products = [Product.new]
-      Product.stub(:get_page).and_return(products)
+    it "should call Category.all" do
+      Product.stub(:get_page)
+      Type.should_receive(:all)
       get :index
-      expect(assigns[:products]).to eql(products)
+    end
+
+    describe "should assign" do
+
+      let!(:products) { [Product.new] }
+
+      before(:each) do
+        Product.stub(:get_page).and_return(products)
+        get :index
+      end
+
+      it "the @products variable to the view" do
+        expect(assigns[:products]).to eql(products)
+      end
+
+      it "the @categories variable to the view" do
+        expect(assigns[:categories]).to eql(categories)
+      end
+
+      it "the @types variable to the view" do
+        expect(assigns[:types]).to eql(types)
+      end
+      
     end
 
   end
 
   describe "GET 'welcome'" do
+    let(:products) { FactoryGirl.build_list(:product, 3) }
+
+    before(:each) do
+      Product.stub(:favorite_products).and_return(products)
+    end
+
     it "returns http success" do
-      get 'welcome'
+      get :welcome
       response.should be_success
     end
 
@@ -48,11 +91,19 @@ describe ProductsController do
       get :welcome
     end
 
-    it "should assign products to the welcome view" do
-      products = FactoryGirl.build_list(:valid_product, 3)
-      Product.stub(:favorite_products).and_return(products)
+    it "should call the model method favorite_products" do
+      Category.should_receive(:all)
+      get :welcome
+    end
+
+    it "should assign @products to the welcome view" do
       get :welcome
       expect(assigns[:products]).to eql(products)
+    end
+
+    it "should assign @categories to the welcome view" do
+      get :welcome
+      expect(assigns[:categories]).to eql(categories)
     end
   end
 
@@ -84,9 +135,19 @@ describe ProductsController do
       get :show, :id => @product.id
     end
 
+    it "calls the Product.find method" do
+      Category.should_receive(:all)
+      get :show, :id => @product.id
+    end
+
     it "assigns the @product variable to the template" do
       get :show, :id => @product.id
       expect(assigns[:product]).to eql(@product)
+    end
+
+    it "assigns the @categories variable to the template" do
+      get :show, :id => @product.id
+      expect(assigns[:categories]).to eql(categories)
     end
 
   end

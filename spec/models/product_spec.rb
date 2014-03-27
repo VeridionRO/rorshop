@@ -25,9 +25,14 @@ describe Product do
       product.get_neighbours.should be_a_kind_of(Hash)
     end
 
-    it 'has_many images' do
-      should have_many(:images)
+    it "PAG" do
+      stub_const("Product::PAG", 2)
+      Product::PAG.should equal(2)
     end
+
+    it { should have_many(:images) }
+    it { should have_and_belong_to_many(:categories) }
+    it { should have_and_belong_to_many(:type_values) }
 
   end
 
@@ -35,6 +40,8 @@ describe Product do
     it { Product.should respond_to(:favorite_products) }
     it { Product.should respond_to(:default_img) }
     it { Product.should respond_to(:get_page) }
+    it { Product.should respond_to(:filter_params) }
+    it { Product.should respond_to(:get_results) }
   end
 
   describe 'method' do
@@ -109,7 +116,8 @@ describe Product do
           @product = Product.new(:id => 1)
           @next_neighbour = Product.new
           @previous_neighbour = Product.new
-          @product.neighbours = {:previous => @previous_neighbour, 
+          @product.neighbours = {
+            :previous => @previous_neighbour, 
             :next => @next_neighbour}
         end
 
@@ -133,17 +141,51 @@ describe Product do
 
     describe "get_page" do
 
-      it "returns the last 10/20/30... elements" do
-        products = Product.order('created_at DESC').limit(10).offset(0)
-        expect(Product.get_page(0)).to eq(products)
-        products = Product.order('created_at DESC').limit(10).offset(10)
-        expect(Product.get_page(1)).to eq(products)
+      it "returns the last 10 elements" do
+        products = Product.order('created_at DESC')
+                          .limit(Product::PAG).offset(0)
+        expect(Product.get_page({
+          :page => 1
+        })).to eq(products)
+      end
+
+      it "returns the last 20 elements" do
+        products = Product.order('created_at DESC')
+                          .limit(Product::PAG)
+                          .offset(Product::PAG)
+        expect(Product.get_page({
+          :page => 2
+        })).to eq(products)
+      end
+
+      it "calls filter_params" do
+        Product.should_receive(:filter_params)
+        Product.stub(:get_results)
+        Product.get_page
+      end
+
+      it "calls get_results" do
+        Product.should_receive(:get_results)
+        Product.get_page
+      end
+
+    end
+
+    describe "filter_params" do
+
+      it "with empty hash {}" do
+        Product.filter_params({}).should eql({:page => 1, :where => nil, 
+          :category_id => nil})
+      end
+
+      it "with hash {:category_id => 1}" do
+        Product.filter_params({:category_id => 1}).should eql({:page => 1, :where => nil, 
+          :category_id => 1})
       end
 
     end
 
   end
-
 
   it 'is invalid without a name or description' do
     [:name, :description, :image].each do |attribute|
@@ -152,7 +194,6 @@ describe Product do
       invalid_product.errors.should have_key(attribute)
     end
   end
-
 
   it "image should be a Hash" do
     p = Product.new

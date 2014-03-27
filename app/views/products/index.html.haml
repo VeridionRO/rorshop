@@ -4,6 +4,8 @@
   = render :partial => 'shared/top_header'
   = render :partial => 'shared/menu_header'
 - content_for(:sidebar) do
+  - content_for(:types) do
+    = render :partial => 'shared/products/types'
   = render :partial => 'shared/categories'
   = render :partial => 'shared/login_box'
   = render :partial => 'shared/newsletter'

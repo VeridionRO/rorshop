@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"val",
+				"value"
+			],
+			[
+				"type",
+				"type_values"
+			],
+			[
+				"hm",
+				"hm	has_many"
+			],
+			[
+				"prod",
+				"products"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"pro",
+				"products_index_path"
+			],
+			[
+				"produ",
+				"product"
+			],
+			[
+				"desc",
+				"describe"
+			],
+			[
+				"ass",
+				"assign"
+			],
+			[
+				"categor",
+				"categories"
+			],
+			[
+				"get",
+				"get_results"
+			],
+			[
+				"sho",
+				"should_receive"
+			],
+			[
+				"stu",
+				"stub"
+			],
+			[
+				"she",
+				"shne	should_not eql"
+			],
+			[
+				"ca",
+				"category_id"
+			],
+			[
+				"categ",
+				"categories"
+			],
+			[
+				"h",
+				"hm	has_many"
+			],
+			[
+				"butt",
+				"buttons_heading"
+			],
+			[
 				"la",
 				"label	label"
 			],
@@ -16,28 +88,8 @@
 				"get_page"
 			],
 			[
-				"get",
-				"get_page"
-			],
-			[
-				"prod",
-				"products"
-			],
-			[
-				"pro",
-				"products"
-			],
-			[
 				"expe",
 				"expeql	expect(obj).to eql(value)"
-			],
-			[
-				"ass",
-				"assigns"
-			],
-			[
-				"produ",
-				"products"
 			],
 			[
 				"con",
@@ -58,10 +110,6 @@
 			[
 				"shre",
 				"shre	should raise_error"
-			],
-			[
-				"she",
-				"she	should equal"
 			],
 			[
 				"nex",
@@ -122,10 +170,6 @@
 			[
 				"att",
 				"attrr	Ruby attr_reader"
-			],
-			[
-				"val",
-				"valid_image"
 			],
 			[
 				"defau",
@@ -202,10 +246,6 @@
 			[
 				"m",
 				"Migration"
-			],
-			[
-				"desc",
-				"desc	RSpec Describe Block"
 			],
 			[
 				"it",
@@ -474,92 +514,72 @@
 			[
 				"curre",
 				"current_version"
-			],
-			[
-				"per",
-				"per_result"
-			],
-			[
-				"getUpdate",
-				"getUpdatedById"
-			],
-			[
-				"border",
-				"border-bottom"
-			],
-			[
-				"cell",
-				"cell_class_name"
-			],
-			[
-				"clas",
-				"class_name"
-			],
-			[
-				"changes",
-				"changes_count"
-			],
-			[
-				"row",
-				"rowspan_first_cell"
-			],
-			[
-				"req",
-				"req1	require_once …"
-			],
-			[
-				"pft",
-				"p_form_types"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/views/shared/products/_index.html.haml",
+			"file": "spec/factories/type_values.rb",
 			"settings":
 			{
-				"buffer_size": 996,
+				"buffer_size": 173,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/products/show.html.haml",
+			"file": "spec/factories/categories.rb",
 			"settings":
 			{
-				"buffer_size": 430,
+				"buffer_size": 81,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/shared/products/_product.html.haml",
+			"file": "spec/factories/types.rb",
 			"settings":
 			{
-				"buffer_size": 320,
+				"buffer_size": 460,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/shared/products/_product_details.html.haml",
+			"file": "factories.rb",
 			"settings":
 			{
-				"buffer_size": 1385,
+				"buffer_size": 1663,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/shared/products/_buttons_heading.html.haml",
+			"file": "spec/models/type_spec.rb",
 			"settings":
 			{
-				"buffer_size": 797,
+				"buffer_size": 326,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/requests/products_spec.rb",
+			"file": "spec/models/product_spec.rb",
 			"settings":
 			{
-				"buffer_size": 673,
+				"buffer_size": 6131,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/type_value_spec.rb",
+			"settings":
+			{
+				"buffer_size": 356,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/category_spec.rb",
+			"settings":
+			{
+				"buffer_size": 354,
 				"line_ending": "Unix"
 			}
 		}
@@ -567,9 +587,77 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 224.0,
+		"height": 203.0,
 		"selected_items":
 		[
+			[
+				"column",
+				"Snippet: Change Column"
+			],
+			[
+				"have_ma",
+				"Snippet: RSpec \"shoulda\" have_many"
+			],
+			[
+				"change",
+				"Snippet: Change Column"
+			],
+			[
+				"hasbe",
+				"Snippet: has_and_belongs_to_many"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"belong",
+				"Snippet: RSpec \"shoulda\" belong_to"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"validates",
+				"Snippet: RSpec \"shoulda\" validate_presence_of"
+			],
+			[
+				"throu",
+				"Snippet: RSpec \"shoulda\" have_many_through"
+			],
+			[
+				"gitcomm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"git chec",
+				"Git: Checkout Current File"
+			],
+			[
+				"git rec",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git cur",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
 			[
 				"haml",
 				"Set Syntax: Ruby Haml"
@@ -595,14 +683,6 @@
 				"Git: Commit"
 			],
 			[
-				"git comm",
-				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add..."
-			],
-			[
 				"select",
 				"Snippet: :id => \"selector\""
 			],
@@ -617,10 +697,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"reinde",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"be nil",
@@ -665,10 +741,6 @@
 			[
 				"snippet",
 				"Snippet: form_tag"
-			],
-			[
-				"add",
-				"Git: Add..."
 			],
 			[
 				"push",
@@ -785,10 +857,6 @@
 			[
 				"git current",
 				"Git: Reset (unstage) Current File"
-			],
-			[
-				"git ",
-				"Git: Fetch"
 			],
 			[
 				"git curr",
@@ -1033,57 +1101,9 @@
 			[
 				"scena",
 				"Snippet: Scenario"
-			],
-			[
-				"rspe",
-				"Set Syntax: RSpec"
-			],
-			[
-				"add f",
-				"Project: Add Folder"
-			],
-			[
-				"beha",
-				"Set Syntax: Behat"
-			],
-			[
-				"be",
-				"Set Syntax: Behat"
-			],
-			[
-				"xdebug clea",
-				"Xdebug: Clear Watch Expressions"
-			],
-			[
-				"watc",
-				"Xdebug: Set Watch Expression"
-			],
-			[
-				"resti",
-				"Rot13 Selection"
-			],
-			[
-				"xdebug s",
-				"Xdebug: Stop Debugging"
-			],
-			[
-				"xdebug stop",
-				"Xdebug: Stop Debugging"
-			],
-			[
-				"brea",
-				"Xdebug: Add/Remove Breakpoint"
-			],
-			[
-				"xdebug sett",
-				"Preferences: Xdebug Settings – User"
-			],
-			[
-				"xdebug set",
-				"Preferences: Xdebug Settings – Default"
 			]
 		],
-		"width": 575.0
+		"width": 530.0
 	},
 	"console":
 	{
@@ -1104,70 +1124,122 @@
 	},
 	"file_history":
 	[
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product_main_page.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/product.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/type.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/category.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/image.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/type_value.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/types.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/factories.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/categories.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140326204451_create_type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140326173525_changed_data_type_for_description.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140326173040_drop_types_name_column.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140326171641_create_types.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140321182301_rename_product_category2.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319225052_rename_product_category.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319221946_create_join_table_product_category.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319220846_create_categories.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309164515_images_uniqueness_of_image_id_product_id_default.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309161917_add_default_image_to_image.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309143403_add_products_ref_to_image.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305223140_add_columns_to_image_table.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305203550_change_data_type_for_product_id.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140326210101_not_null_type_and_type_value.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_newsletter.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menus.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/spec_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140302103557_create_products.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/category_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/controllers/products_controller_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/product_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/products_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/type_value_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/helpers/products_helper_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/routes.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/index.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/product_shows_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/category_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_types.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_categories.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/test.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/home_pages_spec.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/application.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_index.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/show.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/mime_types.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product_details.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/category_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_buttons_heading.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_products.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/products_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/type_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/products_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/welcome.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/application_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menu_header.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/database.yml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/template.css",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_top_header.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_banner_header.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/scaffolds.css.scss",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/session_store.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/rorshop.sublime-project",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/Rails/HTML (Rails).tmLanguage",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/category/show.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product_main_page.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/virtuemart.css",
+		"/home/mvinaga/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/helpers/category_helper_spec.rb",
+		"/home/mvinaga/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/categories_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/cloudflare.min.js",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/ie6_script_other.js",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140304205128_add_image_ref_to_products.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/product_categories.rb",
+		"/tmp/tmpQGv_Bc-rabbitvcs-HEAD-WORKI.diff",
+		"/home/mvinaga/kernow/kernow1dot8.config",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/product_category_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/product_category.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/controllers/category_controller_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/category.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/test/sass/f414911b44d1dffe9caf0c533c0641776e12ddbe/category.css.scssc",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/image_spec.rb",
+		"/home/mvinaga/.bash_aliases",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/views/category/show.html.haml_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319223223_create_product_categories.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319223558_create_product_categories.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319221603_products_categories.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config.ru",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/application.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/application_controller.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/application.css",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/application.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/application.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305223140_add_columns_to_image_table.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/spec_helper.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_products.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/index.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/products_controller.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/product.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/products_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/helpers/products_helper_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/product_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/home_pages_spec.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/Guardfile",
 		"/home/mvinaga/Dropbox/sites/rorshop/.rspec",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/controllers/products_controller_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/rorshop.sublime-project",
 		"/home/mvinaga/Dropbox/sites/rorshop/.gitignore",
-		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/product_shows_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menus.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309164515_images_uniqueness_of_image_id_product_id_default.rb",
-		"/home/mvinaga/.bash_aliases",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/secret_token.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140304205128_add_image_ref_to_products.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/show.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/welcome.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_index.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/image.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/inflections.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/products_helper.rb",
 		"/home/mvinaga/.config/sublime-text-3/Packages/User/RSpec/should raise_exception.sublime-snippet",
 		"/home/mvinaga/.config/sublime-text-3/Packages/User/RSpec/page should have content.sublime-snippet",
-		"/home/mvinaga/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mvinaga/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/routes.rb",
 		"/home/mvinaga/.config/sublime-text-3/Packages/User/current_path should.sublime-snippet",
 		"/home/mvinaga/.config/sublime-text-3/Packages/User/RSpec/focus.sublime-snippet",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_top_header.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menu_header.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/0099f10762bc6224307b61d85b6e3fb7",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/ie6_script_other.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305203550_change_data_type_for_product_id.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_banner_header.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/exceptions/product_exception.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/README.rdoc",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/database.yml",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/environment.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/boot.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/backtrace_silencers.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/filter_parameter_logging.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/mime_types.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/session_store.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/wrap_parameters.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/test.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/exceptions/test.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/models/exceptions/test.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/cucumber.yml",
-		"/home/mvinaga/Dropbox/sites/rorshop/config.ru",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/exceptions/product.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/models/HTML/HTML.tmLanguage",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/models/concerns/.keep",
@@ -1179,59 +1251,7 @@
 		"/home/mvinaga/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/mvinaga/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
 		"/home/mvinaga/Dropbox/sites/rorshop/spec/features",
-		"/home/mvinaga/Dropbox/sites/rorshop/factories.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309161917_add_default_image_to_image.rb",
-		"/home/mvinaga/.local/share/Trash/files/features/step_definitions/product_steps.rb",
-		"/home/mvinaga/.local/share/Trash/files/features/step_definitions/index_steps.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/f59227026ea7046d7f1d008bc167f07e",
-		"/home/mvinaga/Dropbox/sites/rorshop/features/home/index.feature",
-		"/home/mvinaga/Dropbox/sites/rorshop/features/step_definitions/index_steps.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/features/support/env.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/script/cucumber",
-		"/home/mvinaga/Dropbox/sites/rorshop/features/home/product.feature",
-		"/home/mvinaga/Dropbox/sites/rorshop/features/step_definitions/product_steps.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile.lock",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/scaffolds.css.scss",
-		"/home/mvinaga/Desktop/test.html",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/product.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_categories.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/template.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/virtuemart.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/schema.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_slide_js.html.haml",
-		"/usr/lib/python2.7/dist-packages/PySide-1.1.0-py2.7.egg-info",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_login_box.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_newsletter.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_footer.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/HTML/sublimelinter.version",
-		"/home/mvinaga/Dropbox/docs/patches/review/B0545 edit filter BugFix.patch",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309143403_add_products_ref_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/HTML/sublimelinter.version",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/mootools.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/application.html.erb",
-		"/home/mvinaga/Dropbox/sites/rorshop/log/development.log",
-		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ead785f33f7fc28ed5dd531355b039b6",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/image_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140304195352_create_images.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140302103557_create_products.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309161654_add_default_image_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309161605_add_default_image_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309142937_add_products_ref_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305213506_images_uniqueness_of_image_id_product_id_default.rb",
-		"/home/mvinaga/.config/sublime-text-3/Packages/User/Ruby/fb.sublime-snippet",
-		"/home/mvinaga/Dropbox/sites/rorshop/features/home/product_steps.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/cloudflare.min.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ad3a0dcd1b2dfa4b8942c25dc8552a5b",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/environments/production.rb",
-		"/home/mvinaga/.config/sublime-text-3/Packages/User/Ruby/validates_format_of.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-cy93vg/sublime-rails-snippets-master/Migration-Remove-Index.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-BNgyXm/sublime-rails-snippets-master/Migration-Add-Column.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-0ew3RW/sublime-rails-snippets-master/belongs_to-(bt).sublime-snippet",
-		"/home/mvinaga/.cache/.fr-X1ziG4/sublime-rails-snippets-master/class-end.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-ahGLMA/sublime-rails-snippets-master/crud-actions.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-zeWzSF/sublime-rails-snippets-master/crud-actions.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-g1CCsC/sublime-rails-snippets-master/def-post-request.sublime-snippet",
-		"/home/mvinaga/.cache/.fr-Si01nb/sublime-rails-snippets-master/end.sublime-snippet"
+		"/home/mvinaga/.local/share/Trash/files/features/step_definitions/product_steps.rb"
 	],
 	"find":
 	{
@@ -1242,6 +1262,10 @@
 		"height": 102.0,
 		"where_history":
 		[
+			"/home/mvinaga/Dropbox/sites/rorshop/",
+			"/home/mvinaga/Dropbox/sites/rorshop/,*.haml",
+			"/home/mvinaga/Dropbox/sites/rorshop/",
+			"/home/mvinaga/Dropbox/sites/rorshop/, *.rb",
 			"/home/mvinaga/Dropbox/sites/rorshop/",
 			"/home/mvinaga/Dropbox/sites/rorshop/, *.css",
 			"/home/mvinaga/Dropbox/sites/rorshop/, *.rb",
@@ -1275,134 +1299,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"body",
-			"buttons_heading",
-			"body",
-			"header",
-			"buttons_heading",
-			"product_details",
-			"@p",
-			"leftPosition",
-			"Price",
-			"options",
-			"Price",
-			"=",
-			"Print",
-			"\">",
-			"class",
-			"http://cms.template-help.com/virtuemart_32184/images/M_images/",
-			"onclick",
-			"href",
-			"=> ",
-			"nil",
-			"namesort",
-			"test",
-			"status",
-			"email",
-			"input_tag",
-			"test",
-			"sort",
-			"person_id",
-			"post",
-			"label_tag",
-			"nil",
-			"post",
-			"favorite_products",
-			", :focus => true",
-			"get_neighbours",
-			"default_img",
-			"favorite_products",
-			"neighbour",
-			"favo",
-			"<ActiveRecord::Relation [#<Product id: 825, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:36:31\", updated_at: \"2014-03-18 22:36:31\">, #<Product id: 824, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:36:21\", updated_at: \"2014-03-18 22:36:21\">, #<Product id: 800, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:35:41\", updated_at: \"2014-03-18 22:35:41\">, #<Product id: 799, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:33:31\", updated_at: \"2014-03-18 22:33:31\">, #<Product id: 798, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:33:04\", updated_at: \"2014-03-18 22:33:04\">, #<Product id: 797, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:32:11\", updated_at: \"2014-03-18 22:32:11\">, #<Product id: 796, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:31:22\", updated_at: \"2014-03-18 22:31:22\">, #<Product id: 795, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:29:45\", updated_at: \"2014-03-18 22:29:45\">, #<Product id: 794, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:29:14\", updated_at: \"2014-03-18 22:29:14\">, #<Product id: 793, name: \"test\", description: \"Description 1\", created_at: \"2014-03-18 22:27:42\", updated_at: \"2014-03-18 22:27:42\">]>",
-			"#<ActiveRecord",
-			"eq(",
-			"eq",
-			"equal",
-			"get_page",
-			"products",
-			"created_on",
-			"products",
-			"matcher",
-			"config",
-			"welcome",
-			"counter",
-			"rc",
+			"categories_count",
+			"type_values_count",
+			"product_with_categories",
+			"type_with_values",
+			"category",
+			"type_value",
 			"product",
-			",",
-			"option",
-			"</",
-			"\">",
-			">",
-			"Select",
-			"select",
-			"<select",
-			"Language",
-			"should",
-			"asdasdasd",
-			"raise_exception",
-			"shrex",
-			"has_header_menus",
-			"	",
-			"tab_size",
-			"test",
-			"topmenu",
-			"find",
+			"product_category",
+			"type_value",
+			"category",
+			"categories_count",
+			"type_values_count",
 			"product",
-			"'",
 			"name",
-			"path",
-			"menus",
-			"new_user_path",
-			"focus",
-			"new_user_path",
-			"Acasa",
-			"menu",
-			"find",
-			"shrex",
-			"first",
+			"invalid_type",
+			"type",
+			"type_value",
+			"name",
+			"types",
+			"type_id",
+			"name",
+			"type",
+			"type_values",
+			"type_value",
+			"type_values",
+			"have_many",
+			"TypeValue",
+			"type_value",
+			"attribute",
+			"xit",
+			"type",
+			"value",
+			"validates",
+			"50",
+			"category",
+			"Category",
+			"buttons_heading",
+			"types",
+			"buttons_heading",
+			"filter_types",
+			"buttons_heading",
+			"Filtre",
+			"types",
+			"categories",
+			"category",
+			"types",
+			"categories",
+			"Categorii",
+			"categories",
+			"category",
+			"filters",
+			"filter",
+			"filters",
+			"column_name",
+			"table_name",
+			"Category",
+			"\n  ",
+			"Category",
+			"categories",
+			"all",
+			"Category",
+			"should_receive",
+			"categories",
+			"Category",
+			"categories",
+			"Ca",
+			"Category",
+			"categories",
+			"Category",
+			"categories",
+			"category",
+			"categories",
+			"Categories",
+			"invalid_product",
+			"valid_product",
+			"category",
+			"orderby_form",
+			"product_main_page",
 			"previous_neighbour",
-			"condition",
-			"previous",
-			"last",
-			"find",
-			"previous_neighbour",
-			"assets",
-			"src",
-			"img",
-			"previous_neighbour",
-			"neighbour",
-			"previous_neighbour",
-			"previous",
-			"previous_page",
-			"previous_product",
-			"previous_page",
-			"clear",
-			"previous",
-			"previous_product",
-			"next_product",
-			"previous_product",
-			"(\"",
-			"_",
 			"product",
-			"previous_neighbour",
-			"next_neighbour",
-			"next",
-			"neighbours",
-			"condition",
-			"which",
-			"get_next_neighbours",
-			"neighbour",
-			"get_next_neighbours",
-			"should_not_receive",
-			", ",
-			"next",
+			"find",
 			"Product",
-			"new",
-			")\n",
-			"CannotHaveNeighbours",
-			"ProductException",
-			"get_next_neighbours"
+			"favorite_products",
+			"DProduct",
+			"products",
+			"expect(assigns[:categories]).to eql(categories)",
+			"categories",
+			"products",
+			"'",
+			"favorite_products",
+			"Product",
+			"favorite_products",
+			"should assign",
+			"should",
+			"counter",
+			"Categories",
+			"categories",
+			"category",
+			"build",
+			"build_list",
+			"products",
+			"category",
+			"#{category.id}",
+			"category",
+			"products",
+			"category",
+			"displays",
+			"create",
+			"Product",
+			"get_page",
+			"category",
+			"create",
+			"has_categories",
+			"products",
+			"categories",
+			"it",
+			"products",
+			"cateories",
+			"products",
+			"get_page",
+			"Product",
+			"Category",
+			"get_page",
+			"favorite_products",
+			"limit",
+			"Product",
+			"category",
+			"10"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1410,6 +1434,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			":product_with_images",
+			"product_with_images",
+			"product_with_images_and_category",
 			"  ",
 			"<scope>source.feature</scope>\n</description>",
 			"nwhere",
@@ -1424,24 +1451,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/shared/products/_index.html.haml",
+					"file": "spec/factories/type_values.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 996,
+						"buffer_size": 173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								627,
-								627
+								162,
+								162
 							]
 						],
 						"settings":
@@ -1526,334 +1553,7 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Ruby on Rails snippets/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/products/show.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 430,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								430,
-								430
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/shared/products/_product.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								320,
-								320
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/shared/products/_product_details.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23,
-								23
-							]
-						],
-						"settings":
-						{
-							"_anf_new": "",
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1863,25 +1563,52 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/shared/products/_buttons_heading.html.haml",
+					"buffer": 1,
+					"file": "spec/factories/categories.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 797,
+						"buffer_size": 81,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								797,
-								797
+								81,
+								81
 							]
 						],
 						"settings":
 						{
-							"_anf_new": "",
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/factories/types.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -1962,7 +1689,179 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "factories.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "spec/models/type_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "spec/models/product_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								667,
+								667
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1972,28 +1871,22 @@
 					},
 					"stack_index": 4,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 5,
-					"file": "spec/requests/products_spec.rb",
+					"buffer": 6,
+					"file": "spec/models/type_value_spec.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 673,
+						"buffer_size": 356,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								136,
+								136
 							]
 						],
 						"settings":
@@ -2078,15 +1971,121 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/RSpec/RSpec.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 23.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "spec/models/category_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -2120,7 +2119,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.66,
 			1.0
 		],
 		"rows":
@@ -2162,8 +2161,372 @@
 		"selected_items":
 		[
 			[
+				"facto",
+				"factories.rb"
+			],
+			[
+				"factot",
+				"spec/factories/type_values.rb"
+			],
+			[
+				"factori",
+				"spec/factories/type_values.rb"
+			],
+			[
+				"notnull",
+				"db/migrate/20140326210101_not_null_type_and_type_value.rb"
+			],
+			[
+				"migrate/ty",
+				"db/migrate/20140326204451_create_type_values.rb"
+			],
+			[
+				"spectype_va",
+				"spec/models/type_value_spec.rb"
+			],
+			[
+				"migrate/type",
+				"db/migrate/20140326204451_create_type_values.rb"
+			],
+			[
+				"type",
+				"app/models/type_value.rb"
+			],
+			[
+				"categor",
+				"app/models/category.rb"
+			],
+			[
+				"specproduct",
+				"spec/models/product_spec.rb"
+			],
+			[
+				"spectype",
+				"spec/models/type_value_spec.rb"
+			],
+			[
+				"create_type_va",
+				"db/migrate/20140326204451_create_type_values.rb"
+			],
+			[
+				"image",
+				"app/models/image.rb"
+			],
+			[
+				"product",
+				"app/models/product.rb"
+			],
+			[
+				"reques",
+				"spec/requests/products_spec.rb"
+			],
+			[
+				"modelcate",
+				"app/models/category.rb"
+			],
+			[
+				"speccate",
+				"spec/models/category_spec.rb"
+			],
+			[
+				"requests",
+				"spec/requests/products_spec.rb"
+			],
+			[
+				"typesham",
+				"app/views/shared/products/_types.html.haml"
+			],
+			[
+				"categorham",
+				"app/views/shared/_categories.html.haml"
+			],
+			[
+				"product_details",
+				"app/views/shared/products/_product_details.html.haml"
+			],
+			[
+				"buttons_heading",
+				"app/views/shared/products/_buttons_heading.html.haml"
+			],
+			[
+				"prodhaml",
+				"app/views/shared/products/_product.html.haml"
+			],
+			[
+				"product_de",
+				"app/views/shared/products/_product_details.html.haml"
+			],
+			[
+				"types",
+				"app/views/shared/products/_types.html.haml"
+			],
+			[
+				"categories",
+				"app/views/shared/_categories.html.haml"
+			],
+			[
+				"_categor",
+				"app/views/shared/_categories.html.haml"
+			],
+			[
+				"productshaml",
+				"app/views/products/index.html.haml"
+			],
+			[
+				"productsham",
+				"app/views/shared/products/_index.html.haml"
+			],
+			[
+				"helper",
+				"spec/helpers/products_helper_spec.rb"
+			],
+			[
+				"drop_",
+				"db/migrate/20140326173040_drop_types_name_column.rb"
+			],
+			[
+				"reque",
+				"spec/requests/products_spec.rb"
+			],
+			[
+				"products",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"specproducts",
+				"spec/controllers/products_controller_spec.rb"
+			],
+			[
+				"type.r",
+				"app/models/type.rb"
+			],
+			[
+				"_header",
+				"app/views/shared/_top_header.html.haml"
+			],
+			[
+				"requesproducts",
+				"spec/requests/products_spec.rb"
+			],
+			[
+				"scss",
+				"app/assets/stylesheets/scaffolds.css.scss"
+			],
+			[
+				"specprod",
+				"spec/models/product_spec.rb"
+			],
+			[
+				"shared/cate",
+				"app/views/shared/_categories.html.haml"
+			],
+			[
+				"modelprodu",
+				"app/models/product.rb"
+			],
+			[
+				"speccateg",
+				"spec/models/category_spec.rb"
+			],
+			[
+				"cate",
+				"app/models/category.rb"
+			],
+			[
+				"product_main_page",
+				"app/views/shared/products/_product_main_page.html.haml"
+			],
+			[
+				"views/prod",
+				"app/views/shared/_products.html.haml"
+			],
+			[
+				"_products",
+				"app/views/shared/_products.html.haml"
+			],
+			[
+				"_product_de",
+				"app/views/shared/products/_product_details.html.haml"
+			],
+			[
 				"_product",
 				"app/views/shared/products/_product.html.haml"
+			],
+			[
+				"_product_ma",
+				"app/views/shared/products/_product_main_page.html.haml"
+			],
+			[
+				"_produc",
+				"app/views/shared/products/_product_main_page.html.haml"
+			],
+			[
+				"_cate",
+				"app/views/shared/_categories.html.haml"
+			],
+			[
+				"faccatego",
+				"spec/factories/categories.rb"
+			],
+			[
+				"_index",
+				"app/views/shared/products/_index.html.haml"
+			],
+			[
+				"modelprod",
+				"app/models/product.rb"
+			],
+			[
+				"product.",
+				"app/models/product.rb"
+			],
+			[
+				"spec",
+				"spec/spec_helper.rb"
+			],
+			[
+				"specproduct_contr",
+				"spec/controllers/products_controller_spec.rb"
+			],
+			[
+				"product_contr",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"factocateg",
+				"spec/factories/categories.rb"
+			],
+			[
+				"factories",
+				"factories.rb"
+			],
+			[
+				"category_spec",
+				"spec/helpers/category_helper_spec.rb"
+			],
+			[
+				"requecategor",
+				"spec/requests/categories_spec.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"speccategory",
+				"spec/models/category_spec.rb"
+			],
+			[
+				"specproduct_spec",
+				"spec/models/product_spec.rb"
+			],
+			[
+				"migraterename",
+				"db/migrate/20140319225052_rename_product_category.rb"
+			],
+			[
+				"categorie",
+				"spec/factories/categories.rb"
+			],
+			[
+				"product.rb",
+				"app/models/product.rb"
+			],
+			[
+				"requestscate",
+				"spec/requests/categories_spec.rb"
+			],
+			[
+				"facproductcate",
+				"spec/factories/product_categories.rb"
+			],
+			[
+				"specproductcate",
+				"spec/models/product_category_spec.rb"
+			],
+			[
+				"speccatego",
+				"spec/models/category_spec.rb"
+			],
+			[
+				"product_cate",
+				"app/models/product_category.rb"
+			],
+			[
+				"migratitecate",
+				"db/migrate/20140319221946_create_join_table_product_category.rb"
+			],
+			[
+				"speccateogr",
+				"spec/controllers/category_controller_spec.rb"
+			],
+			[
+				"specmodel",
+				"spec/models/product_spec.rb"
+			],
+			[
+				"faccategor",
+				"spec/factories/categories.rb"
+			],
+			[
+				"rename",
+				"db/migrate/20140319225052_rename_product_category.rb"
+			],
+			[
+				"categ",
+				"app/models/category.rb"
+			],
+			[
+				"productcategor",
+				"db/migrate/20140319221946_create_join_table_product_category.rb"
+			],
+			[
+				"migrateproduct_ca",
+				"db/migrate/20140319223223_create_product_categories.rb"
+			],
+			[
+				"catego",
+				"app/controllers/category_controller.rb"
+			],
+			[
+				"productcate",
+				"db/migrate/20140319221946_create_join_table_product_category.rb"
+			],
+			[
+				"migratecategor",
+				"db/migrate/20140319221603_products_categories.rb"
+			],
+			[
+				"category",
+				"app/controllers/category_controller.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"specproducts_c",
+				"spec/controllers/products_controller_spec.rb"
+			],
+			[
+				"products_c",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"welcome",
+				"app/views/products/welcome.html.haml"
+			],
+			[
+				"_product_deta",
+				"app/views/shared/products/_product_details.html.haml"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"factor",
+				"factories.rb"
 			],
 			[
 				"applica",
@@ -2174,16 +2537,8 @@
 				"app/views/products/show.html.haml"
 			],
 			[
-				"_products",
-				"app/views/shared/_products.html.haml"
-			],
-			[
 				"products_spe",
 				"spec/requests/products_spec.rb"
-			],
-			[
-				"_produc",
-				"app/views/shared/products/_product.html.haml"
 			],
 			[
 				"products/index",
@@ -2194,20 +2549,12 @@
 				"spec/requests/products_spec.rb"
 			],
 			[
-				"spec",
-				"spec/spec_helper.rb"
-			],
-			[
 				".spec",
 				".rspec"
 			],
 			[
 				"guard",
 				"Guardfile"
-			],
-			[
-				"specproduct",
-				"spec/models/product_spec.rb"
 			],
 			[
 				"produc",
@@ -2218,20 +2565,8 @@
 				"app/controllers/products_controller.rb"
 			],
 			[
-				"modelprod",
-				"app/models/product.rb"
-			],
-			[
-				"reque",
-				"spec/requests/products_spec.rb"
-			],
-			[
 				"spec_",
 				"spec/spec_helper.rb"
-			],
-			[
-				"reques",
-				"spec/requests/home_pages_spec.rb"
 			],
 			[
 				"request",
@@ -2270,10 +2605,6 @@
 				"app/views/products/index.html.haml"
 			],
 			[
-				"productshaml",
-				"app/views/products/index.html.haml"
-			],
-			[
 				"home",
 				"spec/requests/home_pages_spec.rb"
 			],
@@ -2298,14 +2629,6 @@
 				"app/controllers/products_controller.rb"
 			],
 			[
-				"product",
-				"app/models/product.rb"
-			],
-			[
-				"product_contr",
-				"app/controllers/products_controller.rb"
-			],
-			[
 				"productc",
 				"app/controllers/products_controller.rb"
 			],
@@ -2320,10 +2643,6 @@
 			[
 				"config",
 				"config/application.rb"
-			],
-			[
-				"specprod",
-				"spec/models/product_spec.rb"
 			],
 			[
 				"produ",
@@ -2352,326 +2671,6 @@
 			[
 				"product_",
 				"spec/requests/product_shows_spec.rb"
-			],
-			[
-				"spe",
-				"spec/spec_helper.rb"
-			],
-			[
-				"gemf",
-				"Gemfile"
-			],
-			[
-				"productspec",
-				"spec/models/product_spec.rb"
-			],
-			[
-				"feature",
-				"features/step_definitions/index_steps.rb"
-			],
-			[
-				"gem",
-				"Gemfile"
-			],
-			[
-				"fac",
-				"factories.rb"
-			],
-			[
-				"productcontr",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				"applicationcss",
-				"app/assets/stylesheets/application.css"
-			],
-			[
-				"scaf",
-				"app/assets/stylesheets/scaffolds.css.scss"
-			],
-			[
-				"scaffolds",
-				"app/assets/stylesheets/scaffolds.css.scss"
-			],
-			[
-				"product.css",
-				"app/assets/stylesheets/product.css"
-			],
-			[
-				"welcome",
-				"app/views/products/welcome.html.haml"
-			],
-			[
-				"routes",
-				"config/routes.rb"
-			],
-			[
-				"spec/prod",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				"facto",
-				"factories.rb"
-			],
-			[
-				"factor",
-				"factories.rb"
-			],
-			[
-				"template",
-				"app/assets/stylesheets/template.css"
-			],
-			[
-				"feature/pro",
-				"features/step_definitions/product_steps.rb"
-			],
-			[
-				"product.fea",
-				"features/home/product.feature"
-			],
-			[
-				"index.feat",
-				"features/home/index.feature"
-			],
-			[
-				"featureproduct.",
-				"features/step_definitions/product_steps.rb"
-			],
-			[
-				"appmodels/",
-				"app/models/product.rb"
-			],
-			[
-				"gemfi",
-				"Gemfile"
-			],
-			[
-				"fact",
-				"factories.rb"
-			],
-			[
-				"spec/product_spec",
-				"spec/models/product_spec.rb"
-			],
-			[
-				"wewlcome",
-				"app/views/products/welcome.html.haml"
-			],
-			[
-				"migrate",
-				"db/migrate/20140304205128_add_image_ref_to_products.rb"
-			],
-			[
-				"add_de",
-				"db/migrate/20140309161917_add_default_image_to_image.rb"
-			],
-			[
-				"add_defa",
-				"db/migrate/20140309161654_add_default_image_to_image.rb"
-			],
-			[
-				"image",
-				"app/models/image.rb"
-			],
-			[
-				"migrateadd_pro",
-				"db/migrate/20140309142937_add_products_ref_to_image.rb"
-			],
-			[
-				"specimage",
-				"spec/models/image_spec.rb"
-			],
-			[
-				"index.fe",
-				"features/home/index.feature"
-			],
-			[
-				"image.r",
-				"app/models/image.rb"
-			],
-			[
-				"appproduct.r",
-				"app/models/product.rb"
-			],
-			[
-				"spec/produc",
-				"spec/models/product_spec.rb"
-			],
-			[
-				"product_spec",
-				"spec/models/product_spec.rb"
-			],
-			[
-				"spec/",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				"model/prod",
-				"app/models/product.rb"
-			],
-			[
-				"feat",
-				"features/home/index.feature"
-			],
-			[
-				"add_c",
-				"db/migrate/20140305223140_add_columns_to_image_table.rb"
-			],
-			[
-				"specimages",
-				"spec/models/image_spec.rb"
-			],
-			[
-				"migratio",
-				"db/migrate/20140305213506_images_uniqueness_of_image_id_product_id_default.rb"
-			],
-			[
-				"migrati",
-				"db/migrate/20140305213506_images_uniqueness_of_image_id_product_id_default.rb"
-			],
-			[
-				"migrat",
-				"db/migrate/20140305203550_change_data_type_for_product_id.rb"
-			],
-			[
-				"change",
-				"db/migrate/20140305203550_change_data_type_for_product_id.rb"
-			],
-			[
-				"spec/product",
-				"spec/models/product_spec.rb"
-			],
-			[
-				"_",
-				"app/views/shared/products/_product.html.haml"
-			],
-			[
-				"migr",
-				"db/migrate/20140303220920_add_image_ref_to_products.rb"
-			],
-			[
-				"gemfil",
-				"Gemfile"
-			],
-			[
-				"spec/pro",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				"products_he",
-				"spec/helpers/products_helper_spec.rb"
-			],
-			[
-				"welcom",
-				"app/views/products/welcome.html.haml"
-			],
-			[
-				"controller",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				"featr",
-				"features/home/index.feature"
-			],
-			[
-				"welco",
-				"app/views/products/welcome.html.haml"
-			],
-			[
-				"product.r",
-				"app/models/product.rb"
-			],
-			[
-				"productsspec",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				".css",
-				"app/assets/stylesheets/template.css"
-			],
-			[
-				"proudct",
-				"spec/controllers/products_controller_spec.rb"
-			],
-			[
-				"templates",
-				"app/assets/stylesheets/template.css"
-			],
-			[
-				"rou",
-				"config/routes.rb"
-			],
-			[
-				"database",
-				"config/database.yml"
-			],
-			[
-				"rspec",
-				".rspec"
-			],
-			[
-				"sylecell.php",
-				"html/test/PHPWord/Style/Cell.php"
-			],
-			[
-				"base.php",
-				"html/test/PHPWord/Writer/Word2007/Base.php"
-			],
-			[
-				"cell.php",
-				"html/test/PHPWord/Style/Cell.php"
-			],
-			[
-				"textb",
-				"html/test/PHPWord/Section/TextBreak.php"
-			],
-			[
-				"template.php",
-				"html/test/PHPWord/Template.php"
-			],
-			[
-				"advance",
-				"html/test/Examples/AdvancedTable.php"
-			],
-			[
-				"formcontr",
-				"lib/Trace/FormController.php"
-			],
-			[
-				"historycontroller.php",
-				"lib/Trace/HistoryController.php"
-			],
-			[
-				"test",
-				"html/test.php"
-			],
-			[
-				"taskssear",
-				"tasks/scripts/search.php"
-			],
-			[
-				"search.php",
-				"html/filters/search.php"
-			],
-			[
-				"formsedit-ac",
-				"html/forms/edit-action.php"
-			],
-			[
-				"edit-act",
-				"html/filters/edit-action.php"
-			],
-			[
-				"template.doc",
-				"html/test/Examples/Template.docx"
-			],
-			[
-				"basictab",
-				"html/test/Examples/BasicTable.php"
-			],
-			[
-				"phpw",
-				"html/test/PHPWord.php"
 			]
 		],
 		"width": 0.0

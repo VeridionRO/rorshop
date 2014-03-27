@@ -42,15 +42,6 @@ FactoryGirl.define do
     association :category
   end
 
-  factory :product_with_category, parent: :product do
-    ignore do
-      category_count 1
-    end
-    after(:create) do |product, evaluator|
-      FactoryGirl.create_list(:product_category, evaluator.category_count, product: product)
-    end
-  end
-
   # c = FactoryGirl.create(:category_with_product, products_count: 10)
   factory :category_with_product, parent: :category do
     ignore do
