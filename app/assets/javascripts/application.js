@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+jQuery(document).ready(function() {
+  jQuery("div.filter-type a.level1").click(function (e) {
+    alert("text 1");
+    jQuery.get(
+      '/products/filter' + '.js',
+      null,
+      null,
+      'script'
+    );
+    e.preventDefault();
+  });
+});

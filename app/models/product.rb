@@ -28,8 +28,8 @@ class Product < ActiveRecord::Base
   def get_neighbours
     raise ProductException::CannotHaveNeighbours, 
       "Unsaved product cannot have neighbours" unless id
-    previous_product = Product.where("id < #{id}").order('id DESC').first
-    next_product = Product.where("id > #{id}").first
+    previous_product = Product.where('id < ?', id).order('id DESC').first
+    next_product = Product.where('id > ?', id).first
     @neighbours = {:previous => previous_product, :next => next_product}
   end
 
@@ -56,7 +56,7 @@ class Product < ActiveRecord::Base
   def self.get_results params
     products = Product.order('created_at DESC')
     products = products.joins(:categories)
-                       .where("category_id = #{params[:category_id]}") if params[:category_id]
+                       .where('category_id = ?', params[:category_id]) if params[:category_id]
     products = products.where(params[:where]) if params[:where]
     products.limit(PAG)
             .offset((params[:page] - 1) * PAG)

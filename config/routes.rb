@@ -2,6 +2,7 @@ Rorshop::Application.routes.draw do
   root 'products#welcome'
   get 'products/index'
   get 'product/:id/' => 'products#show'
+  get 'products/filter'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

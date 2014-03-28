@@ -1,0 +1,13 @@
+- @types.each do |type|
+  %div.filter-type{id: "type-#{type.id}"}
+    %h3
+      %span 
+        = type.name
+    .boxIndent
+      #relative_div{style: "position:relative;z-index:0"}
+      %ul.level1
+        - type.type_values.each do |type_value|
+          %li.level1.item1{id: "value-#{type_value.id}"}
+            %a.level1.item1{href: "#", target: "_self", title: "Diamond Rings"}
+              %span 
+                = type_value.value

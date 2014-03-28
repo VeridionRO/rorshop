@@ -15,4 +15,7 @@ class ProductsController < ApplicationController
     @products = Product.favorite_products
     @categories = Category.all
   end
+
+  def filter
+  end
 end
