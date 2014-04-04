@@ -22,14 +22,12 @@ describe ProductsController do
       response.should render_template(:index)
     end
 
-    it "should call get_page" do
-      Product.should_receive(:get_page).with({:page => '1', :category_id => '1'})
-      get :index, :page => 1, :category_id => 1
-    end
-
-    it "should call get_page" do
-      Product.should_receive(:get_page).with({:page => '1', :category_id => '1'})
-      get :index, :page => 1, :category_id => 1
+    it "should call get_page with params" do
+      Product.should_receive(:get_page).with({
+        :page => '1', 
+        :category_id => '1',
+        :where => ['1','2','3']})
+      get :index, :page => 1, :category_id => 1, :where => ['1','2','3']
     end
 
     it "should call Category.all" do

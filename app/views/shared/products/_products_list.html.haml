@@ -1,0 +1,6 @@
+- @products.each do |product|
+  .leftPosition{style: "width: 100%"}
+    .browse_1
+      .bottom_separator
+        .bottom_separator
+          = render :partial => 'shared/products/product_details', :locals => {:product => product}

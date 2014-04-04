@@ -8,6 +8,6 @@
       %ul.level1
         - type.type_values.each do |type_value|
           %li.level1.item1{id: "value-#{type_value.id}"}
-            %a.level1.item1{href: "#", target: "_self", title: "Diamond Rings"}
+            %a.level1.item1{href: "#", target: "_self", title: "Diamond Rings", parent: "#{type.id}", val: "#{type_value.id}"}
               %span 
                 = type_value.value

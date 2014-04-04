@@ -64,5 +64,22 @@ end
 def filter_page_has_product(product, counter)
   page.find("//div[@id='product_list']/*[#{counter}]").should have_content(
     product.name)
+  page.find("//div[@id='product_list']/*[#{counter}]").should have_content(
+    product.description)
 end
 
+def filter_page_does_not_gave_product(product, counter)
+  page.find("//div[@id='product_list']/*[#{counter}]").should_not have_content(
+    product.name)
+  page.find("//div[@id='product_list']/*[#{counter}]").should_not have_content(
+    product.description)
+end
+
+def wait_for_ajax
+  Timeout.timeout(Capybara.default_wait_time) do
+    active = page.evaluate_script('jQuery.active')
+    until active == 0
+      active = page.evaluate_script('jQuery.active')
+    end
+  end
+end

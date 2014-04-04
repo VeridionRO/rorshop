@@ -49,4 +49,24 @@ describe "Products" do
 
   end
 
+  describe "filter" do
+
+    it "returns filtered products" do
+      type = FactoryGirl.create(:type_values_and_prods, type_values_count: 3)
+      type_values = type.type_values
+      products = type_values[0].products.to_a
+      product1 = FactoryGirl.build(:product)
+      product1.type_values = type_values[0..1]
+      product1.save!
+      products << product1
+      # product2 = FactoryGirl.create(:product)
+      uri_query = type_values.to_a.to_query('where')
+      visit "/products/index?#{uri_query}"
+      filter_page_has_products [product1]
+      page.all("//div[@id='product_list']/*").count.should equal(3)
+      # filter_page_does_not_gave_product product2
+    end
+
+  end
+
 end

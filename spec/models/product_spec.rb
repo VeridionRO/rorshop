@@ -36,6 +36,10 @@ describe Product do
 
   end
 
+  describe "scopes" do
+    it { Product.should respond_to(:filter_type_values) }
+  end
+
   describe "class method" do
     it { Product.should respond_to(:favorite_products) }
     it { Product.should respond_to(:default_img) }
@@ -158,6 +162,13 @@ describe Product do
         })).to eq(products)
       end
 
+      it "with type_values" do
+        type = FactoryGirl.create(:type_values_and_prods, type_values_count: 3)
+        type_values = type.type_values
+        products = type_values[0].products
+        expect(Product.get_page({:where => type_values.ids}).to_a).to eq(products.to_a)
+      end
+
       it "calls filter_params" do
         Product.should_receive(:filter_params)
         Product.stub(:get_results)
@@ -174,13 +185,19 @@ describe Product do
     describe "filter_params" do
 
       it "with empty hash {}" do
-        Product.filter_params({}).should eql({:page => 1, :where => nil, 
+        Product.filter_params({}).should eql({:page => 1, :where => [], 
           :category_id => nil})
       end
 
       it "with hash {:category_id => 1}" do
-        Product.filter_params({:category_id => 1}).should eql({:page => 1, :where => nil, 
+        Product.filter_params({:category_id => 1}).should eql({
+          :page => 1, :where => [], 
           :category_id => 1})
+      end
+
+      it "with hash array of type_values" do
+        Product.filter_params({:where => [1,2,3,10]}).should eql({
+          :page => 1, :where => [1,2,3,10], :category_id => nil})
       end
 
     end

@@ -3,6 +3,9 @@ class Product < ActiveRecord::Base
   has_and_belongs_to_many :categories, :join_table => "categories_products"
   has_and_belongs_to_many :type_values, :join_table => "products_type_values"
   has_many :images
+  scope :filter_type_values, ->(value_id){ 
+    includes(:type_values).where(:type_values => {:id => value_id})
+  }
 
   after_initialize :add_image
   
@@ -54,18 +57,22 @@ class Product < ActiveRecord::Base
   end
 
   def self.get_results params
-    products = Product.order('created_at DESC')
+    products = Product.order('products.created_at DESC')
     products = products.joins(:categories)
                        .where('category_id = ?', params[:category_id]) if params[:category_id]
-    products = products.where(params[:where]) if params[:where]
+    params[:where].each do |value_id|
+      products = products.merge(Product.filter_type_values(value_id))
+    end
     products.limit(PAG)
             .offset((params[:page] - 1) * PAG)
+            .to_a
   end
 
   def self.filter_params params
     page = params[:page] ? params[:page].to_i : 1
     category_id = params[:category_id] ? params[:category_id].to_i : nil
-    {:page => page, :category_id => category_id, :where => nil}
+    where = params[:where] ? params[:where] : []
+    {:page => page, :category_id => category_id, :where => where}
   end
 
 end

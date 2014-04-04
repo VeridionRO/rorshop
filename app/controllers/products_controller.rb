@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.get_page({:page => params['page'], :category_id => params['category_id']})
+    @products = Product.get_page({
+      :page => params['page'], 
+      :category_id => params['category_id'],
+      :where => params['where']})
+    # debugger
     @categories = Category.all
     @types = Type.all
   end
@@ -17,5 +21,6 @@ class ProductsController < ApplicationController
   end
 
   def filter
+
   end
 end

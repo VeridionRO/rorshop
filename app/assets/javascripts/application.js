@@ -14,15 +14,60 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function MainController() {
+}
+
+MainController.prototype = {
+
+  loader: null,
+  types: new Object,
+  values: new Array,
+
+  addLoader: function() {
+    if (!this.loader) {
+      this.loader = jQuery('<div/>',{
+        id: 'notice'
+      }).text('Se incarca')
+      var loaderImage = jQuery('<img />',{
+        src: '/assets/spinner-64.gif'
+      })
+      this.loader.append(loaderImage);
+    };
+    jQuery("#product_list").html(this.loader);
+  },
+
+  addTypeValue: function(event) {
+    var link = event.currentTarget;
+    var type = jQuery(link).attr('parent');
+    var value = jQuery(link).attr('val');
+    var values = controller.values
+    if (!controller.types[type]) {
+      controller.types[type] = new Array;
+    };
+    var typeArray = controller.types[type];
+    if (jQuery.inArray(value, typeArray) == -1) {
+      typeArray.push(value);
+      values.push(value);
+    };
+  }
+
+};
+
+var controller = new MainController();
+
 jQuery(document).ready(function() {
   jQuery("div.filter-type a.level1").click(function (e) {
-    alert("text 1");
-    jQuery.get(
-      '/products/filter' + '.js',
-      null,
-      null,
-      'script'
-    );
+    controller.addTypeValue(e);
+    jQuery.ajax({
+      url: '/products/index' + '.js',
+      beforeSend: function(xhr) {
+        controller.addLoader();
+      },
+      data: jQuery.param({'where': controller.values}),
+      success: function() {},
+      dataType: 'script'
+    });
     e.preventDefault();
   });
 });
