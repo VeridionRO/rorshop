@@ -59,13 +59,17 @@ var controller = new MainController();
 jQuery(document).ready(function() {
   jQuery("div.filter-type a.level1").click(function (e) {
     controller.addTypeValue(e);
+    var typeUrlIds = jQuery.param({'where': controller.values});
     jQuery.ajax({
       url: '/products/index' + '.js',
       beforeSend: function(xhr) {
         controller.addLoader();
       },
-      data: jQuery.param({'where': controller.values}),
-      success: function() {},
+      data: typeUrlIds,
+      success: function() {
+        var stateObj = { foo: "bar" };
+        history.pushState(stateObj, "page 2", 'index?' + typeUrlIds);
+      },
       dataType: 'script'
     });
     e.preventDefault();

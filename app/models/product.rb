@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   has_and_belongs_to_many :categories, :join_table => "categories_products"
   has_and_belongs_to_many :type_values, :join_table => "products_type_values"
   has_many :images
-  scope :filter_type_values, ->(value_id){ 
+  scope :filter_type_values, ->(value_id) { 
     includes(:type_values).where(:type_values => {:id => value_id})
   }
 
@@ -59,10 +59,13 @@ class Product < ActiveRecord::Base
   def self.get_results params
     products = Product.order('products.created_at DESC')
     products = products.joins(:categories)
-                       .where('category_id = ?', params[:category_id]) if params[:category_id]
-    params[:where].each do |value_id|
-      products = products.merge(Product.filter_type_values(value_id))
-    end
+                       .where('category_id = ?', 
+                          params[:category_id]) if params[:category_id]
+    products = products.joins(:type_values)
+                       .where(type_values: {id: params[:where]})
+                       .group("products.id")
+                       .having('COUNT("product.id")=?', 
+                          params[:where].count) unless params[:where].empty?
     products.limit(PAG)
             .offset((params[:page] - 1) * PAG)
             .to_a
