@@ -1,4 +1,4 @@
-html, body {
+/*html, body {
   height: 100%!important;
   min-width: 940px;
 }
@@ -35,7 +35,7 @@ fieldset td {
 }
 h6 {
   font: bold 12px Arial, Helvetica, sans-serif;
-}
+}*/
 .article-decor {
   padding: 0px 0px 12px 0px;
 }
@@ -445,11 +445,6 @@ dl.contentpane .button-field {
   height: 21px;
 }
 .search .inputbox {
-  background: url(/assets/search-bg.gif) no-repeat 0 0;
-  border: none;
-  color: #a0a0a0;
-  font: normal 12px/15px Arial, Helvetica, sans-serif;
-  vertical-align: top;
   float: left;
   padding: 2px 0px 4px 5px;
   margin: 0px 0px 0px 0px;
@@ -563,23 +558,9 @@ dl.contentpane .button-field {
   padding: 0px 0px 0px 12px;
   margin: 0px 0px 0px 0px;
 }
-.module li a:hover{
-  color: #817a7a;
-  text-decoration: underline;
-}
-.module a {
-  color: #cb0abb;
-  text-decoration: underline;
-}
-.module a:hover{
-  text-decoration: none!important;
-}
-.count {
-  text-decoration: underline;
-}
 .module-categories {
   margin: 0px 0px 6px 0px;
-  padding: 14px 0 0 40px;
+  padding: 14px 0 0 0px;
 }
 .module-categories .boxIndent {
   margin: 10px 0 10px 2px;
@@ -597,24 +578,11 @@ dl.contentpane .button-field {
   vertical-align: top;
   overflow: hidden;
 }
-.module-categories ul li a {
-  color: #817a7a;
-  position: relative;
-}
-.module-categories li.parent a {
-  padding-right: 14px;
-}
 .module-categories ul li.parent {
   background: url(/assets/parent-point.gif) no-repeat 0 9px;
 }
 .module-categories ul.level2 li {
   padding: 2px 0 6px 13px;
-}
-.module-categories ul.level2 li a {
-  text-decoration: underline;
-}
-.module-categories li a:hover, .module-categories li.active a, .module-categories li.active .level2 li a:hover, .module-categories li.active .level2 li.active a {
-  text-decoration: none;
 }
 .module-new, .module-specials {
   padding: 8px 0px 22px 0px;
@@ -654,9 +622,6 @@ dl.contentpane .button-field {
   padding: 0 0 0 0px;
   text-decoration: none;
 }
-.module_menu li a:hover, .module_menu li.active a:hover, .module_menu li.active li a:hover{
-  text-decoration: underline;
-}
 .module_menu li.active ul {
   margin: 1px 0px -1px 10px;
 }
@@ -678,9 +643,10 @@ dl.contentpane .button-field {
   color: #9c9c9a;
 }
 .module-login {
+  width: 100%;
   float: left;
   margin: 0px 0px 6px 0px;
-  padding: 24px 0 0 40px;
+  padding: 24px 0 0 20px;
   background: #f2f2f2;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -698,12 +664,8 @@ label.remember {
   color: #535353;
 }
 #mod_login_username, #mod_login_password {
-  background: url(/assets/login-input.gif) no-repeat 0 0;
-  border: none;
-  width: 151px;
+  width: 180px;
   padding: 6px 0px 7px 12px;
-  font: normal 10px/13px Arial, Helvetica, sans-serif;
-  color: #7d7d7d;
   margin: 2px 0px 3px 0px;
 }
 .username, .password {
@@ -770,32 +732,8 @@ input.checkbox {
   display: inline-block;
   margin: 6px 0 0 0;
 }
-#inputs a:hover{
-  text-decoration: underline!important;
-}
 #form-login-remember {
   font: normal 11px/18px Arial, Helvetica, sans-serif;
-  color: #7d7d7d;
-  padding: 0px 0 0 0;
-}
-#form-login-remember a {
-  font: normal 11px/18px Arial, Helvetica, sans-serif;
-  color: #000;
-  text-decoration: underline;
-}
-#form-login-remember a:hover{
-  text-decoration: none!important;
-}
-#form-login-remember a:hover{
-  text-decoration: underline!important;
-}
-#form-login-remember .reg {
-  display: inline-block;
-  color: #cb0abb;
-  text-decoration: none;
-}
-#form-login-remember .reg:hover{
-  text-decoration: underline!important;
 }
 ul.menu-nav {
   list-style: none;
@@ -818,9 +756,6 @@ ul.menu-nav li a {
   display: block;
   color: #fff;
   text-decoration: none;
-}
-ul.menu-nav li a:hover, ul.menu-nav li.active a {
-  text-decoration: underline;
 }
 #body {
   background: #fff;
@@ -991,11 +926,7 @@ ul.menu-nav li a:hover, ul.menu-nav li.active a {
 }
 .newslatter #email {
   width: 111px;
-  background: url(/assets/mail-bg.gif) no-repeat 0 0;
-  padding: 6px 0 6px 5px;
-  border: none;
   margin: 6px 0 13px 0;
-  vertical-align: middle;
 }
 .newslatter .button {
   margin: 10px 0 0 0!important;

@@ -9,7 +9,7 @@ def has_types types
   types.each do |type|
     page.find("#type-#{type.id}").should have_content(type.name)
     type.type_values.each do |type_value|
-      page.find("#value-#{type_value.id}").should have_content(type_value.value)
+      page.find("#type-#{type.id}").should have_content(type_value.value)
     end
   end
 end

@@ -50,6 +50,9 @@ group :test, :development do
   gem 'capybara-webkit'
 end
 
+# twitter css
+gem "twitter-bootstrap-rails"
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 

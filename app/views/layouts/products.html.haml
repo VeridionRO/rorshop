@@ -8,4 +8,19 @@
     = yield :title
     = yield :head_extra
   %body
-    = yield
+    = yield :body
+  %body#body
+    #header
+      = yield :header
+    .main
+      #wrapper
+        .clear
+          #left
+            .clear
+              = yield :sidebar
+          .prod-container
+            .module-new
+              .boxIndent
+                = yield :content
+                
+      = render :partial => 'shared/footer'

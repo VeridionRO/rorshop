@@ -161,9 +161,6 @@ img.feed {
 .browseAddToCartContainer {
     width: 100%;
 }
-.browseProductImageContainer {
-    margin: 0px 0px 1px 0px;
-}
 .productParams {
     padding: 0px 8px 0px 0px;
 }
@@ -208,18 +205,6 @@ div.buttons_heading img {
 .product_name {
     padding: 5px 0 2px 0;
 }
-a.product_name, h1.product_name, .vader .ui-widget-content a.product_name {
-    color: #817a7a;
-    font: normal 12px/16px Arial, Helvetica, sans-serif;
-    display: inline-block;
-    width: auto;
-}
-a.product_name:hover {
-    color: #cb0abb;
-}
-.vader a.product_name {
-    color: #161616!important;
-}
 .productPrice {
     color: #353535;
     font: bold 13px/18px Arial, Helvetica, sans-serif;
@@ -252,9 +237,6 @@ div.productDescription {
 .top_separator {
     border-top: 1px solid #ccc;
     padding: 10px 0px 0px 0px;
-}
-.bottom_separator {
-    padding: 10px 0px 10px 0px;
 }
 #five_stars, #four_stars, #three_stars, #two_stars, #one_star, #null_stars {
     text-align: center;
@@ -539,9 +521,9 @@ legend.sectiontableheader {
     padding-right: 20px;
 }
 .rightPosition, .leftPosition {
+    width: 100%;
     float: left;
     border-bottom: 1px dotted #ccc;
-    padding-bottom: 10px;
 }
 .rightPosition .rightPos {
     float: right;
