@@ -582,7 +582,7 @@ dl.contentpane .button-field {
   padding: 14px 0 0 40px;
 }
 .module-categories .boxIndent {
-  padding: 10px 0 10px 2px;
+  margin: 10px 0 10px 2px;
 }
 .module-categories ul {
   list-style: none;
@@ -678,6 +678,7 @@ dl.contentpane .button-field {
   color: #9c9c9a;
 }
 .module-login {
+  float: left;
   margin: 0px 0px 6px 0px;
   padding: 24px 0 0 40px;
   background: #f2f2f2;

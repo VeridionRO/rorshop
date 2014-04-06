@@ -1,13 +1,18 @@
+%a.clone-filter-value.remove-filter-value{href: "#"}
+  = image_tag "/assets/delete-value.png", class: "remove-filter-value-icon"
+%li.level1.item1.hide
+  %a.filter-value{href: "#", target: "_self", title: "", parent: "", val: ""}
+    %span 
 - @types.each do |type|
   %div.filter-type{id: "type-#{type.id}"}
     %h3
       %span 
         = type.name
+      %a.collapse.toggle-type{href: "#", title: "Comuta #{type.name}"}
     .boxIndent
-      #relative_div{style: "position:relative;z-index:0"}
       %ul.level1
         - type.type_values.each do |type_value|
-          %li.level1.item1{id: "value-#{type_value.id}"}
-            %a.level1.item1{href: "#", target: "_self", title: "Diamond Rings", parent: "#{type.id}", val: "#{type_value.id}"}
+          %li.level1.item1
+            %a.filter-value{href: "#", target: "_self", title: "", parent: "#{type.id}", val: "#{type_value.id}"}
               %span 
                 = type_value.value
