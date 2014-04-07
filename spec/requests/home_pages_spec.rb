@@ -13,7 +13,7 @@ describe "HomePage" do
 
   it "displays products with images" do
     products = [FactoryGirl.create(:valid_product, 
-      :images => [FactoryGirl.create(:valid_image)])]
+      :images => [FactoryGirl.create(:image)])]
     visit "/"
     products.each do |product|
       check_product_cell_display product
@@ -21,7 +21,7 @@ describe "HomePage" do
   end
 
   it "has active links in the header" do
-    product = Product.first
+    product = FactoryGirl.create :valid_product
     visit "/product/#{product.id}"
     menus = [{:name => 'Acasa', :path => '/'}]
     menus.each do |menu|

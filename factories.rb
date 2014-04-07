@@ -5,19 +5,13 @@ FactoryGirl.define do
     description Faker::Lorem.paragraph
   end
 
-  factory :valid_image, class: Image do
-    title   Faker::Commerce.department
-    uri     "Product01_resized.png"
-    product FactoryGirl.create(:valid_product)
-  end
-
   factory :image, class: Image do
     title   Faker::Commerce.department
     uri     "Product01_resized.png"
     product 
   end
 
-  factory :valid_image_hash do
+  factory :image_hash do
     title Faker::Commerce.department
     uri   Faker::Lorem.paragraph
   end

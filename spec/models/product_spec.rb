@@ -62,8 +62,9 @@ describe Product do
 
     describe "get_neighbours" do
 
+      let(:products) { FactoryGirl.create_list(:valid_product, 3) }
+
       it "with both neighbours" do
-        products = FactoryGirl.create_list(:valid_product, 3)
         neighbours = {
           :previous => products[0],
           :next => products[2]
@@ -73,20 +74,21 @@ describe Product do
       end
 
       it "with only previous neighbour" do
-        products = FactoryGirl.create_list(:valid_product, 2)
         neighbours = {
-          :previous => products[0],
+          :previous => products[1],
           :next => nil
         }
-        products[1].get_neighbours
+        products[2].get_neighbours
                    .should eq(neighbours)
       end
 
       it "with only next neighbour" do
-        current_product = Product.first
-        next_product = Product.where("id > #{current_product.id}").first
-        neighbours = {:previous => nil, :next => next_product}
-        current_product.get_neighbours.should eq(neighbours)
+        neighbours = {
+          :previous => nil,
+          :next => products[1]
+        }
+        products[0].get_neighbours
+                   .should eq(neighbours)
       end
    
       it "raises an exception when called with an unsaved product" do
@@ -223,13 +225,13 @@ describe Product do
   end
 
   it "image is not the default_image when the image_id is not nil" do
-    p = Product.new(:images => [FactoryGirl.build(:valid_image)])
+    p = Product.new(:images => [FactoryGirl.build(:image)])
     p.image.should_not == Product.default_img
   end
 
   it "image is the first image from the Product images array" do
-    img1 = FactoryGirl.build(:valid_image)
-    img2 = FactoryGirl.build(:valid_image)
+    img1 = FactoryGirl.build(:image)
+    img2 = FactoryGirl.build(:image)
     p = Product.new(:images => [img1,img2])
     p.image.should == img1
   end
