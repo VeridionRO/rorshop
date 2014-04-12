@@ -15,6 +15,11 @@ describe Product do
       product.description.should eq('description 1')
     end
 
+    it 'responds to price' do
+      product.price = 10
+      product.price.should eq(10)
+    end
+
     it 'responds to neighbours' do
       product.neighbours = {}
       product.neighbours.should eq({})
@@ -55,14 +60,14 @@ describe Product do
     it { should respond_to(:add_image) }
 
     it 'favorite_products' do
-      products = FactoryGirl.create_list(:valid_product, 18)
+      products = FactoryGirl.create_list(:product, 18)
       products.sort! { |a, b| b.id <=> a.id }
       Product.favorite_products.should eq(products[0..8])
     end
 
     describe "get_neighbours" do
 
-      let(:products) { FactoryGirl.create_list(:valid_product, 3) }
+      let(:products) { FactoryGirl.create_list(:product, 3) }
 
       it "with both neighbours" do
         neighbours = {
@@ -148,6 +153,7 @@ describe Product do
     describe "get_page" do
 
       it "returns the last 10 elements" do
+        # @todo these tests don't do shit!!! the database is empty
         products = Product.order('created_at DESC')
                           .limit(Product::PAG).offset(0)
         expect(Product.get_page({
@@ -156,6 +162,7 @@ describe Product do
       end
 
       it "returns the last 20 elements" do
+        # @todo these tests don't do shit!!! the database is empty
         products = Product.order('created_at DESC')
                           .limit(Product::PAG)
                           .offset(Product::PAG)
@@ -182,24 +189,56 @@ describe Product do
         Product.get_page
       end
 
+      it "sorts results by price" do
+        products = FactoryGirl.build_list(:product, 4)
+        price = 20
+        products.each do |product|
+          product.price = price
+          price += 1
+          product.save!
+        end
+        page_products = Product.get_page({:order => '2'})
+        expect(page_products[0]).to eq(products[3])
+        expect(page_products[3]).to eq(products[0])
+      end
+
     end
 
     describe "filter_params" do
 
       it "with empty hash {}" do
         Product.filter_params({}).should eql({:page => 1, :where => [], 
-          :category_id => nil})
+          :category_id => nil, :order => 'created_at'})
       end
 
       it "with hash {:category_id => 1}" do
         Product.filter_params({:category_id => 1}).should eql({
           :page => 1, :where => [], 
-          :category_id => 1})
+          :category_id => 1, :order => 'created_at'})
+      end
+
+      it "with hash {:order => 1}" do
+        Product.filter_params({:order => '1'}).should eql({
+          :page => 1, :where => [], 
+          :category_id => nil, :order => 'created_at'})
+      end
+
+      it "with hash {:order => 2}" do
+        Product.filter_params({:order => '2'}).should eql({
+          :page => 1, :where => [], 
+          :category_id => nil, :order => 'price'})
+      end
+
+      it "with hash {:order => 3}" do
+        Product.filter_params({:order => '3'}).should eql({
+          :page => 1, :where => [], 
+          :category_id => nil, :order => 'name'})
       end
 
       it "with hash array of type_values" do
         Product.filter_params({:where => [1,2,3,10]}).should eql({
-          :page => 1, :where => [1,2,3,10], :category_id => nil})
+          :page => 1, :where => [1,2,3,10], 
+          :category_id => nil, :order => 'created_at'})
       end
 
     end
@@ -207,8 +246,8 @@ describe Product do
   end
 
   it 'is invalid without a name or description' do
-    [:name, :description, :image].each do |attribute|
-      invalid_product = FactoryGirl.build(:valid_product, attribute => nil)
+    [:name, :description, :price, :image].each do |attribute|
+      invalid_product = FactoryGirl.build(:product, attribute => nil)
       invalid_product.should_not be_valid
       invalid_product.errors.should have_key(attribute)
     end

@@ -1,8 +1,9 @@
 FactoryGirl.define do
 
-  factory :valid_product, class: Product do
-    name        Faker::Commerce.product_name
-    description Faker::Lorem.paragraph
+  factory :product, class: Product do
+    name        { Faker::Commerce.product_name }
+    description { Faker::Lorem.paragraph }
+    price       { Faker::Number.number(3).to_i / 100 }
   end
 
   factory :image, class: Image do
@@ -14,11 +15,6 @@ FactoryGirl.define do
   factory :image_hash do
     title Faker::Commerce.department
     uri   Faker::Lorem.paragraph
-  end
-
-  factory :product, class: Product do
-    name        Faker::Commerce.product_name
-    description Faker::Lorem.paragraph
   end
 
   factory :product_with_images, parent: :product do

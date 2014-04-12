@@ -9,7 +9,9 @@ class Product < ActiveRecord::Base
 
   after_initialize :add_image
   
-  validates :name, :description, :image, presence: true
+  validates :name, :description, :price, :image, presence: true
+
+  
 
   @@default_img = {
     :title => "Imagine Default", 
@@ -57,7 +59,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.get_results params
-    products = Product.order('products.created_at DESC')
+    products = Product.order("products.#{params[:order]} DESC")
     products = products.joins(:categories)
                        .where('category_id = ?', 
                           params[:category_id]) if params[:category_id]
@@ -75,7 +77,14 @@ class Product < ActiveRecord::Base
     page = params[:page] ? params[:page].to_i : 1
     category_id = params[:category_id] ? params[:category_id].to_i : nil
     where = params[:where] ? params[:where] : []
-    {:page => page, :category_id => category_id, :where => where}
+    order = 'created_at'
+    if params[:order] == '2'
+      order = 'price'
+    elsif params[:order] == '3'
+      order = 'name'
+    end
+    {:page => page, :category_id => category_id, 
+      :where => where, :order => order}
   end
 
 end

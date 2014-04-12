@@ -138,4 +138,16 @@ jQuery(document).ready(function() {
     controller.toggleType(jQuery(event.currentTarget));
     event.preventDefault();
   });
+
+  jQuery('#sort_item').change(function(event) {
+    jQuery.ajax({
+      url: '/products/index.js',
+      beforeSend: function(xhr) {
+        controller.addLoader();
+      },
+      data: 'order=' + jQuery('#sort_item').val(),
+      success: function() {},
+      dataType: 'script'
+    });
+  });
 });

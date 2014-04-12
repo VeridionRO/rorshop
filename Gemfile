@@ -50,6 +50,8 @@ group :test, :development do
   gem 'capybara-webkit'
 end
 
+gem 'simple_form'
+
 # twitter css
 gem "twitter-bootstrap-rails"
 

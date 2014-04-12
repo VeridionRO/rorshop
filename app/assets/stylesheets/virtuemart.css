@@ -23,9 +23,6 @@
     text-align: left;
     cursor: pointer;
 }
-.addtocart_button:hover {
-    text-decoration: none;
-}
 .vmCartContainer .addtocart_button {
     margin-top: 4px;
 }
@@ -47,10 +44,6 @@ a.product_details, div.back_button a {
     width: auto;
     height: 18px;
 }
-a.product_details:hover, div.back_button a:hover {
-    background: none;
-    text-decoration: none!important;
-}
 .back_button {
     padding: 10px 0px 0px 0px;
 }
@@ -67,7 +60,6 @@ a.details {
     width: 50px;
 }
 a.details:hover {
-    text-decoration: none;
     background: url(/assets/button3-active.gif) no-repeat 0 0;
 }
 .cbButton {
@@ -97,9 +89,6 @@ a.details:hover {
     width: auto;
     height: 18px;
 }
-.button02:hover, a.button02:hover, #register_stretcher .button:hover {
-    text-decoration: none!important;
-}
 input.button02, #register_stretcher .button {
     padding: 0 0px 4px 0px;
     height: 22px;
@@ -115,9 +104,6 @@ input.button02, #register_stretcher .button {
     padding: 0px 0px 0px 0px;
     display: inline-block;
     width: auto;
-}
-.nobutton .button:hover {
-    text-decoration: none;
 }
 img.feed {
     margin: 5px 5px 0px 0px;
@@ -140,9 +126,6 @@ img.feed {
 }
 .browseProductImage a {
     text-decoration: none;
-}
-.browseProductImage a:hover {
-    color: #000;
 }
 .browsePriceContainer {
     float: none;

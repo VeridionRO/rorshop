@@ -1,0 +1,7 @@
+1. produs, camp nou, stare: stoc, rezervat, vandut
+2. produs, camp nou, lungime: int
+3. pagina de stiri edit din admin
+4. slider-ul home-page editabil din admin
+5. seturi de produse
+6. categoriile sa apara/dispara in mod dinamic in functie de rezultate
+7. tag-uri pe pagina de produse

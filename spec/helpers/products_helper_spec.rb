@@ -66,6 +66,8 @@ def filter_page_has_product(product, counter)
     product.name)
   page.find("//div[@id='product_list']/*[#{counter}]").should have_content(
     product.description)
+  page.find("//div[@id='product_list']/*[#{counter}]").should have_content(
+    product.price)
 end
 
 def filter_page_does_not_gave_product(product, counter)

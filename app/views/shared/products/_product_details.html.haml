@@ -12,10 +12,9 @@
       %a.product_name{href: "/product/#{product.id}", title: "#{product.name}"}
         = product.name
     .browsePriceContainer
-      %span.product-Old-Price
-        $205.00
       %span.productPrice
-        $197.98
+        $
+        = product.price
     %div
     .ask_seller.nobutton
       %a.button{href: "#"} Ask a question about this product

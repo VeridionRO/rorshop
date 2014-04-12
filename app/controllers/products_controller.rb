@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
     @products = Product.get_page({
       :page => params['page'], 
       :category_id => params['category_id'],
-      :where => params['where']})
+      :where => params['where'],
+      :order => params['order']})
     # debugger
     @categories = Category.all
     @types = Type.all

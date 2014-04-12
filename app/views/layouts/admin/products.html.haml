@@ -9,4 +9,11 @@
     = yield :title
     = yield :head_extra
   %body
-    = yield
+    = render :partial => "shared/admin/products/nav_bar"
+    .container
+      - flash.each do |type, message|
+        .alert.fade.in{class: "#{bootstrap_class_for(type)}"}
+          %button.close{"data-dismiss" => "alert"}
+            ×
+          = message
+      = yield

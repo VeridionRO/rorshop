@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "HomePage" do
 
   it "displays the first 9 favorite products" do
-    products = FactoryGirl.create_list(:valid_product, 9)
+    products = FactoryGirl.create_list(:product, 9)
     visit "/"
     has_header_menus
     products.each do |product|
@@ -12,7 +12,7 @@ describe "HomePage" do
   end
 
   it "displays products with images" do
-    products = [FactoryGirl.create(:valid_product, 
+    products = [FactoryGirl.create(:product, 
       :images => [FactoryGirl.create(:image)])]
     visit "/"
     products.each do |product|
@@ -21,7 +21,7 @@ describe "HomePage" do
   end
 
   it "has active links in the header" do
-    product = FactoryGirl.create :valid_product
+    product = FactoryGirl.create :product
     visit "/product/#{product.id}"
     menus = [{:name => 'Acasa', :path => '/'}]
     menus.each do |menu|

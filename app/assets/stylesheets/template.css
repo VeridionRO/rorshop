@@ -158,9 +158,6 @@ div.small {
 *+html .button, *+html .validate, *+html .modal-button {
   padding: 0;
 }
-.button:hover, .validate:hover, .modal-button:hover, .readmore a:hover, div.blank a:hover{
-  text-decoration: none;
-}
 .modal-button, .readmore a, div.blank a {
   float: left;
   padding: 2px 5px 2px 5px;
@@ -215,9 +212,6 @@ div a.readon {
 .blog_more a {
   text-decoration: underline;
 }
-.blog_more a:hover{
-  text-decoration: none;
-}
 .pagenav {
   font-size: 12px;
   font-weight: normal;
@@ -227,9 +221,6 @@ a.pagenav {
   padding: 0px 2px 0px 2px;
   margin: 0px 2px 0px 0px;
   text-decoration: none;
-}
-a.pagenav:hover{
-  text-decoration: underline;
 }
 .pagination_nav {
   font-size: 12px;
@@ -738,12 +729,11 @@ input.checkbox {
 ul.menu-nav {
   list-style: none;
   overflow: hidden;
-  padding: 7px 0px 0px 0px;
+  padding: 12px 0px 0px 0px;
   margin: 0 0 0 -15px;
 }
 ul.menu-nav li {
   background: url(/assets/menu-divider.gif) left 7px no-repeat;
-  font: normal 13px/18px Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   margin: 0 0 0 0;
   padding: 0 19px 0 20px;
@@ -754,8 +744,6 @@ ul.menu-nav li a {
   background: none;
   padding: 0px 0px 9px 0px;
   display: block;
-  color: #fff;
-  text-decoration: none;
 }
 #body {
   background: #fff;
@@ -1071,4 +1059,10 @@ div.pathway img {
   height: auto;
   width: auto;
   background: none;
+}
+ul.menu-nav li a {
+  background: none;
+  padding: 0px 0px 9px 0px;
+  display: block;
+  color: #fff;
 }

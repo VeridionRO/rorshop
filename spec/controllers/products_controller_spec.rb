@@ -5,7 +5,7 @@ describe ProductsController do
   let!(:categories) { [Category.new] }
   let!(:types) { [Type.new] }
 
-  before(:each) do
+  before do
     Category.stub(:all).and_return(categories)
     Type.stub(:all).and_return(types)
   end
@@ -26,8 +26,9 @@ describe ProductsController do
       Product.should_receive(:get_page).with({
         :page => '1', 
         :category_id => '1',
-        :where => ['1','2','3']})
-      get :index, :page => 1, :category_id => 1, :where => ['1','2','3']
+        :where => ['1','2','3'],
+        :order => '1'})
+      get :index, :page => 1, :category_id => 1, :where => ['1','2','3'], :order => '1'
     end
 
     it "should call Category.all" do
