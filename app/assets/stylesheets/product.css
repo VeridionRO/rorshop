@@ -394,11 +394,6 @@ table.adminform td.labelcell {
   background: #ffff33;
   cursor: pointer;
 }
-ul.pagination li {
-  padding: 2px 1px;
-  display: inline;
-  background: none;
-}
 .clr {
   clear: both;
   overflow: hidden;

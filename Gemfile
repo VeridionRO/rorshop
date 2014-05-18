@@ -51,6 +51,9 @@ group :test, :development do
 end
 
 gem 'simple_form'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'carrierwave'
+gem 'jquery-fileupload-rails'
 
 # twitter css
 gem "twitter-bootstrap-rails"

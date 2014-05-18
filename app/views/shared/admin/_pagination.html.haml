@@ -1,0 +1,15 @@
+%tr
+  %td{:colspan => "6"}
+    .pagination.pagination-large
+      %ul
+        - back_path = (page == 1 ? '#' : "/admin/products/?page=#{page - 1}")
+        - forward_path = (page * 3 >= count ? '#' : "/admin/products/?page=#{page + 1}")
+        %li{:class => "#{page == 1 ? 'disabled' : ''}"}
+          %a{:href => back_path}
+            &laquo;
+        - @pages.each do |p|
+          %li{:class => "#{page == p ? 'active': ''}"}
+            %a{:href => "/admin/products/?page=#{p}"}= p
+        %li{:class => "#{page == @pages.count ? 'active': ''}"}
+          %a{:href => forward_path}
+            &raquo;

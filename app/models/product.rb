@@ -2,16 +2,14 @@ class Product < ActiveRecord::Base
 
   has_and_belongs_to_many :categories, :join_table => "categories_products"
   has_and_belongs_to_many :type_values, :join_table => "products_type_values"
-  has_many :images
-  scope :filter_type_values, ->(value_id) { 
-    includes(:type_values).where(:type_values => {:id => value_id})
-  }
-
-  after_initialize :add_image
+  has_many :images, dependent: :destroy
+  belongs_to :category
   
-  validates :name, :description, :price, :image, presence: true
+  accepts_nested_attributes_for :images, allow_destroy: true
 
-  
+  validates :name, :description, :price, presence: true
+
+  attr_accessor :neighbours
 
   @@default_img = {
     :title => "Imagine Default", 
@@ -20,14 +18,13 @@ class Product < ActiveRecord::Base
 
   PAG = 9
 
-  attr_accessor :image, :neighbours
-  
-  def add_image
+  def image
     if images.empty?
       @image = @@default_img
     else
       @image = images[0]
     end
+    @image
   end
 
   def get_neighbours
@@ -85,6 +82,11 @@ class Product < ActiveRecord::Base
     end
     {:page => page, :category_id => category_id, 
       :where => where, :order => order}
+  end
+
+  def self.get_page_array
+    count = Product.count
+    return 1..count/10
   end
 
 end

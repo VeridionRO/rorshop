@@ -65,9 +65,11 @@ describe Admin::ProductsController do
   describe "GET 'edit'" do
 
     let(:product) { FactoryGirl.create(:product) }
+    let(:types) { FactoryGirl.create_list(:type, 3) }
 
     before do
       Product.stub(:find).and_return(product)
+      Type.stub(:all).and_return(types)
     end
 
     it "returns http success" do
@@ -75,7 +77,7 @@ describe Admin::ProductsController do
       response.should be_success
     end
 
-    it "calls find" do
+    it "Product calls find" do
       Product.should_receive(:find)
       get :edit, :id => product.id
     end
@@ -88,6 +90,16 @@ describe Admin::ProductsController do
     it "renders index template" do
       get :edit, :id => product.id
       expect(assigns[:product]).to eql(product)
+    end
+
+    it "Type calls all" do
+      Type.should_receive(:all)
+      get :edit, :id => product.id
+    end
+
+    it "renders index template" do
+      get :edit, :id => product.id
+      expect(assigns[:types]).to eql(types)
     end
 
   end

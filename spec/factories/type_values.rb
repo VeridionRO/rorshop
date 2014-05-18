@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :type_value do
-    type Type.new
-    value Faker::Lorem.word
+    type  Type.new
+    value { Faker::Lorem.word }
   end
 end

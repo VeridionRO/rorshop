@@ -1,0 +1,19 @@
+= simple_form_for @type, 
+  url: (@type.id ? admin_type_path(@type) : admin_types_path(@type)),
+  html: { :class => 'form-horizontal', :multipart => true } do |f|
+  .row
+    .span5
+      .modal-header
+        %h3
+          Detalii
+      = f.input :id, disabled: true, as: :integer
+      = f.input :name, label: 'Nume'
+    .span7
+      .modal-header
+        %h3
+          Valori
+      = f.association :type_values, as: :check_boxes
+
+  .form-actions
+    = f.submit 'Salveaza', :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t('Anuleaza')), admin_types_path, :class => 'btn'

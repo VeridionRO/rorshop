@@ -1,21 +1,26 @@
 = simple_form_for @product, 
   url: (@product.id ? admin_product_path(@product) : admin_products_path(@product)),
-  html: { :class => 'form-horizontal' } do |f|
-  = f.input :name
-  = f.input :description
-  = f.input :price
-  / .control-group
-  /   = f.label :name, 'Nume', :class => 'control-label'
-  /   .controls
-  /     = f.text_field :name, :class => 'text_field'
-  / .control-group
-  /   = f.label :description, 'Descriere', :class => 'control-label'
-  /   .controls
-  /     = f.text_field :description, :class => 'text_field'
-  / .control-group
-  /   = f.label :price, 'Pret', :class => 'control-label'
-  /   .controls
-  /     = f.number_field :price, :class => 'text_field', :step => 0.1
+  html: { :class => 'form-horizontal', :multipart => true } do |f|
+  .row
+    .span5
+      .modal-header
+        %h3
+          Detalii
+      = f.input :id, disabled: true, as: :integer
+      = f.input :name, label: 'Nume'
+      = f.input :description, label: 'Descriere'
+      = f.input :price, label: 'Pret'
+    .span7
+      = render :partial => "shared/admin/products/categories"        
+  .row
+    .span12
+      .modal-header
+        %h3
+          Imagini
+      = f.fields_for :images do |i|
+        = i.file_field :image
+  .row
+    .span12
   .form-actions
     = f.submit 'Salveaza', :class => 'btn btn-primary'
     = link_to t('.cancel', :default => 'Anuleaza'), admin_products_path, :class => 'btn'

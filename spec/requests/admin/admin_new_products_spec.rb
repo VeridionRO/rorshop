@@ -7,10 +7,11 @@ describe "GET /admin/products/new" do
     page.should have_content('Nume')
     page.should have_content('Descriere')
     page.should have_content('Pret')
+    page.should have_content('Imagine')
     page.should have_xpath('//input[@value="Salveaza"]')
   end
 
-  xit "saves the product to the database" do
+  it "saves the product to the database" do
     visit new_admin_product_path
     fill_in "Nume", with: "Nume_Produs"
     fill_in "Descriere", with: "Descriere_Produs"

@@ -2,26 +2,21 @@
   %h3
     %span Login Form
   .boxIndent
-    %form.form-login{action: "#", method: "post", name: "login"}
+    = form_tag login_path, :class => 'form-login' do
       .part1
         .clear
           .username
-            %input#mod_login_username.inputbox{alt: "Username", name: "username", onblur: "if(this.value=='') this.value='Username'", onfocus: "if(this.value =='Username' ) this.value=''", type: "text", value: "Username"}/
+            = text_field_tag :email, '', id: 'mod_login_username', placeholder: 'Email'
           .password
-            %input#mod_login_password.inputbox{alt: "Password", name: "passwd", onfocus: "this.value=null", type: "password", value: "password"}/
+            = password_field_tag :password, '', id: 'mod_login_password', placeholder: '••••••'
         #inputs
-          .rememberCheck
-            %input#mod_login_remember.checkbox{alt: "Remember Me", name: "remember", type: "checkbox", value: "yes"}/
-            %label.remember{for: "mod_login_remember"}
-              Remember Me
-          %input.button{name: "Submit", type: "submit", value: "Log in"}/
+          / <input type="submit" name="Submit" class="button" value="Log in">
+          %input.button{name: "submit", type: "submit", value: "Logheaza-te"}/
       #form-login-remember
         %a{href: "#"}
-          Forgot your password?
+          Ti-ai uitat parola
         %br/
-        %a{href: "#"}
-          Forgot your username?
+        Nu ai cont inca?
         %br/
-        No Account Yet?
-        %br/
-        %a.reg{href: "#"} Create an account
+        %a.reg{href: "#"}
+        = link_to 'Creaza-ti un cont', new_user_path

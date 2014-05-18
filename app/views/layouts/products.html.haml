@@ -7,9 +7,9 @@
     = javascript_include_tag "jquery"
     = yield :title
     = yield :head_extra
-  %body
-    = yield :body
   %body#body
+    .container
+      = render :partial => 'shared/notices'      
     #header
       = yield :header
     .main
@@ -22,5 +22,4 @@
             .module-new
               .boxIndent
                 = yield :content
-                
       = render :partial => 'shared/footer'

@@ -229,22 +229,9 @@ a.pagenav {
 .pagination_nav div {
   padding: 5px 0px 5px 0px;
 }
-.pagination {
-  margin-top: 10px;
-}
-.pagination li {
-  padding: 0px 5px 0px 5px;
-}
 .pagination_result {
   padding: 5px 0px 0px 0px;
   line-height: 16px;
-}
-.pagination span {
-  padding: 0px 10px 0px 0px;
-}
-.pagination strong span {
-  padding: 0px 6px 0px 6px;
-  font-weight: normal;
 }
 .searchArea {
   border: 1px solid #444;
@@ -670,8 +657,6 @@ label.remember {
   color: #fff;
   font: normal 11px/14px Arial, Helvetica, sans-serif;
   text-decoration: none;
-  padding: 0 0px 4px 0px;
-  margin: 20px 0 5px 0;
   width: 49px;
   height: 21px;
   text-align: center;
@@ -934,9 +919,6 @@ ul.menu-nav li a {
 }
 #subscribeForm .newslatter #email {
   margin: 0;
-}
-.form-validate #email {
-  padding: 0 0 0 1px;
 }
 .josForm #email {
   width: 147px;

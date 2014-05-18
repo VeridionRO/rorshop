@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :type do
-    name Faker::Lorem.word
+    name { Faker::Lorem.word }
   end
 
   # t = FactoryGirl.create(:type_with_values, type_values_count: 3)
