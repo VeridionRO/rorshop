@@ -47,7 +47,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'bcrypt-ruby'
 end
 
 gem 'simple_form'
@@ -61,6 +60,7 @@ gem 'twitter-bootstrap-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
+gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
