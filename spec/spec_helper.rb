@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'capybara'
 require 'capybara/rspec'
 
 Capybara.javascript_driver = :webkit
