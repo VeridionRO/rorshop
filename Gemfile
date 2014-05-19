@@ -49,16 +49,16 @@ group :test, :development do
 end
 
 gem 'simple_form'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'carrierwave'
 gem 'jquery-fileupload-rails'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 # twitter css
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
