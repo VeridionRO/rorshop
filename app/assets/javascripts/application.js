@@ -1,13 +1,3 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
 //= require jquery
@@ -28,15 +18,15 @@ MainController.prototype = {
 
   addLoader: function() {
     if (!this.loader) {
-      this.loader = jQuery('<div/>',{
+      this.loader = jQuery('<div/>', {
         id: 'notice'
       }).text('Se incarca');
-      var loaderImage = jQuery('<img />',{
+      var loaderImage = jQuery('<img />', {
         src: '/assets/spinner-64.gif'
       });
       this.loader.append(loaderImage);
     }
-    jQuery("#product_list").html(this.loader);
+    jQuery('#product_list').html(this.loader);
   },
 
   toggleDataValue: function(link) {
@@ -52,7 +42,7 @@ MainController.prototype = {
         typeArray.push(value);
         values.push(value);
       }
-    } else if (link.hasClass('remove-filter-value')){
+    } else if (link.hasClass('remove-filter-value')) {
       controller.types[type] = jQuery.grep(typeArray, function(item) {
         return item != value;
       });
@@ -75,7 +65,7 @@ MainController.prototype = {
         clone(true, true).
         removeClass('clone-filter-value');
       link.closest('.filter-type').find('h3').after(selectedValue);
-      selectedValue.css("display", "block");
+      selectedValue.css('display', 'block');
       selectedValue.append(jQuery(link).text());
       selectedValue.attr({
         parent: jQuery(link).attr('parent'),
@@ -112,8 +102,8 @@ MainController.prototype = {
 var controller = new MainController();
 
 jQuery(document).ready(function() {
-  var selector = "a.remove-filter-value, a.filter-value";
-  jQuery(selector).click(function (event) {
+  var selector = 'a.remove-filter-value, a.filter-value';
+  jQuery(selector).click(function(event) {
     var link = jQuery(event.currentTarget);
     controller.toggleDataValue(link);
     var typeUrlIds = jQuery.param({'where': controller.values});
@@ -124,10 +114,8 @@ jQuery(document).ready(function() {
       },
       data: typeUrlIds,
       success: function() {
-        /**
-         * @todo check that this function is available 
-         */
-        history.pushState(null, "page 2", 'index?' + typeUrlIds);
+        // @todo check that this function is available
+        history.pushState(null, 'page 2', 'index?' + typeUrlIds);
         controller.toggleDisplayValue(link);
       },
       dataType: 'script'
@@ -135,7 +123,7 @@ jQuery(document).ready(function() {
     event.preventDefault();
   });
 
-  jQuery("div.filter-type a.toggle-type").click(function (event) {
+  jQuery('div.filter-type a.toggle-type').click(function(event) {
     controller.toggleType(jQuery(event.currentTarget));
     event.preventDefault();
   });
