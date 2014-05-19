@@ -16,6 +16,10 @@ class Product < ActiveRecord::Base
     :uri => "default_img.jpg"
   }
 
+  searchable do
+    text :name, :description
+  end
+
   PAG = 9
 
   def image

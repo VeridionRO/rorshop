@@ -1,7 +1,11 @@
 class Admin::ProductsController < ApplicationController
   def index
     @params = Product.filter_params params
-    @products = Product.get_page params
+    # @products = Product.get_page params
+    @search = Product.search do
+      fulltext params[:search]
+    end
+    @products = @search.results.order_by(:id)
     @pages = Product.get_page_array
   end
 
