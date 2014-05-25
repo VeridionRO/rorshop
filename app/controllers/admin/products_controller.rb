@@ -1,12 +1,11 @@
 class Admin::ProductsController < ApplicationController
   def index
-    @params = Product.filter_params params
-    # @products = Product.get_page params
     @search = Product.search do
       fulltext params[:search]
+      order_by :updated_at, :desc
+      paginate :page => params[:page], :per_page => 10
     end
-    @products = @search.results.order_by(:id)
-    @pages = Product.get_page_array
+    @results = @search.results
   end
 
   def show
@@ -28,7 +27,7 @@ class Admin::ProductsController < ApplicationController
   def create
     @types = Type.all
     @product = Product.new(product_params)
-    if @product.save!
+    if @product.save
       redirect_to polymorphic_path([:admin, @product]),
         :flash => { :success => 'Produsul a fost salvat' }
     else
@@ -39,12 +38,9 @@ class Admin::ProductsController < ApplicationController
   def update
     @product = Product.find params[:id]
     @types = Type.all
-    if params[:product][:images]
-      @product.images << params[:product][:images]
-    end
     if @product.update(product_params)
       redirect_to polymorphic_path([:admin, @product]),
-        :flash => { :success => 'Produsul a fost salvat' }
+        :flash => {:success => 'Produsul a fost salvat'}
     else
       render action: 'edit'
     end
@@ -62,7 +58,8 @@ class Admin::ProductsController < ApplicationController
   private
 
     def product_params
-      params.require(:product).permit(:name, :description, :price, images_attributes: [:image])
+      params.require(:product).permit(:name, :description, :price,
+        :type_value_ids => [], images_attributes: [:image])
     end
 
 end

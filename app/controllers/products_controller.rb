@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.get_page({
-      :page => params['page'], 
-      :category_id => params['category_id'],
-      :where => params['where'],
-      :order => params['order']})
-    # debugger
+    @search = Product.search do
+      fulltext params[:search]
+      order_by :updated_at, :desc
+      paginate :page => params[:page], :per_page => 10
+    end
+    @results = @search.results
     @categories = Category.all
     @types = Type.all
   end
@@ -17,7 +17,12 @@ class ProductsController < ApplicationController
   end
 
   def welcome
-    @products = Product.favorite_products
+    @search = Product.search do
+      fulltext params[:search]
+      order_by :updated_at, :desc
+      paginate :page => params[:page], :per_page => 10
+    end
+    @results = @search.results
     @categories = Category.all
   end
 

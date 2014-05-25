@@ -1,5 +1,3 @@
 .orderby_form
-  = label_tag('sort_item', "Sorteaza dupa: ")
-  = select(:sort, :item, {"Cele mai noi" => 1, "Pret" => 2, "Nume" => 3})
   #product_list
     = render :partial => 'shared/products/products_list'

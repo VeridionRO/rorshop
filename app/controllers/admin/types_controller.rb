@@ -1,8 +1,11 @@
 class Admin::TypesController < ApplicationController
   def index
-    @types = Type.all
-    @params = Type.params
-    @pages = Type.get_page_array
+    @search = Type.search do
+      fulltext params[:search]
+      order_by :updated_at, :desc
+      paginate :page => params[:page], :per_page => 10
+    end
+    @results = @search.results
   end
 
   def show

@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -19,7 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -52,8 +51,8 @@ end
 gem 'simple_form'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'carrierwave'
-gem 'jquery-fileupload-rails'
 gem 'sunspot_rails'
+gem 'sunspot_autocomplete', '>= 0.0.3', :git => 'git@github.com:xponrails/sunspot_autocomplete.git'
 gem 'sunspot_solr'
 # twitter css
 gem 'twitter-bootstrap-rails'

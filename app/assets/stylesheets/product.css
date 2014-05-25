@@ -504,3 +504,9 @@ table.adminform td.labelcell {
 #lbCaption {
   font-weight: bold;
 }
+#mod_search_searchword{
+  width: 200px;
+}
+#sort_item{
+  margin-bottom: 0;
+}

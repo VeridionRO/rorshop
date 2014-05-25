@@ -1,15 +1,17 @@
+- page = (params[:page] && params[:page].to_i) || 1
+- url = admin ? '/admin/products/' : 'index'
 %tr
   %td{:colspan => "6"}
     .pagination.pagination-large
       %ul
-        - back_path = (page == 1 ? '#' : "/admin/products/?page=#{page - 1}")
-        - forward_path = (page * 3 >= count ? '#' : "/admin/products/?page=#{page + 1}")
-        %li{:class => "#{page == 1 ? 'disabled' : ''}"}
+        - back_path = (@results.first_page? ? '#' : "#{url}?page=#{@results.previous_page}")
+        - forward_path = (@results.last_page? ? '#' : "#{url}?page=#{@results.next_page}")
+        %li{:class => "#{@results.first_page? ? 'disabled' : ''}"}
           %a{:href => back_path}
             &laquo;
-        - @pages.each do |p|
+        - (1..@results.total_pages).each do |p|
           %li{:class => "#{page == p ? 'active': ''}"}
-            %a{:href => "/admin/products/?page=#{p}"}= p
-        %li{:class => "#{page == @pages.count ? 'active': ''}"}
+            %a{:href => "#{url}?page=#{p}"}= p
+        %li{:class => "#{@results.last_page? ? 'active': ''}"}
           %a{:href => forward_path}
             &raquo;

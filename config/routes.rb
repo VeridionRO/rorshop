@@ -1,4 +1,6 @@
 Rorshop::Application.routes.draw do
+  resources :search_suggestions
+
   resources :users
   post 'sessions/create', as: 'login'
   get 'sessions/destroy', as: 'logout'

@@ -4,27 +4,29 @@
 %table.table.table-striped
   %thead
     = render :partial => "shared/admin/pagination",
-      :locals => {:page => @params[:page], :count => @products.count}
+      :locals => {:admin => true}
     %tr
       %th= :ID
       %th= :Nume
       %th= :Descriere
       %th= :Pret
       %th= :Creat
+      %th= :Updatat
       %th.actions{width: '110px'}=t '.actions', :default => t('Actiuni')
   %tbody
-    - @products.each do |product|
+    - @results.each do |product|
       %tr
         %td= link_to product.id, admin_product_path(product)
         %td= product.name
         %td= product.description
         %td= product.price
         %td= product.created_at
+        %td= product.updated_at
         %td
           = link_to t('.edit', :default => "Editeaza"), edit_admin_product_path(product), :class => 'btn btn-mini'
           = link_to t('.destroy', :default => "Sterge"), admin_product_path(product), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
     %tfoot
       = render :partial => "shared/admin/pagination",
-        :locals => {:page => @params[:page], :count => @products.count}
+        :locals => {:admin => true}
     
 = link_to t('.new', :default => "Produs Nou"), new_admin_product_path, :class => 'btn btn-primary'

@@ -1,10 +1,11 @@
+- image = (!product.images.empty? && product.images.first) || Image.default_image
 .clear
   = yield(:buttons_heading)
 .clear.indent
   .browseProductImageContainer
     .browseProductImage
       %a{href: "/product/#{product.id}", rel: "lightbox[product1]", title: "#{product.name}"}
-        %img{alt: "#{product.name}", border: "0", height: "204", src: "/assets/#{product.image[:uri]}", width: "218"}/
+        = image_tag image.image.url(:medium)
     %br/
     %br/
   .floatElement

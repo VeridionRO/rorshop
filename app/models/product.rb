@@ -5,6 +5,8 @@ class Product < ActiveRecord::Base
   has_many :images, dependent: :destroy
   belongs_to :category
   
+  after_save :index_product
+
   accepts_nested_attributes_for :images, allow_destroy: true
 
   validates :name, :description, :price, presence: true
@@ -18,18 +20,11 @@ class Product < ActiveRecord::Base
 
   searchable do
     text :name, :description
+    time :updated_at
+    autocomplete :product_name, :using => :name
   end
 
   PAG = 9
-
-  def image
-    if images.empty?
-      @image = @@default_img
-    else
-      @image = images[0]
-    end
-    @image
-  end
 
   def get_neighbours
     raise ProductException::CannotHaveNeighbours, 
@@ -91,6 +86,10 @@ class Product < ActiveRecord::Base
   def self.get_page_array
     count = Product.count
     return 1..count/10
+  end
+
+  def index_product
+    SearchSuggestion.index_product self
   end
 
 end

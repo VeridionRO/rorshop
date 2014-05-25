@@ -4,9 +4,9 @@
 - count = @types.count
 - count_middle = count / 3
 - count_right = (count / 3) * 2
-= render :partial => 'shared/admin/products/category', 
+= render :partial => 'shared/admin/products/category',
   :locals => {:types => @types[0..count_middle]}
-= render :partial => 'shared/admin/products/category', 
+= render :partial => 'shared/admin/products/category',
   :locals => {:types => @types[count_middle + 1..count_right]}
-= render :partial => 'shared/admin/products/category', 
+= render :partial => 'shared/admin/products/category',
   :locals => {:types => @types[count_right + 1..count]}

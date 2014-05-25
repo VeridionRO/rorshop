@@ -6,8 +6,6 @@
           = render :partial => 'shared/menus'
       #search
         .moduletable
-          %h3 search:
-          %form{action: "#", method: "post"}
-            .search
-              %input#mod_search_searchword.inputbox{alt: "Search", maxlength: "20", name: "searchword", onblur: "if(this.value=='') this.value='search...';", onfocus: "if(this.value=='search...') this.value='';", size: "20", type: "text", value: "search..."}/
-              %input.button{onclick: "this.form.searchword.focus();", src: "/assets/searchButton.gif", type: "image", value: "Search"}/
+          = form_tag products_index_path, :class => "pull-right navbar-search", :method => :get do
+            = autocomplete_text_field "product", "name", "http://127.0.0.1:8982/solr/", "product_name"
+            # = text_field_tag :search, params[:search], size: 30, id: 'mod_search_searchword'

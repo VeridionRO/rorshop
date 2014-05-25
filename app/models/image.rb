@@ -1,11 +1,12 @@
 class Image < ActiveRecord::Base
-  # validates :product, presence: true
-  # validates_uniqueness_of :product, 
-  #   message: "product_id and default_image must be unique",
-  #   scope: :default_image
-
   belongs_to :product
-  has_attached_file :image
+  has_attached_file :image, 
+    :default_url => "/assets/default_img.jpg", 
+    :styles => { :medium => "210x210>", :thumb => "100x100>" }
   do_not_validate_attachment_file_type :image
+
+  def self.default_image
+    return self.new
+  end
 
 end

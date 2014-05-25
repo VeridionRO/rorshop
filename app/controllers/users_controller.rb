@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @categories = Category.all
     @types = Type.all
-    if @user.save!
+    if @user.save
       redirect_to root_path,
         :flash => { :success => 'Utilizatorul a fost salvat' }
     else
