@@ -7,5 +7,5 @@
       #search
         .moduletable
           = form_tag products_index_path, :class => "pull-right navbar-search", :method => :get do
-            = autocomplete_text_field "product", "name", "http://127.0.0.1:8982/solr/", "product_name"
-            # = text_field_tag :search, params[:search], size: 30, id: 'mod_search_searchword'
+            = text_field_tag :search, params[:search], size: 30, 
+              id: 'mod_search_searchword', placeholder: 'Cauta...'

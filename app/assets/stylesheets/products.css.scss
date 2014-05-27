@@ -121,8 +121,14 @@ img.remove-filter-value-icon{
   }
 }
 
-.moduletable{
-  form{
-    margin-bottom: 10px;
-  }
+#product-details{
+  width: 100%;
+}
+
+#product-details th{
+  width: 33%;
+}
+
+#product-details td{
+  width: 64%;
 }

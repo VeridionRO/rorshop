@@ -12,8 +12,16 @@
       .modal-header
         %h3
           Valori
-      = f.association :type_values, as: :check_boxes
-
+      = f.association :type_values, 
+        as: :check_boxes, 
+        label: 'Categorii', 
+        label_method: :value, 
+        value_method: :id
+      .control-group.check_boxes.optional.type_type_values
+        %label.check_boxes.optional.control-label Adauga
+        .controls
+          = text_field :type_value, :type_value
+          = f.submit 'Adauga', :class => 'btn btn-primary', :id => 'add-values'
   .form-actions
     = f.submit 'Salveaza', :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t('Anuleaza')), admin_types_path, :class => 'btn'

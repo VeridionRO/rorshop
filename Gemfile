@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
-gem 'pg'
+gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
@@ -18,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-ui-rails'
+gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -49,17 +51,12 @@ group :test, :development do
 end
 
 gem 'simple_form'
-gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
-gem 'carrierwave'
-gem 'sunspot_rails'
-gem 'sunspot_autocomplete', '>= 0.0.3', :git => 'git@github.com:xponrails/sunspot_autocomplete.git'
-gem 'sunspot_solr'
+
 # twitter css
-gem 'twitter-bootstrap-rails'
+gem "twitter-bootstrap-rails"
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -70,4 +67,3 @@ gem 'bcrypt-ruby'
 # Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
-gem 'seed_dump'

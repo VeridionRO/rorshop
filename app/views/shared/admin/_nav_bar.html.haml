@@ -12,4 +12,4 @@
           %li= link_to "Categorii", :controller => "types", :action => "index"
           %li= link_to "Comenzi"
         = form_tag admin_products_path, :class => "pull-right navbar-search", :method => :get do
-          = text_field_tag :search, params[:search], class: 'search-query', placeholder: "Cauta..."
+          = text_field_tag :search, params[:search], class: 'search-query', size: 30, id: 'mod_search_searchword', placeholder: 'Cauta...'

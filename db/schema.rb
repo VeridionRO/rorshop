@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524074825) do
+ActiveRecord::Schema.define(version: 20140526203408) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -54,7 +54,12 @@ ActiveRecord::Schema.define(version: 20140524074825) do
     t.integer "type_value_id", null: false
   end
 
-  add_index "products_type_values", ["product_id", "type_value_id"], name: "index_products_type_values_on_product_id_and_type_value_id", unique: true, using: :btree
+  create_table "products_types", force: true do |t|
+    t.integer "product_id"
+    t.integer "type_id"
+  end
+
+  add_index "products_types", ["product_id", "type_id"], name: "index_products_types_on_product_id_and_type_id", unique: true, using: :btree
 
   create_table "search_suggestions", force: true do |t|
     t.string   "term"

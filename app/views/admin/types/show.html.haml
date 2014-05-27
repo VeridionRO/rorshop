@@ -22,7 +22,6 @@
           %strong= 'Valori:'
           %br
           = @type.type_values
-
     .form-actions
       = link_to t('.back', :default => 'Inapoi'), admin_types_path, :class => 'btn'
       = link_to t('.edit', :default => 'Editeaza'), edit_admin_type_path(@type), :class => 'btn'

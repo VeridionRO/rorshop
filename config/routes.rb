@@ -15,6 +15,7 @@ Rorshop::Application.routes.draw do
     # (app/controllers/admin/products_controller.rb)
     resources :products, :types
     # get 'products/search'
+    get "type_values_controller/create"
   end
 
 end

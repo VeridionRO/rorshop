@@ -3,7 +3,7 @@
     = "Numarul de produse: #{@search.total}"
   = select(:sort, :item, {"Cele mai noi" => 1, "Pret" => 2, "Nume" => 3})
   = render :partial => 'shared/admin/pagination',
-    :locals => {:admin => false}
+      :locals => {:url => 'index'}
   - @results.each do |product|
     .leftPosition
       .browse_1
@@ -11,4 +11,4 @@
           .bottom_separator
             = render :partial => 'shared/products/product_details', :locals => {:product => product}
   = render :partial => 'shared/admin/pagination',
-    :locals => {:admin => false}
+    :locals => {:url => 'index'}

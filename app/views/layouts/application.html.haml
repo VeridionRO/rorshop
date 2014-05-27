@@ -2,9 +2,10 @@
 %html{dir: "ltr", lang: "en-gb", "xml:lang" => "en-gb", xmlns: "http://www.w3.org/1999/xhtml"}
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    = stylesheet_link_tag "application"
-    = javascript_include_tag "application"
-    = javascript_include_tag "jquery"
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'jquery-1.10.2.js'
+    = javascript_include_tag 'jquery-ui-1.10.4.custom.min.js'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     = yield :title
     = yield :head_extra

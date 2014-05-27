@@ -21,6 +21,9 @@ class Product < ActiveRecord::Base
   searchable do
     text :name, :description
     time :updated_at
+    text :type_values do
+      type_values.map { |v| v.value }
+    end
     autocomplete :product_name, :using => :name
   end
 

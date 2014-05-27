@@ -4,11 +4,17 @@
 %div
   %div
     %h3.Title
-      %span Customer Reviews:
-    %br/
-    There are yet no reviews for this product.
-    = succeed "Please" do
-      %br/
+      %span Detalii produs:
+    %table{id: 'product-details'}
+      %tbody
+        - @product.types.each do |p_type|
+          %tr
+            %th
+              = p_type.type.name
+            %td
+              - p_type.values.each do |p_value|
+                = p_value.type_value.value
+                ,
   %br/
 %div
 #statusBox{style: "text-align:center;display:none;visibility:hidden;"}

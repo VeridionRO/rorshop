@@ -3,7 +3,8 @@
   %h1=t '.title', :default => 'Categorii'
 %table.table.table-striped
   %thead
-    = render :partial => "shared/admin/pagination"
+    = render :partial => "shared/admin/pagination",
+      :locals => {:url => '/admin/types/'}
     %tr
       %th= :ID
       %th= :Nume
@@ -21,6 +22,7 @@
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_admin_type_path(type), :class => 'btn btn-mini'
           = link_to t('.destroy', :default => t("helpers.links.destroy")), admin_type_path(type), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
   %tfoot
-    = render :partial => "shared/admin/pagination"
+    = render :partial => "shared/admin/pagination",
+      :locals => {:url => '/admin/types/'}
 
 = link_to t('.new', :default => t("helpers.links.new")), new_admin_type_path, :class => 'btn btn-primary'

@@ -562,12 +562,9 @@ dl.contentpane .button-field {
 .module-categories ul.level2 li {
   padding: 2px 0 6px 13px;
 }
-.module-new, .module-specials {
-  padding: 8px 0px 22px 0px;
-}
 .module-new h3, .module-specials h3 {
   color: #393c40;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 .module-specials .product-Old-Price, .module-new .product-Old-Price {
   display: none;

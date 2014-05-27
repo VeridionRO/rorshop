@@ -1,7 +1,8 @@
-jQuery ->
-  jQuery('#mod_search_searchword').autocomplete
+$ ->
+  $('#mod_search_searchword').autocomplete
     source: '/search_suggestions'
     delay: 500
+    minLength: 2
 
   MainController = ->
   MainController:: =
@@ -11,14 +12,14 @@ jQuery ->
     values: new Array
     addLoader: ->
       unless @loader
-        @loader = jQuery("<div/>",
+        @loader = $("<div/>",
           id: "notice"
         ).text("Se incarca")
-        loaderImage = jQuery("<img />",
+        loaderImage = $("<img />",
           src: "/assets/spinner-64.gif"
         )
         @loader.append loaderImage
-      jQuery("#product_list").html @loader
+      $("#product_list").html @loader
       return
     toggleDataValue: (link) ->
       type = link.attr("parent")
@@ -27,43 +28,43 @@ jQuery ->
       controller.types[type] = new Array  unless controller.types[type]
       typeArray = controller.types[type]
       if link.hasClass("filter-value")
-        if jQuery.inArray(value, typeArray) is -1
+        if $.inArray(value, typeArray) is -1
           typeArray.push value
           values.push value
       else if link.hasClass("remove-filter-value")
-        controller.types[type] = jQuery.grep(typeArray, (item) ->
+        controller.types[type] = $.grep(typeArray, (item) ->
           item isnt value
         )
-        controller.values = jQuery.grep(values, (item) ->
+        controller.values = $.grep(values, (item) ->
           item isnt value
         )
       else
         return
       return
     toggleType: (trigger, imageCollapse) ->
-      imageCollapse = jQuery(trigger)  unless imageCollapse
-      ul = jQuery(trigger).closest(".filter-type").find("ul.level1")
+      imageCollapse = $(trigger)  unless imageCollapse
+      ul = $(trigger).closest(".filter-type").find("ul.level1")
       ul.toggle "slow"
-      jQuery(imageCollapse).toggleClass "display collapse"
+      $(imageCollapse).toggleClass "display collapse"
       return
     toggleDisplayValue: (link) ->
       if link.hasClass("filter-value")
-        selectedValue = jQuery(".clone-filter-value").clone(true, true).removeClass("clone-filter-value")
+        selectedValue = $(".clone-filter-value").clone(true, true).removeClass("clone-filter-value")
         link.closest(".filter-type").find("h3").after selectedValue
         selectedValue.css "display", "block"
-        selectedValue.append jQuery(link).text()
+        selectedValue.append $(link).text()
         selectedValue.attr
-          parent: jQuery(link).attr("parent")
-          val: jQuery(link).attr("val")
+          parent: $(link).attr("parent")
+          val: $(link).attr("val")
         controller.toggleType link, controller.findToggleIcon(link)
         link.parent().remove()
       else if link.hasClass("remove-filter-value")
-        restoreLi = jQuery("li.hide").clone(true, true).removeClass("hide")
+        restoreLi = $("li.hide").clone(true, true).removeClass("hide")
         restoreLink = restoreLi.find("a")
-        typeId = jQuery(link).attr("parent")
+        typeId = $(link).attr("parent")
         restoreLink.attr
           parent: typeId
-          val: jQuery(link).attr("val")
+          val: $(link).attr("val")
         restoreLink.find("span").append link.text()
         ul = link.closest(".filter-type").find("ul")
         ul.append restoreLi
@@ -73,15 +74,15 @@ jQuery ->
         return
       return
     findToggleIcon: (elem) ->
-      jQuery(elem).closest(".filter-type").find ".toggle-type"
+      $(elem).closest(".filter-type").find ".toggle-type"
   controller = new MainController()
-  jQuery(document).ready ->
+  $(document).ready ->
     selector = "a.remove-filter-value, a.filter-value"
-    jQuery(selector).click (event) ->
-      link = jQuery(event.currentTarget)
+    $(selector).click (event) ->
+      link = $(event.currentTarget)
       controller.toggleDataValue link
-      typeUrlIds = jQuery.param(where: controller.values)
-      jQuery.ajax
+      typeUrlIds = $.param(where: controller.values)
+      $.ajax
         url: "/products/index.js"
         beforeSend: (xhr) ->
           controller.addLoader()
@@ -95,18 +96,21 @@ jQuery ->
         dataType: "script"
       event.preventDefault()
       return
-    jQuery("div.filter-type a.toggle-type").click (event) ->
-      controller.toggleType jQuery(event.currentTarget)
+    $("div.filter-type a.toggle-type").click (event) ->
+      controller.toggleType $(event.currentTarget)
       event.preventDefault()
       return
-    jQuery("#sort_item").change (event) ->
-      jQuery.ajax
+    $("#sort_item").change (event) ->
+      $.ajax
         url: "/products/index.js"
         beforeSend: (xhr) ->
           controller.addLoader()
           return
-        data: "order=" + jQuery("#sort_item").val()
+        data: "order=" + $("#sort_item").val()
         success: ->
         dataType: "script"
       return
     return
+
+  $("a[rel~=popover], .has-popover").popover()
+  $("a[rel~=tooltip], .has-tooltip").tooltip()
