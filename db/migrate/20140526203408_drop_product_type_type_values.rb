@@ -3,4 +3,3 @@ class DropProductTypeTypeValues < ActiveRecord::Migration
     drop_table :products_types_type_values
   end
 end
-Brandon Snow

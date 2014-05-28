@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"type",
+				"type_params"
+			],
+			[
+				"fiel",
+				"field_id"
+			],
+			[
+				"type_",
+				"type_value"
+			],
+			[
 				"j",
 				"jQuery"
 			],
@@ -21,10 +33,6 @@
 			],
 			[
 				"ty",
-				"type_values"
-			],
-			[
-				"type",
 				"type_values"
 			],
 			[
@@ -506,74 +514,72 @@
 			[
 				"as",
 				"asg	assert(var = assigns(:var))"
-			],
-			[
-				"fav",
-				"favorite_products"
-			],
-			[
-				"st",
-				"stu	stub"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/assets/javascripts/solr-autocomplete/jquery-autocomplete/jquery.autocomplete.js",
-			"settings":
-			{
-				"buffer_size": 24268,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/application.js",
-			"settings":
-			{
-				"buffer_size": 521,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/models/product.rb",
 			"settings":
 			{
-				"buffer_size": 2751,
+				"buffer_size": 2684,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 1125 files for \"AjaxSolr\"\n\n/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/AbstractManager.js:\n    8   * @class AbstractManager\n    9   */\n   10: AjaxSolr.AbstractManager = AjaxSolr.Class.extend(\n   11:   /** @lends AjaxSolr.AbstractManager.prototype */\n   12    {\n   13    /**\n   ..\n   89     *\n   90     * <p>If no store has been set, it sets the store to the basic <tt>\n   91:    * AjaxSolr.ParameterStore</tt>.</p>\n   92     */\n   93    init: function () {\n   94      this.initialized = true;\n   95      if (this.store === null) {\n   96:       this.setStore(new AjaxSolr.ParameterStore());\n   97      }\n   98      this.store.load(false);\n   ..\n  106     * Set the manager's parameter store.\n  107     *\n  108:    * @param {AjaxSolr.ParameterStore} store\n  109     */\n  110    setStore: function (store) { \n  ...\n  116     * Adds a widget to the manager.\n  117     *\n  118:    * @param {AjaxSolr.AbstractWidget} widget\n  119     */\n  120    addWidget: function (widget) { \n\n/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/Core.js:\n    4   * @namespace A unique namespace for the AJAX Solr library.\n    5   */\n    6: AjaxSolr = function () {};\n    7  \n    8  /**\n    9   * @namespace Baseclass for all classes\n   10   */\n   11: AjaxSolr.Class = function () {};\n   12  \n   13  /**\n   ..\n   18   * @returns A function that represents the subclass.\n   19   */\n   20: AjaxSolr.Class.extend = function (properties) {\n   21    var klass = this; // Safari dislikes 'class'\n   22    // The subclass is just a function that when called, instantiates itself.\n   ..\n   25      // 'this' refers to the subclass, which starts life as an empty object.\n   26      // Add its parent's properties, its own properties, and any passed options.\n   27:     AjaxSolr.extend(this, new klass(options), properties, options);\n   28    }\n   29    // Allow the subclass to extend itself into further subclasses.\n   ..\n   38   * @see http://stackoverflow.com/questions/5223/length-of-javascript-associative-array\n   39   */\n   40: AjaxSolr.size = function (obj) {\n   41    var size = 0;\n   42    for (var key in obj) {\n   ..\n   54   * @returns {Boolean} Whether the two given values are equal.\n   55   */\n   56: AjaxSolr.equals = function (foo, bar) {\n   57:   if (AjaxSolr.isArray(foo) && AjaxSolr.isArray(bar)) {\n   58      if (foo.length !== bar.length) {\n   59        return false;\n   ..\n   66      return true;\n   67    }\n   68:   else if (AjaxSolr.isRegExp(foo) && AjaxSolr.isString(bar)) {\n   69      return bar.match(foo);\n   70    }\n   71:   else if (AjaxSolr.isRegExp(bar) && AjaxSolr.isString(foo)) {\n   72      return foo.match(bar);\n   73    }\n   ..\n   83   * @returns {Boolean} Whether value exists in the array.\n   84   */\n   85: AjaxSolr.inArray = function (value, array) {\n   86    if (array) {\n   87      for (var i = 0, l = array.length; i < l; i++) {\n   88:       if (AjaxSolr.equals(array[i], value)) {\n   89          return i;\n   90        }\n   ..\n  100   * @see http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js\n  101   */\n  102: AjaxSolr.flatten = function(array) {\n  103    var ret = [];\n  104    for (var i = 0, l = array.length; i < l; i++) {\n  105:     ret = ret.concat(AjaxSolr.isArray(array[i]) ? AjaxSolr.flatten(array[i]) : array[i]);\n  106    }\n  107    return ret;\n  ...\n  114   * @see http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js\n  115   */\n  116: AjaxSolr.grep = function(array, callback) {\n  117    var ret = [];\n  118    for (var i = 0, l = array.length; i < l; i++) {\n  ...\n  127   * Equivalent to Ruby's Array#compact.\n  128   */\n  129: AjaxSolr.compact = function(array) {\n  130:   return AjaxSolr.grep(array, function (item) {\n  131      return item.toString();\n  132    });\n  ...\n  141   * @see http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js\n  142   */\n  143: AjaxSolr.isArray = function (obj) {\n  144    return obj != null && typeof obj == 'object' && 'splice' in obj && 'join' in obj;\n  145  };\n  ...\n  149   * @returns {Boolean} Whether the object is a RegExp object.\n  150   */\n  151: AjaxSolr.isRegExp = function (obj) {\n  152    return obj != null && (typeof obj == 'object' || typeof obj == 'function') && 'ignoreCase' in obj;\n  153  };\n  ...\n  157   * @returns {Boolean} Whether the object is a String object.\n  158   */\n  159: AjaxSolr.isString = function (obj) {\n  160    return obj != null && typeof obj == 'string';\n  161  };\n  ...\n  164   * Define theme functions to separate, as much as possible, your HTML from your\n  165   * JavaScript. Theme functions provided by AJAX Solr are defined in the\n  166:  * AjaxSolr.theme.prototype namespace, e.g. AjaxSolr.theme.prototype.select_tag.\n  167   *\n  168   * To override a theme function provided by AJAX Solr, define a function of the\n  169:  * same name in the AjaxSolr.theme namespace, e.g. AjaxSolr.theme.select_tag.\n  170   *\n  171:  * To retrieve the HTML output by AjaxSolr.theme.prototype.select_tag(...), call\n  172:  * AjaxSolr.theme('select_tag', ...).\n  173   *\n  174   * @param {String} func\n  ...\n  184   * @see http://cvs.drupal.org/viewvc.py/drupal/drupal/misc/drupal.js?revision=1.58\n  185   */\n  186: AjaxSolr.theme = function (func) {\n  187    for (var i = 1, args = []; i < arguments.length; i++) {\n  188      args.push(arguments[i]);\n  189    }\n  190    try {\n  191:     return (AjaxSolr.theme[func] || AjaxSolr.theme.prototype[func]).apply(this, args);\n  192    }\n  193    catch (e) {\n  ...\n  205   * @see http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js\n  206   */\n  207: AjaxSolr.extend = function () {\n  208    var target = arguments[0] || {}, i = 1, length = arguments.length, options;\n  209    for (; i < length; i++) {\n  ...\n  215          }\n  216          if (copy && typeof copy == 'object' && !copy.nodeType) {\n  217:           target[name] = AjaxSolr.extend(src || (copy.length != null ? [] : {}), copy);\n  218          }\n  219          else if (copy !== undefined) {\n\n/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/Parameter.js:\n    7   * @class Parameter\n    8   */\n    9: AjaxSolr.Parameter = AjaxSolr.Class.extend(\n   10:   /** @lends AjaxSolr.Parameter.prototype */\n   11    {\n   12    /**\n   ..\n  144     */\n  145    valueString: function (value) {\n  146:     value = AjaxSolr.isArray(value) ? value.join(',') : value;\n  147      return encodeURIComponent(value);\n  148    },\n\n/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/ParameterStore.js:\n   27   * @class ParameterStore\n   28   */\n   29: AjaxSolr.ParameterStore = AjaxSolr.Class.extend(\n   30:   /** @lends AjaxSolr.ParameterStore.prototype */\n   31    {\n   32    /**\n   ..\n   56     * @field\n   57     * @private\n   58:    * @type AjaxSolr.AbstractManager\n   59     */\n   60    manager: null,\n   ..\n   86     *\n   87     * @param {String} name The name of the parameter.\n   88:    * @returns {AjaxSolr.Parameter|AjaxSolr.Parameter[]} The parameter.\n   89     */\n   90    get: function (name) {\n   91      if (this.params[name] === undefined) {\n   92:       var param = new AjaxSolr.Parameter({ name: name });\n   93        if (this.isMultiple(name)) {\n   94          this.params[name] = [ param ];\n   ..\n  131     *\n  132     * @param {String} name The name of the parameter.\n  133:    * @param {AjaxSolr.Parameter} [param] The parameter.\n  134:    * @returns {AjaxSolr.Parameter|Boolean} The parameter, or false.\n  135     */\n  136    add: function (name, param) {\n  137      if (param === undefined) {\n  138:       param = new AjaxSolr.Parameter({ name: name });\n  139      }\n  140      if (this.isMultiple(name)) {\n  ...\n  143        }\n  144        else {\n  145:         if (AjaxSolr.inArray(param.val(), this.values(name)) == -1) {\n  146            this.params[name].push(param);\n  147          }\n  ...\n  187          var indices = [];\n  188          for (var i = 0, l = this.params[name].length; i < l; i++) {\n  189:           if (AjaxSolr.equals(this.params[name][i].val(), value)) {\n  190              indices.push(i);\n  191            }\n  ...\n  194        }\n  195        else {\n  196:         if (AjaxSolr.equals(this.params[name].val(), value)) {\n  197            return name;\n  198          }\n  ...\n  210     * @param {String} name The name of the parameter.\n  211     * @param {String|Number|String[]|Number[]} value The value.\n  212:    * @returns {AjaxSolr.Parameter|Boolean} The parameter, or false.\n  213     */\n  214    addByValue: function (name, value) {\n  215:     if (this.isMultiple(name) && AjaxSolr.isArray(value)) {\n  216        var ret = [];\n  217        for (var i = 0, l = value.length; i < l; i++) {\n  218:         ret.push(this.add(name, new AjaxSolr.Parameter({ name: name, value: value[i] })));\n  219        }\n  220        return ret;\n  221      }\n  222      else {\n  223:       return this.add(name, new AjaxSolr.Parameter({ name: name, value: value }))\n  224      }\n  225    },\n  ...\n  235      var indices = this.find(name, value);\n  236      if (indices) {\n  237:       if (AjaxSolr.isArray(indices)) {\n  238          for (var i = indices.length - 1; i >= 0; i--) {\n  239            this.remove(name, indices[i]);\n  ...\n  265        }\n  266      }\n  267:     return AjaxSolr.compact(params).join('&');\n  268    },\n  269  \n  ...\n  277      for (var i = 0, l = pairs.length; i < l; i++) {\n  278        if (pairs[i]) { // ignore leading, trailing, and consecutive &'s\n  279:         var param = new AjaxSolr.Parameter();\n  280          param.parseString(pairs[i]);\n  281          this.add(param.name, param);\n  ...\n  303        }\n  304      }\n  305:     return AjaxSolr.compact(params).join('&');\n  306    },\n  307  \n\n/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/managers/Manager.jquery.js:\n    4   * @see http://wiki.apache.org/solr/SolJSON#JSON_specific_parameters\n    5   * @class Manager\n    6:  * @augments AjaxSolr.AbstractManager\n    7   */\n    8: AjaxSolr.Manager = AjaxSolr.AbstractManager.extend(\n    9:   /** @lends AjaxSolr.Manager.prototype */\n   10    {\n   11    executeRequest: function (servlet) {\n\n/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/jquery-autocomplete/jquery.autocomplete.js:\n   20        success: callback,\n   21        dataType: type,\n   22:       jsonpCallback: \"applyAjaxSolrCallback\"\n   23      });\n   24    }\n   ..\n   67      return this.trigger(\"unautocomplete\");\n   68    },\n   69:   ajaxSolrCallback: null,\n   70:   ajaxSolrFieldName: null\n   71  });\n   72  \n   ..\n  104    var suggest = options.suggest;\n  105    \n  106:   var ajaxSolrManager = new AjaxSolr.Manager({\n  107      solrUrl: options.url\n  108    });\n  109:   ajaxSolrManager.init();\n  110    \n  111    // prevent form submit in opera when selecting with return key\n  ...\n  390        });\n  391        \n  392:       ajaxSolrManager.store.addByValue('q', makeQuery(lastWord(term)));\n  393:       ajaxSolrManager.store.addByValue('indent', 'on');\n  394:       ajaxSolrManager.store.addByValue('sort', 'score desc');\n  395:       ajaxSolrManager.store.addByValue('fl', solrFieldName());\n  396        \n  397:       $.ajaxSolrCallback = success;\n  398:       $.ajaxSolrFieldName = solrFieldName();\n  399        \n  400:       ajaxSolrManager.doRequest();\n  401  \n  402      } else {\n  ...\n  849  //// callback is not encapsulated in any objects\n  850  //// to avoid the (.) anomaly in the url\n  851: var applyAjaxSolrCallback = function(result){\n  852    var items = \"\";\n  853    $(result.response.docs).each(function(index, doc){\n  854:     items = items + doc[$.ajaxSolrFieldName] + \"\\n\";\n  855    });\n  856:   $.ajaxSolrCallback(result.responseHeader.params.q, items);\n  857  };\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/0a0d2bbe9a97a41446bc97d60a394803:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/0c7fa017e58d69686d85d80d4b0a5601:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/12e825e866dddc5ee5888d36e3b3a331:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/2f5173deea6c795b8fdde723bb4b63af:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/34e116390e368d415a4774717efa2bbe:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/89ff03956267c0ba7763c60ff46db295:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/8e13086af6b0c200e9ee9d09723081dc:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/92258bb832877494e2e400812794efee:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/aed46c1ccfd7eac13445c6891a6b27d7:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ba34cedbaea991fafa34c6412cad4b2e:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/bb2fdc177f418ebd60dc7e9e4473da47:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ce9548bea3aac42203ae676b476fcc20:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/cffd775d018f68ce5dba1ee0d951a994:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/d43415b07dc42aeb7d5b7f481f3f1304:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ddc3a59da0bef1c9529f5c59b4e2c79f:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/e0f1cfbaf7a93397724e758535c46730:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/e6521d9ba03dc01353b57f1bd09a354f:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/eacdd3126ce61ec3d4a873ff761cdc43:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ebb545c7b7165d5692c072bff64d1d3a:\n    <binary>\n\n~/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/f340d2aa58d5c1b9bbbfcc41568cc78a:\n    <binary>\n\n516 matches across 26 files\n\n\nSearching 1125 files for \"8982\"\n\n/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menu_header.html.haml:\n    8          .moduletable\n    9            = form_tag products_index_path, :class => \"pull-right navbar-search\", :method => :get do\n   10:             = autocomplete_text_field(\"product\", \"name\", \"http://0.0.0.0:8982/solr/\", \"product_name\").html_safe\n   11  \n\n/home/mvinaga/Dropbox/sites/rorshop/config/sunspot.yml:\n   12      solr_home: solr\n   13      hostname: localhost\n   14:     port: 8982\n   15      log_level: INFO\n   16  \n\n~/Dropbox/sites/rorshop/log/development.log:\n    <binary>\n\n/home/mvinaga/Dropbox/sites/rorshop/log/sunspot-solr-development.log:\n  311  INFO: Opening Searcher@7c94eb11 realtime\n  312  May 24, 2014 2:20:41 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  313: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982038042247168)} 0 273\n  314  May 24, 2014 2:20:41 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  315  INFO: [default] webapp=/solr path=/update params={wt=ruby} {} 0 66\n  ...\n  389  INFO: [default] webapp=/solr path=/select params={sort=updated_at_d+desc&start=0&q=*:*&wt=ruby&fq=type:Product&rows=10} hits=0 status=0 QTime=0 \n  390  May 24, 2014 2:21:12 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  391: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982070638280704)} 0 4\n  392  May 24, 2014 2:21:12 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  393  INFO: [default] webapp=/solr path=/update params={wt=ruby} {} 0 1\n  ...\n  457  INFO: end_commit_flush\n  458  May 24, 2014 2:21:41 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  459: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982101150793728)} 0 3\n  460  May 24, 2014 2:21:41 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  461  INFO: [default] webapp=/solr path=/update params={wt=ruby} {} 0 2\n  ...\n  515  INFO: [default] Registered new searcher Searcher@2d50e341 main{StandardDirectoryReader(segments_18:86:nrt _p(4.2):C45/44)}\n  516  May 24, 2014 2:21:50 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  517: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982111290523648)} 0 2\n  518  May 24, 2014 2:21:50 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  519: INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[Product 1 (1468982111340855296), Product 2 (1468982111355535360), Product 3 (1468982111357632512), Product 4 (1468982111361826816), Product 5 (1468982111366021120), Product 6 (1468982111370215424), Product 7 (1468982111372312576), Product 8 (1468982111374409728), Product 9 (1468982111377555456), Product 10 (1468982111379652608), ... (32 adds)]} 0 76\n  520  May 24, 2014 2:21:50 PM org.apache.solr.update.DirectUpdateHandler2 commit\n  521  INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}\n  ...\n  537  INFO: Opening Searcher@132cd7ba realtime\n  538  May 24, 2014 2:21:51 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  539: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Type (-1468982112003555328)} 0 6\n  540  May 24, 2014 2:21:51 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  541: INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[Type 1 (1468982112021381120)]} 0 4\n  542  May 24, 2014 2:21:51 PM org.apache.solr.update.DirectUpdateHandler2 commit\n  543  INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}\n  ...\n  559  INFO: Opening Searcher@3d2328bf realtime\n  560  May 24, 2014 2:24:12 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  561: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982259509886976)} 0 5\n  562  May 24, 2014 2:24:12 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  563  INFO: [default] webapp=/solr path=/update params={wt=ruby} {} 0 2\n  ...\n  627  INFO: end_commit_flush\n  628  May 24, 2014 2:27:19 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  629: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982456429314048)} 0 3\n  630  May 24, 2014 2:27:20 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  631  INFO: [default] webapp=/solr path=/update params={wt=ruby} {} 0 1\n  ...\n  695  INFO: end_commit_flush\n  696  May 24, 2014 2:29:23 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  697: INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:Product (-1468982585860292608)} 0 2\n  698  May 24, 2014 2:29:23 PM org.apache.solr.update.processor.LogUpdateProcessor finish\n  699  INFO: [default] webapp=/solr path=/update params={wt=ruby} {} 0 2\n\n239 matches across 4 files\n",
+			"file": "app/controllers/products_controller.rb",
 			"settings":
 			{
-				"buffer_size": 19132,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "config/sunspot.yml",
-			"settings":
-			{
-				"buffer_size": 346,
+				"buffer_size": 709,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "solr/conf/schema.xml",
+			"file": "app/controllers/admin/products_controller.rb",
 			"settings":
 			{
-				"buffer_size": 13502,
+				"buffer_size": 1432,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/shared/_menu_header.html.haml",
+			"file": "app/controllers/admin/types_controller.rb",
 			"settings":
 			{
-				"buffer_size": 366,
+				"buffer_size": 1038,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/shared/admin/types/_form.html.haml",
+			"settings":
+			{
+				"buffer_size": 946,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/admin/types.js.coffee",
+			"settings":
+			{
+				"buffer_size": 403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/type_values_controller/create.js.haml",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/admin/types.html.haml",
+			"settings":
+			{
+				"buffer_size": 652,
 				"line_ending": "Unix"
 			}
 		}
@@ -581,9 +587,49 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 56.0,
+		"height": 77.0,
 		"selected_items":
 		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git hist",
+				"Git: Commit history"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"git curr",
+				"Git: Checkout Current File"
+			],
+			[
+				"git pu",
+				"Git: Pull Current Branch"
+			],
 			[
 				"format",
 				"Format Code"
@@ -605,10 +651,6 @@
 				"Git: Reset (unstage) Current File"
 			],
 			[
-				"git curr",
-				"Git: Pull Current Branch"
-			],
-			[
 				"git re",
 				"Git: Reset (unstage) Current File"
 			],
@@ -621,23 +663,7 @@
 				"Package Control: Install Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"git comm",
-				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add..."
-			],
-			[
 				"git push",
-				"Git: Push Current Branch"
-			],
-			[
-				"git pus",
 				"Git: Push Current Branch"
 			],
 			[
@@ -647,10 +673,6 @@
 			[
 				"form",
 				"Snippet: form_tag"
-			],
-			[
-				"git diff",
-				"Git: Diff Current File"
 			],
 			[
 				"git dif",
@@ -917,10 +939,6 @@
 				"Set Syntax: Ruby on Rails"
 			],
 			[
-				"remove",
-				"Xdebug: Add/Remove Breakpoint"
-			],
-			[
 				"rsp",
 				"Set Syntax: RSpec"
 			],
@@ -1083,18 +1101,6 @@
 			[
 				"xdebug cl",
 				"Xdebug: Clear All Breakpoints"
-			],
-			[
-				"xdebug start",
-				"Xdebug: Start Debugging"
-			],
-			[
-				"resto",
-				"Xdebug: Restore Layout"
-			],
-			[
-				"assign",
-				"Snippet: assert(var = assigns(:var))"
 			]
 		],
 		"width": 467.0
@@ -1118,16 +1124,89 @@
 	},
 	"file_history":
 	[
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/admin/products_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/products.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/type_value.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/admin/type_values_controller_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/models/type_value_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/types/edit.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/new.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/index.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/admin/application.css",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140517101233_add_email_to_user.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/application.js",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319221946_create_join_table_product_category.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/sessions/create.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/config.ru",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/admin/products.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/routes.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/Rakefile",
+		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/admin/types.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/admin/types_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/types/index.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/products/_form.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/types/_form.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_products.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/types/show.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/show.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/products_controller.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/application.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/application.css",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/products.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/index.js.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/admin/products.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/application.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/admin/admin_products_spec.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/admin/types_helper.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140527192638_drop_product_type_values2.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140527192649_drop_product_type_type_values2.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/product.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140527193721_create_join_table_product_type3.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140525212101_create_join_table_product_type.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140527193535_create_join_table_product_type2.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140302103557_create_products.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140511142129_drop_image_table.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140526203408_drop_product_type_type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140525211938_drop_product_type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/database.yml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/uploaders/image_uploader.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/image.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/bin/rails",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/admin/types.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/users.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/bootstrap.js.coffee",
+		"/home/mvinaga/Dropbox/sites/rorshop/public/javascripts/jquery.js",
+		"/home/mvinaga/Dropbox/sites/rorshop/f",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/admin/application.js",
+		"/home/mvinaga/.local/share/Trash/files/bootstrap.js.coffee",
+		"/tmp/tmpmfn0kq-rabbitvcs-HEAD-WORKI.diff",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/ga.js",
+		"/tmp/tmpvS1EYy-rabbitvcs-HEAD-WORKI.diff",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/application_controller.rb",
+		"/tmp/tmpbzZYqv-rabbitvcs-HEAD-WORKI.diff",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/type.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menu_header.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/products_types_type_value.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/models/products_type.rb",
+		"/tmp/tmpJgzmOx-rabbitvcs-HEAD-WORKI.diff",
+		"/tmp/tmpXLJd_0-rabbitvcs-HEAD-WORKI.diff",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140525213200_create_join_table_product_type_type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140327185755_create_join_table_product_type_values.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product_details.html.haml",
+		"/home/mvinaga/Dropbox/sites/rorshop/log/production.log",
+		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140511162506_add_product_to_image.rb",
+		"/home/mvinaga/Dropbox/sites/rorshop/solr/conf/schema.xml",
+		"/home/mvinaga/Dropbox/sites/rorshop/config/sunspot.yml",
+		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/jquery-autocomplete/jquery.autocomplete.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/solr/conf/solrconfig.xml",
 		"/home/mvinaga/Desktop/test.xml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/solr-autocomplete/jquery.autocomplete.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140517101233_add_email_to_user.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/config.ru",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/managers/Manager.jquery.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/application.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/AbstractManager.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/ParameterStore.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/sunspot.yml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/Core.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/solr-autocomplete/ajax-solr/core/Parameter.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ab03102dc8339a2e724e36b231d81804",
@@ -1138,9 +1217,6 @@
 		"/home/mvinaga/Dropbox/sites/rorshop/log/sunspot-solr-development.log.lck",
 		"/home/mvinaga/Dropbox/sites/rorshop/log/sunspot-solr-development.log",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/models/search_suggestion.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile",
-		"/home/mvinaga/Dropbox/sites/rorshop/solr/conf/schema.xml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/product.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/vendor/assets/javascripts/.keep",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/virtuemart.css",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/search_suggestions_controller.rb",
@@ -1148,13 +1224,7 @@
 		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/sessions_controller.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_products_list.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_index.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_products.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/template.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/application.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/products.js.coffee",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/type.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/products_controller.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/application.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/Gemfile.lock",
 		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/development/sprockets/ecf7b9e00518162f1a084f9e73d25fc3",
 		"/home/mvinaga/Dropbox/sites/rorshop/tmp/cache/assets/test/sass/e545484a32bfab7ce8ceb9d47402d8d009b969f0/products.css.scssc",
@@ -1163,17 +1233,12 @@
 		"/home/mvinaga/Dropbox/sites/rorshop/lib/assets/.keep",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/sessions.js.coffee",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/search_suggestions.css.scss",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/admin/admin_products_spec.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_slide_js.html.haml",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/category.js.coffee",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/admin/products.js.coffee",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/admin/types.js.coffee",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/test.js",
 		"/home/mvinaga/Desktop/test.html",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/ga.js",
 		"/tmp/tmpULQMfn-rabbitvcs-HEAD-WORKI.diff",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/caption.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/bootstrap.js.coffee",
 		"/home/mvinaga/Dropbox/sites/rorshop/config/boot.rb",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/bootstrap_and_overrides.css",
 		"/home/mvinaga/Dropbox/sites/rorshop/bin/bundle",
@@ -1184,68 +1249,9 @@
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/jquery.anythingslider.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/ie6_script_other.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/javascripts/jquery-1.3.2.min.js",
-		"/home/mvinaga/Dropbox/sites/rorshop/public/javascripts/jquery.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/public/javascripts/jquery_ujs.js",
 		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/search_suggestions.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/admin/products_controller.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/application_controller.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/application.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/spec_helper.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/product.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/products.css.scss",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/controllers/products_controller_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/types/_form.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product_details.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/products/_categories.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_menu_header.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/controllers/admin/products_controller_spec.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/index.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/_pagination.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/_nav_bar.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/requests/admin/meeting.txt",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_product_main_page.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/products/_form.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/admin/products/_category.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/products/welcome.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/admin/products.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/layouts/products.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/show.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140511162506_add_product_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/routes.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/Rakefile",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/new.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/assets/stylesheets/admin/bootstrap_and_overrides.css",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140302103557_create_products.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140321182301_rename_product_category2.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305203550_change_data_type_for_product_id.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140304195352_create_images.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140408170241_add_price_to_product.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140411200033_change_price_from_int_to_float.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140511142129_drop_image_table.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/users_controller.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/models/user.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140511162045_add_attachment_image_to_products.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140305223140_add_columns_to_image_table.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309143403_add_products_ref_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309161917_add_default_image_to_image.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140309164515_images_uniqueness_of_image_id_product_id_default.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319220846_create_categories.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319221946_create_join_table_product_category.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140319225052_rename_product_category.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/db/migrate/20140326171641_create_types.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/uploaders/image_uploader.rb",
-		"/tmp/tmpKAH3gI-rabbitvcs-HEAD-WORKI.diff",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_buttons_heading.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/products/_types.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/solr/conf/mapping-ISOLatin1Accent.txt",
-		"/home/mvinaga/Dropbox/sites/rorshop/config/initializers/wrap_parameters.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/admin/products/edit.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/views/shared/_categories.html.haml",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/helpers/category_helper.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/spec/factories/categories.rb",
-		"/home/mvinaga/Dropbox/sites/rorshop/app/controllers/category_controller.rb"
+		"/home/mvinaga/Dropbox/sites/rorshop/spec/spec_helper.rb"
 	],
 	"find":
 	{
@@ -1256,6 +1262,7 @@
 		"height": 102.0,
 		"where_history":
 		[
+			"/home/mvinaga/Dropbox/sites/rorshop/app",
 			"/home/mvinaga/Dropbox/sites/rorshop",
 			"/home/mvinaga/Dropbox/sites/rorshop/",
 			"/home/mvinaga/Dropbox/sites/rorshop/, *.css",
@@ -1304,6 +1311,122 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Product",
+			"Type",
+			"Produsul",
+			"@product",
+			"product_params",
+			"Produsul",
+			"product",
+			"Product",
+			"product",
+			"type_value_ids",
+			"field",
+			"type_values_params",
+			"Product",
+			"TypeValue",
+			"type_values_params",
+			"product",
+			"type_values_params",
+			"product",
+			"subcomment",
+			"type_id",
+			"+",
+			"'\"'",
+			"field2",
+			"field",
+			"val",
+			"field2",
+			"field",
+			"val",
+			":",
+			"$('",
+			"name",
+			"type_value",
+			"person",
+			" =>",
+			"type_id",
+			"firstName",
+			"object",
+			"type_value",
+			"\"",
+			"typeUrlIds",
+			"\"",
+			"get",
+			"submit",
+			"\"",
+			"Are you sure",
+			"value",
+			"p_type",
+			"type_values",
+			"title",
+			"'",
+			"jquery_ujs",
+			"\"",
+			"products_types_type_values",
+			"products_types",
+			"jquery",
+			"\"",
+			"sun",
+			"\"",
+			"jQuery",
+			"tw",
+			"post",
+			"mod_search_searchword",
+			"\"",
+			"jquer",
+			"jquery.js",
+			"boot",
+			"debugger",
+			"jquery.js",
+			"body",
+			"comment",
+			"comments",
+			"type_values",
+			"comments",
+			"TypeValue",
+			"ajax",
+			"Salveaza",
+			"Adauga",
+			"Categorii",
+			"type_value",
+			"text_field",
+			"name",
+			"text_field",
+			"type_values",
+			"products_types",
+			"products_type_values",
+			"type",
+			"p_type",
+			"p_value",
+			"type",
+			"p_type",
+			"value",
+			"type_value",
+			"ProductsTypesTypeValue",
+			"type_value",
+			"products_type",
+			"ProductsTypesTypeValue",
+			"type_values",
+			"type_value",
+			"value",
+			"types",
+			" :",
+			"Vendor",
+			"ProductsType",
+			"Vendor",
+			"products_types",
+			"types",
+			"company",
+			"index_product",
+			"self",
+			"jobs",
+			"types",
+			"products_types",
+			"types",
+			"products_types",
+			"values",
+			"products_types",
 			"name",
 			"author",
 			"title",
@@ -1315,123 +1438,7 @@
 			"Url",
 			"defaultSearchField",
 			"browser",
-			"AjaxSolr",
-			"product",
-			"prod",
-			"product_name_ac",
-			"title",
-			"autocomplete",
-			"Movie",
-			"author",
-			"title",
-			"search",
-			"title",
-			"post_title",
-			"\"",
-			"terms_for",
-			"SearchSuggestionsController",
-			"jQuery",
-			"#search",
-			"jquery",
-			"jquery.ui.base",
-			"jque",
-			"$",
-			"-",
-			"$",
-			".selector",
-			"selector",
-			"seed_one",
-			"mod_search_searchword",
-			"jQuery",
-			"search",
-			"$",
-			"jquery",
-			"querysearch",
-			"mod_search_searchword",
-			"search",
-			"\"",
-			"jquery",
-			"sort_item",
-			"results",
-			"product_list",
-			"mod_search_searchword",
-			"/admin/products/",
-			"page",
-			"''}",
-			"'/admin'",
-			"/admin",
-			"'admin",
-			"pagination",
-			"\"",
-			"types",
-			"products",
-			"@products",
-			"products",
-			"pagination",
-			"photo",
-			"attachment",
-			"image",
-			"class",
-			"photo",
-			"image",
-			"default_im",
-			"image",
-			"\"",
-			"image",
-			"default_image_uri",
-			"image",
-			"images",
-			"image",
-			"user_name",
-			"gallery_photos",
-			"gallery",
-			"paperclip",
-			"name",
-			"value",
-			"Categorii",
-			"type_values",
-			"span4",
-			"modal-header",
-			"type_values",
-			"description",
-			"recurrents",
-			"item",
-			"product",
-			"'",
-			"produc",
-			"'",
-			"Updatat",
-			"updated_at",
-			"Role",
-			"association",
-			"type",
-			"Creat",
-			"Nume",
-			"name",
-			"Descriere",
-			"Produse",
-			"model_class",
-			"updated_at",
-			"type_values",
-			"updated_at",
-			"Creat",
-			"types",
-			"search",
-			"Product",
-			"Type",
-			"products",
-			"results",
-			"products",
-			"@products",
-			"product",
-			"params",
-			"/@products",
-			"@products",
-			"products",
-			")",
-			"Creat",
-			"last_page",
-			"first_page"
+			"AjaxSolr"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1439,6 +1446,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Esti sigur",
 			"= render :partial => \"shared/form\"",
 			":product",
 			":image",
@@ -1460,241 +1468,54 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/javascripts/solr-autocomplete/jquery-autocomplete/jquery.autocomplete.js",
+					"file": "app/models/product.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24268,
+						"buffer_size": 2684,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2580,
-								2580
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1973.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/javascripts/application.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 521,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								521,
-								521
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/models/product.rb",
+					"buffer": 1,
+					"file": "app/controllers/products_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2751,
+						"buffer_size": 709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								317,
-								317
+								61,
+								61
 							]
 						],
 						"settings":
@@ -1787,721 +1608,170 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
+					"file": "app/controllers/admin/products_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19132,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										200,
-										208
-									],
-									[
-										227,
-										235
-									],
-									[
-										270,
-										278
-									],
-									[
-										439,
-										447
-									],
-									[
-										620,
-										628
-									],
-									[
-										781,
-										789
-									],
-									[
-										944,
-										952
-									],
-									[
-										1217,
-										1225
-									],
-									[
-										1328,
-										1336
-									],
-									[
-										1464,
-										1472
-									],
-									[
-										1836,
-										1844
-									],
-									[
-										2102,
-										2110
-									],
-									[
-										2283,
-										2291
-									],
-									[
-										2336,
-										2344
-									],
-									[
-										2361,
-										2369
-									],
-									[
-										2516,
-										2524
-									],
-									[
-										2542,
-										2550
-									],
-									[
-										2631,
-										2639
-									],
-									[
-										2657,
-										2665
-									],
-									[
-										2816,
-										2824
-									],
-									[
-										2959,
-										2967
-									],
-									[
-										3138,
-										3146
-									],
-									[
-										3283,
-										3291
-									],
-									[
-										3312,
-										3320
-									],
-									[
-										3483,
-										3491
-									],
-									[
-										3677,
-										3685
-									],
-									[
-										3730,
-										3738
-									],
-									[
-										3924,
-										3932
-									],
-									[
-										4153,
-										4161
-									],
-									[
-										4400,
-										4408
-									],
-									[
-										4684,
-										4692
-									],
-									[
-										4725,
-										4733
-									],
-									[
-										4886,
-										4894
-									],
-									[
-										4917,
-										4925
-									],
-									[
-										4995,
-										5003
-									],
-									[
-										5052,
-										5060
-									],
-									[
-										5242,
-										5250
-									],
-									[
-										5423,
-										5431
-									],
-									[
-										5447,
-										5455
-									],
-									[
-										5629,
-										5637
-									],
-									[
-										5908,
-										5916
-									],
-									[
-										6186,
-										6194
-									],
-									[
-										6207,
-										6215
-									],
-									[
-										6250,
-										6258
-									],
-									[
-										6385,
-										6393
-									],
-									[
-										6655,
-										6663
-									],
-									[
-										6681,
-										6689
-									],
-									[
-										6724,
-										6732
-									],
-									[
-										6849,
-										6857
-									],
-									[
-										7011,
-										7019
-									],
-									[
-										7030,
-										7038
-									],
-									[
-										7191,
-										7199
-									],
-									[
-										7413,
-										7421
-									],
-									[
-										7478,
-										7486
-									],
-									[
-										7646,
-										7654
-									],
-									[
-										7795,
-										7803
-									],
-									[
-										8053,
-										8061
-									],
-									[
-										8222,
-										8230
-									],
-									[
-										8478,
-										8486
-									],
-									[
-										8630,
-										8638
-									],
-									[
-										8788,
-										8796
-									],
-									[
-										8953,
-										8961
-									],
-									[
-										9126,
-										9134
-									],
-									[
-										9318,
-										9326
-									],
-									[
-										9548,
-										9556
-									],
-									[
-										9710,
-										9718
-									],
-									[
-										10003,
-										10011
-									],
-									[
-										10046,
-										10054
-									],
-									[
-										10065,
-										10073
-									],
-									[
-										10118,
-										10126
-									],
-									[
-										10422,
-										10430
-									],
-									[
-										10543,
-										10551
-									],
-									[
-										10576,
-										10584
-									],
-									[
-										10688,
-										10696
-									],
-									[
-										10710,
-										10718
-									],
-									[
-										10783,
-										10791
-									],
-									[
-										10939,
-										10947
-									],
-									[
-										11018,
-										11026
-									],
-									[
-										11081,
-										11089
-									],
-									[
-										11150,
-										11158
-									],
-									[
-										11236,
-										11244
-									],
-									[
-										11279,
-										11287
-									],
-									[
-										11343,
-										11351
-									],
-									[
-										11526,
-										11534
-									],
-									[
-										11681,
-										11689
-									],
-									[
-										11732,
-										11740
-									],
-									[
-										14374,
-										14378
-									],
-									[
-										14553,
-										14557
-									],
-									[
-										14960,
-										14964
-									],
-									[
-										15496,
-										15500
-									],
-									[
-										15907,
-										15911
-									],
-									[
-										16418,
-										16422
-									],
-									[
-										16617,
-										16621
-									],
-									[
-										16650,
-										16654
-									],
-									[
-										16683,
-										16687
-									],
-									[
-										16716,
-										16720
-									],
-									[
-										16749,
-										16753
-									],
-									[
-										16782,
-										16786
-									],
-									[
-										16815,
-										16819
-									],
-									[
-										16848,
-										16852
-									],
-									[
-										16881,
-										16885
-									],
-									[
-										16915,
-										16919
-									],
-									[
-										17414,
-										17418
-									],
-									[
-										17610,
-										17614
-									],
-									[
-										18096,
-										18100
-									],
-									[
-										18507,
-										18511
-									],
-									[
-										18918,
-										18922
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								14555,
-								14555
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 9351.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "config/sunspot.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 346,
+						"buffer_size": 1432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								214
+								466,
+								466
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/YAML/YAML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "solr/conf/schema.xml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13113,
-								13113
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": false,
-							"codeintel_live_enabled_languages":
-							[
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/XML/XML.tmLanguage",
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3958.0,
+						"translation.y": 308.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/admin/types_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 6,
-					"file": "app/views/shared/_menu_header.html.haml",
+					"buffer": 4,
+					"file": "app/views/shared/admin/types/_form.html.haml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 366,
+						"buffer_size": 946,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								366,
-								366
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2594,7 +1864,333 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/admin/types.js.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								308,
+								308
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 44.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/admin/type_values_controller/create.js.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/layouts/admin/types.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": false,
+							"codeintel_live_enabled_languages":
+							[
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -2663,27 +2259,163 @@
 	{
 		"height": 70.0
 	},
-	"save_all_on_build": true,
+	"save_all_on_build": false,
 	"select_file":
 	{
 		"height": 0.0,
 		"selected_items":
 		[
 			[
-				"autocomplete",
-				"app/assets/javascripts/solr-autocomplete/jquery-autocomplete/jquery.autocomplete.js"
+				"products_controller",
+				"app/controllers/admin/products_controller.rb"
+			],
+			[
+				"type_controller",
+				"app/controllers/admin/types_controller.rb"
+			],
+			[
+				"type_value",
+				"app/models/type_value.rb"
+			],
+			[
+				"admintype_values_controller",
+				"app/controllers/admin/type_values_controller_controller.rb"
+			],
+			[
+				"createjs",
+				"app/views/admin/type_values_controller/create.js.haml"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"gemfi",
+				"Gemfile"
+			],
+			[
+				"typescoff",
+				"app/assets/javascripts/admin/types.js.coffee"
+			],
+			[
+				"_form",
+				"app/views/shared/admin/types/_form.html.haml"
+			],
+			[
+				"adminindex",
+				"app/views/admin/products/index.html.haml"
+			],
+			[
+				"_product",
+				"app/views/shared/products/_product.html.haml"
+			],
+			[
+				"product.rb",
+				"app/models/product.rb"
 			],
 			[
 				"applica",
 				"app/assets/javascripts/application.js"
 			],
 			[
-				"config.xml",
-				"solr/conf/solrconfig.xml"
+				"application",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"adminproductscoff",
+				"app/assets/javascripts/admin/products.js.coffee"
+			],
+			[
+				"admintypesedit",
+				"app/views/admin/types/edit.html.haml"
+			],
+			[
+				"type_values_controller",
+				"app/controllers/admin/type_values_controller_controller.rb"
+			],
+			[
+				"create_join2",
+				"db/migrate/20140527193535_create_join_table_product_type2.rb"
 			],
 			[
 				"product",
 				"app/models/product.rb"
+			],
+			[
+				"drop",
+				"db/migrate/20140511142129_drop_image_table.rb"
+			],
+			[
+				"appl",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"image_",
+				"app/uploaders/image_uploader.rb"
+			],
+			[
+				"rails",
+				"bin/rails"
+			],
+			[
+				"jquer",
+				"public/javascripts/jquery.js"
+			],
+			[
+				"productscoff",
+				"app/assets/javascripts/products.js.coffee"
+			],
+			[
+				"boots",
+				"app/assets/javascripts/bootstrap.js.coffee"
+			],
+			[
+				"applcjs",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"adminapplica",
+				"app/assets/stylesheets/admin/application.css"
+			],
+			[
+				"adminproducts.js",
+				"app/assets/javascripts/admin/products.js.coffee"
+			],
+			[
+				"typevaluescontroller",
+				"app/controllers/admin/type_values_controller_controller.rb"
+			],
+			[
+				"type_va",
+				"app/models/type_value.rb"
+			],
+			[
+				"type_controll",
+				"app/controllers/admin/types_controller.rb"
+			],
+			[
+				"products_contr",
+				"app/controllers/admin/products_controller.rb"
+			],
+			[
+				"productsjs",
+				"app/assets/javascripts/products.js.coffee"
+			],
+			[
+				"product_type_",
+				"app/models/products_types_type_value.rb"
+			],
+			[
+				"product_type",
+				"app/models/products_types_type_value.rb"
+			],
+			[
+				"autocomplete",
+				"app/assets/javascripts/solr-autocomplete/jquery-autocomplete/jquery.autocomplete.js"
+			],
+			[
+				"config.xml",
+				"solr/conf/solrconfig.xml"
 			],
 			[
 				"shema",
@@ -2710,10 +2442,6 @@
 				"solr/conf/schema.xml"
 			],
 			[
-				"gemfi",
-				"Gemfile"
-			],
-			[
 				"search_sugge",
 				"app/models/search_suggestion.rb"
 			],
@@ -2724,10 +2452,6 @@
 			[
 				"template",
 				"app/assets/stylesheets/template.css"
-			],
-			[
-				"productscoff",
-				"app/assets/javascripts/products.js.coffee"
 			],
 			[
 				"applicaio",
@@ -2742,10 +2466,6 @@
 				"app/assets/javascripts/application.js"
 			],
 			[
-				"appl",
-				"app/assets/javascripts/application.js"
-			],
-			[
 				"bootstra",
 				"app/assets/javascripts/bootstrap.js.coffee"
 			],
@@ -2756,10 +2476,6 @@
 			[
 				"men",
 				"app/views/shared/_menu_header.html.haml"
-			],
-			[
-				"productsjs",
-				"app/assets/javascripts/products.js.coffee"
 			],
 			[
 				"jq",
@@ -2830,32 +2546,16 @@
 				"app/views/shared/products/_product_main_page.html.haml"
 			],
 			[
-				"products_contr",
-				"app/controllers/admin/products_controller.rb"
-			],
-			[
 				"products_contro",
 				"app/controllers/products_controller.rb"
-			],
-			[
-				"routes",
-				"config/routes.rb"
 			],
 			[
 				"pagination",
 				"app/views/shared/admin/_pagination.html.haml"
 			],
 			[
-				"adminindex",
-				"app/views/admin/products/index.html.haml"
-			],
-			[
 				"_product_deta",
 				"app/views/shared/products/_product_details.html.haml"
-			],
-			[
-				"_product",
-				"app/views/shared/products/_product.html.haml"
 			],
 			[
 				"adminshow",
@@ -2930,10 +2630,6 @@
 				"app/views/shared/admin/products/_category.html.haml"
 			],
 			[
-				"_form",
-				"app/views/shared/admin/types/_form.html.haml"
-			],
-			[
 				"admincategories",
 				"app/views/shared/admin/products/_categories.html.haml"
 			],
@@ -2960,10 +2656,6 @@
 			[
 				"adminapplcai",
 				"app/assets/stylesheets/admin/application.css"
-			],
-			[
-				"product.rb",
-				"app/models/product.rb"
 			],
 			[
 				"type.rb",
@@ -3084,102 +2776,6 @@
 			[
 				"user_contr",
 				"app/controllers/users_controller.rb"
-			],
-			[
-				"shared/products/index",
-				"app/views/shared/products/_index.html.haml"
-			],
-			[
-				"products_controller",
-				"app/controllers/products_controller.rb"
-			],
-			[
-				"viewproducindex",
-				"app/views/products/index.html.haml"
-			],
-			[
-				"header",
-				"app/views/shared/_menu_header.html.haml"
-			],
-			[
-				"sessio",
-				"app/controllers/sessions_controller.rb"
-			],
-			[
-				"cate_contr",
-				"app/controllers/category_controller.rb"
-			],
-			[
-				"product_contr",
-				"app/controllers/products_controller.rb"
-			],
-			[
-				"user_con",
-				"app/controllers/users_controller.rb"
-			],
-			[
-				"add_email",
-				"db/migrate/20140517101233_add_email_to_user.rb"
-			],
-			[
-				"user",
-				"app/models/user.rb"
-			],
-			[
-				"ty",
-				"app/models/type.rb"
-			],
-			[
-				"admintype",
-				"app/controllers/admin/types_controller.rb"
-			],
-			[
-				"adminform",
-				"app/views/shared/admin/types/_form.html.haml"
-			],
-			[
-				"adminedith",
-				"app/views/admin/products/edit.html.haml"
-			],
-			[
-				"admintypeform",
-				"app/views/admin/types/_form.html.haml"
-			],
-			[
-				"gemfil",
-				"Gemfile"
-			],
-			[
-				"adminproduct_controller",
-				"app/controllers/admin/products_controller.rb"
-			],
-			[
-				"_form.",
-				"app/views/shared/admin/products/_form.html.haml"
-			],
-			[
-				"add_product_to",
-				"db/migrate/20140511162506_add_product_to_image.rb"
-			],
-			[
-				"add_product",
-				"db/migrate/20140309143403_add_products_ref_to_image.rb"
-			],
-			[
-				"add_attac",
-				"db/migrate/20140511162045_add_attachment_image_to_products.rb"
-			],
-			[
-				"add_atch",
-				"db/migrate/20140511161605_add_attachment_image_to_products.rb"
-			],
-			[
-				"add_attach",
-				"db/migrate/20140511161605_add_attachment_image_to_products.rb"
-			],
-			[
-				"add_att",
-				"db/migrate/20140511142242_add_attachment_image_to_products.rb"
 			]
 		],
 		"width": 0.0
@@ -3329,7 +2925,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 309.0,
+	"side_bar_width": 238.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

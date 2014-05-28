@@ -7,14 +7,12 @@
       %span Detalii produs:
     %table{id: 'product-details'}
       %tbody
-        - @product.types.each do |p_type|
+        - @product.type_values.each do |v|
           %tr
             %th
-              = p_type.type.name
+              = v.type.name
             %td
-              - p_type.values.each do |p_value|
-                = p_value.type_value.value
-                ,
+              = v.value
   %br/
 %div
 #statusBox{style: "text-align:center;display:none;visibility:hidden;"}

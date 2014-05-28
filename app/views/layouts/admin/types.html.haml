@@ -1,19 +1,19 @@
 !!!
-%html{dir: "ltr", lang: "en-gb", "xml:lang" => "en-gb", xmlns: "http://www.w3.org/1999/xhtml"}
+%html{dir: 'ltr', lang: 'en-gb', 'xml:lang' => 'en-gb', xmlns: 'http://www.w3.org/1999/xhtml'}
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    = stylesheet_link_tag "admin/application"
-    = javascript_include_tag "application"
-    = javascript_include_tag "jquery"
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    = stylesheet_link_tag 'admin/application'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'admin/types'
     = csrf_meta_tags
     = yield :title
     = yield :head_extra
   %body
-    = render :partial => "shared/admin/nav_bar"
+    = render :partial => 'shared/admin/nav_bar'
     .container
       - flash.each do |type, message|
-        .alert.fade.in{class: "#{bootstrap_class_for(type)}"}
-          %button.close{"data-dismiss" => "alert"}
+        .alert.fade.in{class: '#{bootstrap_class_for(type)}'}
+          %button.close{'data-dismiss' => 'alert'}
             ×
           = message
       = yield

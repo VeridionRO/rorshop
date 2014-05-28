@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 
-  has_and_belongs_to_many :categories, :join_table => "categories_products"
   has_and_belongs_to_many :type_values, :join_table => "products_type_values"
+  has_and_belongs_to_many :categories, :join_table => "categories_products"
   has_many :images, dependent: :destroy
   belongs_to :category
   
