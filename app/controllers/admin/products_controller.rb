@@ -29,8 +29,9 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       redirect_to polymorphic_path([:admin, @product]),
-        :flash => { :success => 'Produsul a fost salvat' }
+        :flash => {:success => 'Produsul a fost salvat'}
     else
+      flash[:error] = 'Produsul nu a fost salvat'
       render action: 'new'
     end
   end
@@ -42,6 +43,7 @@ class Admin::ProductsController < ApplicationController
       redirect_to polymorphic_path([:admin, @product]),
         :flash => {:success => 'Produsul a fost salvat'}
     else
+      flash[:error] = 'Produsul nu a fost salvat'
       render action: 'edit'
     end
   end

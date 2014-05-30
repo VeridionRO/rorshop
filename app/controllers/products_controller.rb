@@ -1,7 +1,12 @@
 class ProductsController < ApplicationController
   def index
+    if params[:search] && params[:search].kind_of?(Array)
+      query = params[:search].join(' ')
+    else
+      query = params[:search]
+    end
     @search = Product.search do
-      fulltext params[:search] do
+      fulltext query do
         boost_fields :name => 2.0
       end
       paginate :page => params[:page], :per_page => 10

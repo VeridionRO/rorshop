@@ -1,10 +1,9 @@
-
-/ .span2
-/   - types.each do |type|
-/     %h4
-/       = type.name
-/     - type.type_values.each do |value|
-/       .checkbox
-/         %label
-/           %input{type: "checkbox", name: "product[type_values][]", value: value}
-/           = value.value
+.span2
+  - types.each do |type|
+    %h4
+      = type.name
+    - type.type_values.each do |value|
+      .checkbox
+        %label
+          %input{type: 'checkbox', name: 'product[type_value_ids][]', value: value.id}
+          = value.value

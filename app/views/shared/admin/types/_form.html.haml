@@ -13,10 +13,11 @@
         %h3
           Valori
       = f.association :type_values, 
-        as: :check_boxes, 
-        label: 'Valori', 
-        label_method: :value, 
-        value_method: :id
+        label: 'Valori',
+        collection: @type.type_values,
+        as: :check_boxes,
+        value_method: :id,
+        label_method: :value
       .control-group.check_boxes.optional.type_type_values
         %label.check_boxes.optional.control-label Adauga
         .controls

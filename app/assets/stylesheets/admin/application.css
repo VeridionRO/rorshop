@@ -14,3 +14,12 @@
 body{
   padding-top: 40px;
 }
+
+label.checkbox{
+  width: 200px;
+}
+
+label.checkbox a{
+
+  float: right;
+}

@@ -23,7 +23,7 @@ $ ->
       return
     toggleDataValue: (link) ->
       type = link.attr("parent")
-      value = link.attr("val")
+      value = jQuery.trim(link.text())
       values = controller.values
       controller.types[type] = new Array  unless controller.types[type]
       typeArray = controller.types[type]
@@ -81,7 +81,7 @@ $ ->
     $(selector).click (event) ->
       link = $(event.currentTarget)
       controller.toggleDataValue link
-      typeUrlIds = $.param(where: controller.values)
+      typeUrlIds = $.param(search: controller.values)
       $.ajax
         url: "/products/index.js"
         beforeSend: (xhr) ->

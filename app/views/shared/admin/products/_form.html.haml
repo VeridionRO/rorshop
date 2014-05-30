@@ -11,14 +11,7 @@
       = f.input :description, label: 'Descriere'
       = f.input :price, label: 'Pret'
     .span7
-      .modal-header
-        %h3
-          Categorii
-      = f.association :type_values, 
-        as: :check_boxes, 
-        label: 'Categorii', 
-        label_method: :value, 
-        value_method: :id
+      = render :partial => "shared/admin/products/categories"
   .row
     .span12
       .modal-header
