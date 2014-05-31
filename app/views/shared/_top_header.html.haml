@@ -1,3 +1,4 @@
+- user = current_user
 .main
   .clear.currency-bg
     #logo
@@ -6,7 +7,12 @@
     .float-right
       .currency
         .moduletable
-          %h3 Bine ai venit vizitatorule
+          - if is_logged_in
+            %h3 
+              Bine ai venit 
+              = link_to user.name, user_path(user)
+          - else
+            %h3 Bine ai venit vizitatorule
       .cart
         .moduletable
           Cosul tau e gol

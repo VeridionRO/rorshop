@@ -1,6 +1,12 @@
+%h6 
+  = "Numarul de produse: #{@search.total}. "
+  - if params[:search]
+    = "Cautare dupa: "
+    %b
+      - params[:search].each do |word|
+        = link_to word, products_index_path(search: [word])
+        |
 - if !@results.empty?
-  %h5
-    = "Numarul de produse: #{@search.total}"
   = select(:sort, :item, {"Cele mai noi" => 1, "Pret" => 2, "Nume" => 3})
   = render :partial => 'shared/admin/pagination',
       :locals => {:url => 'index'}

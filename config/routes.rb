@@ -14,8 +14,7 @@ Rorshop::Application.routes.draw do
     # Directs /admin/products/* to Admin::ProductsController
     # (app/controllers/admin/products_controller.rb)
     resources :products, :types
-    # get 'products/search'
-    post "type_values_controller/create"
+    post 'type_values_controller/create'
   end
 
 end
