@@ -242,13 +242,6 @@ hr {
   text-transform: uppercase;
   float: left;
 }
-.cart a {
-  color: #cb0abb;
-  text-decoration: underline;
-}
-.cart a:hover {
-  text-decoration: none;
-}
 .currency .moduletable {
   width: 100%;
   overflow: hidden;

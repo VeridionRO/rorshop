@@ -1,10 +1,8 @@
 class Product < ActiveRecord::Base
 
   has_and_belongs_to_many :type_values, :join_table => "products_type_values"
-  has_and_belongs_to_many :categories, :join_table => "categories_products"
   has_many :images, dependent: :destroy
-  belongs_to :category
-  
+
   after_save :index_product
 
   accepts_nested_attributes_for :images, allow_destroy: true
@@ -59,9 +57,6 @@ class Product < ActiveRecord::Base
 
   def self.get_results params
     products = Product.order("products.#{params[:order]} DESC")
-    products = products.joins(:categories)
-                       .where('category_id = ?', 
-                          params[:category_id]) if params[:category_id]
     products = products.joins(:type_values)
                        .where(type_values: {id: params[:where]})
                        .group("products.id")

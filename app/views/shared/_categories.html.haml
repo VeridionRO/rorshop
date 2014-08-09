@@ -1,12 +1,2 @@
 .module-categories
-  %h3
-    %span Categorii:
-  .boxIndent
-    #relative_div{style: "position:relative;z-index:0"}
-    %ul.level1
-      - @categories.each do |category|
-        %li.level1.item1
-          %a.level1.item1{href: "/products/index?category_id=#{category.id}", target: "_self", title: "Diamond Rings"}
-            %span 
-              = category.name
   = yield(:types)

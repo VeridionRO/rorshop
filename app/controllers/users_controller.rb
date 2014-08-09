@@ -1,13 +1,11 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    @categories = Category.all
     @types = Type.all
   end
 
   def create
     @user = User.new(user_params)
-    @categories = Category.all
     @types = Type.all
     if @user.save
       redirect_to root_path,

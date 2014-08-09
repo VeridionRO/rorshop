@@ -6,9 +6,8 @@
 - content_for(:sidebar) do
   - content_for(:types) do
     = render :partial => 'shared/products/types'
-  = render :partial => 'shared/categories'
   - if !is_logged_in
     = render :partial => 'shared/login_box'
-  = render :partial => 'shared/newsletter'
+  
 - content_for(:content) do
   = render :partial => 'shared/users/register'

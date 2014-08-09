@@ -10,11 +10,15 @@ class Type < ActiveRecord::Base
 
   PAG = 9
 
+  def to_s
+    'test'
+  end
+
   def self.get_page
     params = self.params params
     types = Type.limit(PAG)
-                .offset((params[:page] - 1) * PAG)
-                .to_a
+    .offset((params[:page] - 1) * PAG)
+    .to_a
     types
   end
 
@@ -26,10 +30,6 @@ class Type < ActiveRecord::Base
   def self.get_page_array
     count = self.count
     return 1..count/10
-  end
-
-  def to_s
-    'test'
   end
 
 end

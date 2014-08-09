@@ -3,8 +3,12 @@
   - if params[:search]
     = "Cautare dupa: "
     %b
-      - params[:search].each do |word|
-        = link_to word, products_index_path(search: [word])
+      - if params[:search].kind_of?(Array)
+        - params[:search].each do |word|
+          = link_to word, products_index_path(search: [word])
+          |
+      - else
+        = link_to params[:search], products_index_path(search: params[:search])
         |
 - if !@results.empty?
   = select(:sort, :item, {"Cele mai noi" => 1, "Pret" => 2, "Nume" => 3})

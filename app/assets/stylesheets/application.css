@@ -16,5 +16,5 @@
  *= require scaffolds.css.scss
  *= require template.css
  *= require virtuemart.css
- *= require jquery.ui.autocomplete
+ *= require jquery-ui/autocomplete
  */

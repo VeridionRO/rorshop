@@ -47,8 +47,6 @@ group :test, :development do
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'capybara-webkit'
 end
 
 gem 'simple_form'
@@ -56,9 +54,8 @@ gem 'simple_form'
 # twitter css
 gem 'twitter-bootstrap-rails'
 
-
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
-gem 'sunspot_autocomplete', '>= 0.0.3', :git => 'git@github.com:xponrails/sunspot_autocomplete.git'
+gem "sunspot_autocomplete", ">= 0.0.3", :git => "git@github.com:xponrails/sunspot_autocomplete.git"
 
 gem 'sunspot_rails'
 gem 'sunspot_solr'
@@ -73,5 +70,5 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+# gem 'byebug', group: [:development, :test]
 gem 'haml-rails'
