@@ -9,10 +9,8 @@
       .product_name
         %a.product_name{href: "/product/#{product.id}", title: product.name} #{product.name}
       .box_product_price
-        %span.product-Old-Price
-          $205.00
         %span.productPrice
-          $197.98
+          = product.price
       .clear
         .product_buttons
           %form#addtocart{action: "#", method: "post", name: "addtocart"}
