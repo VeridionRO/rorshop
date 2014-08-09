@@ -86,6 +86,17 @@ class Product < ActiveRecord::Base
     return 1..count/10
   end
 
+  def types
+    types = {}
+    type_values.each { |val|
+      if types[val.type.name].nil?
+        types[val.type.name] = []
+      end
+      types[val.type.name] << val.value
+    }
+    types
+  end
+
   def index_product
     SearchSuggestion.index_product self
   end

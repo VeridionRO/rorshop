@@ -7,12 +7,15 @@
       %span Detalii produs:
     %table{id: 'product-details'}
       %tbody
-        - @product.type_values.each do |v|
-          %tr
-            %th
-              = v.type.name
-            %td
-              = v.value
+        - @types.each do |name, values|
+          - first = true
+          - values.each do |value|
+            %tr
+              - if first
+                - first = false
+                %th{:rowspan => values.count, :valign => 'top'}
+                  = name
+              %td
+                = value
   %br/
 %div
-#statusBox{style: "text-align:center;display:none;visibility:hidden;"}
