@@ -11,9 +11,9 @@
       .box_product_price
         %span.productPrice
           = product.price
+          RON
       .clear
-        .product_buttons
-          %form#addtocart{action: "#", method: "post", name: "addtocart"}
-            %input.addtocart_button{title: "Adauga la Cos", type: "submit", value: "Adauga la Cos"}/
         .product_details_container
-          %a.details{href: "#", title: product.name} Details
+          %a.btn.btn-primary{href: "#{new_shopping_cart_path(:product_id => 1)}", title: "Adauga in cosul tau de cumparaturi"}
+            %i.icon-white.icon-shopping-cart
+            adauga in cos

@@ -52,7 +52,9 @@ end
 gem 'simple_form'
 
 # twitter css
-gem 'twitter-bootstrap-rails'
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem "sunspot_autocomplete", ">= 0.0.3", :git => "git@github.com:xponrails/sunspot_autocomplete.git"
@@ -69,6 +71,5 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'byebug', group: [:development, :test]
 gem 'haml-rails'
+gem 'acts_as_shopping_cart'

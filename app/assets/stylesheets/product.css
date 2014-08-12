@@ -508,3 +508,6 @@ table.adminform td.labelcell {
 #sort_item{
   margin-bottom: 0;
 }
+td.product-cell, th.product-cell{
+  border-bottom: 1px dotted #ccc;
+}

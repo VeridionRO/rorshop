@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140729192601) do
+ActiveRecord::Schema.define(version: 20140810103926) do
+
+  create_table "cart_items", force: true do |t|
+    t.integer "owner_id"
+    t.string  "owner_type"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.string  "item_type"
+    t.float   "price"
+  end
 
   create_table "images", force: true do |t|
     t.integer  "product_id",         null: false
@@ -44,6 +53,25 @@ ActiveRecord::Schema.define(version: 20140729192601) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "shopping_cart_items", force: true do |t|
+    t.integer "owner_id"
+    t.string  "owner_type"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.string  "item_type"
+    t.float   "price"
+  end
+
+  create_table "shopping_carts", force: true do |t|
+    t.integer  "user_id"
+    t.date     "delivered_on"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shopping_carts", ["user_id"], name: "index_shopping_carts_on_user_id", using: :btree
 
   create_table "type_values", force: true do |t|
     t.integer  "type_id",    null: false

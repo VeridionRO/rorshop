@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  has_many :carts
+
   has_secure_password
   validates_presence_of :password, :on => :create
   validates :first_name, :last_name, :email, :password, presence: true

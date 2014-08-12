@@ -13,9 +13,7 @@
             %tr
               - if first
                 - first = false
-                %th{:rowspan => values.count, :valign => 'top'}
+                %th.product-cell{:rowspan => values.count, :valign => 'top'}
                   = name
-              %td
+              %td.product-cell
                 = value
-  %br/
-%div

@@ -14,21 +14,20 @@
         = product.name
     .browsePriceContainer
       %span.productPrice
-        $
         = product.price
-    %div
-    .ask_seller.nobutton
-      %a.button{href: "#"} Ask a question about this product
+        RON
     %div
       = product.description
     %div
       .vmCartContainer
-        %form#addtocart_5321f87b5569e.addtocart_form{action: "#", method: "post", name: "addtocart"}
-          .vmCartDetails
+        = form_for(:shopping_cart, :url => {:controller => 'shopping_carts', :action => 'create'}) do |f|
           %div
             .quantity
               %label.quantity_box{for: "quantity1"} Cantitate: 
-              %input#quantity1.inputboxquantity{name: "quantity[]", size: "4", type: "text", value: "1"}/
+              %input#quantity1.inputboxquantity{name: "quantity", size: "4", type: "text", value: "1"}/
               %input.quantity_box_button.quantity_box_button_up.png{onclick: "#", type: "button"}/
               %input.quantity_box_button.quantity_box_button_down.png{onclick: "#", type: "button"}/
-          %input.addtocart_button{title: "Adauga la Cos", type: "submit", value: "Adauga la Cos"}/
+              %input{type: "hidden", value: "#{product.id}", name: 'product_id'}/
+          %button.btn.btn-primary{href: "#", title: "Adauga in cosul tau de cumparaturi", type: 'send'}
+            %i.icon-white.icon-shopping-cart
+            adauga in cos

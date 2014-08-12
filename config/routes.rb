@@ -1,7 +1,5 @@
 Rorshop::Application.routes.draw do
-  resources :search_suggestions
-
-  resources :users
+  resources :search_suggestions, :users, :shopping_carts
   post 'sessions/create', as: 'login'
   get 'sessions/destroy', as: 'logout'
   root 'products#welcome'

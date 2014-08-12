@@ -8,13 +8,27 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap_and_overrides.css
- *= require bootstrap_and_overrides.css
- *= require constant.css
- *= require product.css
- *= require products.css.scss
- *= require scaffolds.css.scss
- *= require template.css
- *= require virtuemart.css
- *= require jquery-ui/autocomplete
+ *= require_self
+ *= require_tree .
+ *= require products
  */
+body{
+  padding-top: 0 !important;
+}
+@import "twitter/bootstrap/grid.less";
+div.mainborder div.row{
+  margin-left: 0;
+}
+#cart-info .input-qty {
+  width: 30px;
+  display: inline-block;
+  margin-right: 6px;
+}
+#cart-info .quantity {
+  white-space: nowrap;
+  text-align: center;
+}
+#cart-info td {
+  vertical-align: middle;
+  background: #FFF !important;
+}

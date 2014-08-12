@@ -1,0 +1,53 @@
+%section#maincontent.col-sm-9.sideleft.shopping-cart{role: "main"}
+  .mainborder
+    #toggle_sidebar
+    %header.heading
+      %h1.page-header Cos de Cumparaturi
+    .row
+      %section#cart-info.col-sm-12
+        %form#cart-contents
+          %table.table.table-bordered
+            %thead
+              %tr
+                %th.image Imagine
+                %th.name.left Nume
+                %th.model.left Model
+                %th.quantity.left Cantitate
+                %th.price.right Pret
+                %th.total.right Total
+            %tbody
+              %tr
+                %td.image
+                  %a{href: "#"}
+                    %img{alt: "Raymond Weil Freelancer Black Chronograph", src: "http://everthemes.com/demo/fortuna/image/cache/data/watches/watch10-60x60.jpg", title: "Raymond Weil Freelancer Black Chronograph"}/
+                %td.name
+                  %a{href: "#"}
+                    %b Raymond Weil Freelancer Black Chronograph
+                  %div
+                %td.model RAMYD
+                %td.quantity
+                  %input.input-qty.form-control.input-sm{name: "quantity[106::]", type: "text", value: "2"}/
+                  %a.update-cart.tooltp{"data-original-title" => "Update", onclick: "document.forms['cart-contents'].submit();;", title: ""}
+                    %i.icon-repeat
+                  %a.tooltp{"data-original-title" => "Remove", href: "#", title: ""}
+                    %i.icon-remove-sign
+                %td.price $2,299.00
+                %td.total $4,598.00
+    .row
+      %section#cart-module.col-sm-6
+        .contentset What would you like to do next?
+      %section#total-cart.col-sm-6
+        %table#total
+          %tbody
+            %tr
+              %td.right
+                %b Sub-Total:
+              %td.right $4,598.00
+            %tr
+              %td.right
+                %b Total:
+              %td.right $4,598.00
+        .buttons
+          %span.cart
+            %a#button-checkout.button{href: "#"} Checkout
+          %a#continue-shopping.button.button-default{href: "#"} Continue Shopping
