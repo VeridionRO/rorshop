@@ -6,8 +6,9 @@
 - content_for(:sidebar) do
   - content_for(:types) do
     = render :partial => 'shared/products/types'
+  = render :partial => 'shared/categories'
   - if !is_logged_in
     = render :partial => 'shared/login_box'
   
 - content_for(:content) do
-  = render :partial => 'shared/shopping_carts/shopping_cart_item', :collection => @shopping_cart.shopping_cart_items
+  = render :partial => 'shared/shopping_carts/shopping_cart'

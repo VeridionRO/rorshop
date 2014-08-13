@@ -413,12 +413,7 @@ legend.sectiontableheader {
 .priceLeft {
   width: 200px;
 }
-.quantity {
-  width: auto;
-  float: left;
-  padding: 3px 10px 0px 0px;
-}
-.featured .quantity {
+.featured {
   padding: 0px 0px 10px 0px;
 }
 .featured .browseProductImageContainer, .featured .browsePriceContainer {
@@ -503,10 +498,10 @@ legend.sectiontableheader {
 .rightPosition .rightPos .browseProductImage {
   margin: 0px 0px 0px 15px;
 }
-.rightPosition .alignRight a.product_details, .rightPosition .alignRight .addtocart_button, .rightPosition .alignRight .quantity {
+.rightPosition .alignRight a.product_details, .rightPosition .alignRight .addtocart_button, .rightPosition .alignRight {
   float: right;
 }
-.rightPosition .alignRight .quantity {
+.rightPosition .alignRight {
   margin: 0px 0px 0px 10px;
 }
 .rightPosition .alignRight {

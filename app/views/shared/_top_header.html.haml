@@ -15,5 +15,8 @@
             %h3 Bine ai venit vizitatorule
       .cart
         .moduletable2
-          Cosul tau e gol
-          %a{href: "#"} Vizualizeaza
+          = @shopping_cart.total_unique_items
+          item(s) -
+          = @shopping_cart.total
+
+          %a{href: "#{shopping_cart_path(@shopping_cart)}"} Vizualizeaza

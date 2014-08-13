@@ -2,11 +2,11 @@
   = image_tag "/assets/delete-value.png", class: "remove-filter-value-icon"
 %li.level1.item1.hide
   %a.filter-value{href: "#", target: "_self", title: "", parent: "", val: ""}
-    %span 
+    %span
 - @types.each do |type|
   %div.filter-type{id: "type-#{type.id}"}
     %h3
-      %span 
+      %span
         = type.name
       %a.collapse.toggle-type{href: "#", title: "Comuta #{type.name}"}
     .boxIndent
@@ -14,5 +14,5 @@
         - type.type_values.each do |type_value|
           %li.level1.item1
             %a.filter-value{href: "#", target: "_self", title: "", parent: "#{type.id}", val: "#{type_value.id}"}
-              %span 
+              %span
                 = type_value.value

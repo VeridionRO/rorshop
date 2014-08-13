@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :extract_shopping_cart
   def index
     if params[:search] && params[:search].kind_of?(Array)
       query = params[:search].join(' ')
