@@ -15,7 +15,7 @@
     %input.input-qty.form-control.input-sm{name: "quantity[#{product.id}]", type: "text", value: "#{shopping_cart_item.quantity}"}/
     %a.update-cart.tooltp{"data-original-title" => "Update", title: ""}
       %i.icon-repeat
-    %a.tooltp{"data-original-title" => "Remove", href: "#", title: ""}
+    %a.tooltp{href: remove_item_path(product), title: "Sterge Produsul din Cos"}
       %i.icon-remove-sign
   %td.price
     = product.price

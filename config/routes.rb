@@ -4,8 +4,10 @@ Rorshop::Application.routes.draw do
   get 'sessions/destroy', as: 'logout'
   root 'products#welcome'
   get 'products/index'
-  get 'product/:id/' => 'products#show'
+  get 'products/:id/' => 'products#show', as: 'product'
   get 'products/filter'
+  get '/shopping_carts/remove_item/:product_id', to: 'shopping_carts#remove_item', as: 'remove_item'
+  get '/shopping_cart/order', to: 'shopping_carts#order', as: 'order'
 
   # Example resource route within a namespace:
   namespace :admin do

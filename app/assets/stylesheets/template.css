@@ -140,21 +140,6 @@ div.small {
   white-space: nowrap;
   line-height: 11px;
 }
-.button, .validate, .modal-button, .readmore a, div.blank a {
-  background: none;
-  border: none;
-  color: #353535;
-  font: normal 12px/14px Arial, Helvetica, sans-serif;
-  padding: 0px 0px 2px 0px;
-  margin: 0px 0px 0px 0px;
-  text-decoration: underline;
-  width: auto;
-  height: auto;
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  cursor: pointer;
-}
 *+html .button, *+html .validate, *+html .modal-button {
   padding: 0;
 }
@@ -307,25 +292,6 @@ dl.poll dt {
 .poll-body label {
   font: normal 12px/18px Arial, Helvetica, sans-serif;
   color: #535353;
-}
-.poll .buttons {
-  padding: 8px 0px 6px 0px;
-  overflow: hidden;
-}
-.poll .button {
-  background: url(/assets/button2.gif) no-repeat 0 0;
-  border: none;
-  color: #fff;
-  font: normal 11px/14px Arial, Helvetica, sans-serif;
-  padding: 0 0px 4px 0px;
-  margin: 5px 3px 0 0px;
-  width: 49px;
-  height: 21px;
-  text-align: center;
-  display: inline;
-}
-*+html .poll .button {
-  padding: 0 0 0 0;
 }
 .poll .button:hover{
   background: url(/assets/button2-active.gif) no-repeat 0 0;

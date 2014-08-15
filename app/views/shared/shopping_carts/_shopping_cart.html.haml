@@ -3,35 +3,49 @@
     #toggle_sidebar
     %header.heading
       %h1.page-header Cos de Cumparaturi
-    .row
-      %section#cart-info.col-sm-12
-        %form#cart-contents
-          %table.table.table-bordered
-            %thead
-              %tr
-                %th.image Imagine
-                %th.name.left Nume
-                %th.model.left Descriere
-                %th.quantity.left Cantitate
-                %th.price.right Pret
-                %th.total.right Total
+    - if @shopping_cart.total_unique_items != 0
+      .row
+        %section#cart-info.col-sm-12
+          %form#cart-contents
+            %table.table.table-bordered
+              %thead
+                %tr
+                  %th.image Imagine
+                  %th.name.left Nume
+                  %th.model.left Descriere
+                  %th.quantity.left Cantitate
+                  %th.price.right Pret
+                  %th.total.right Total
+              %tbody
+                = render :partial => 'shared/shopping_carts/shopping_cart_item', :collection => @shopping_cart.shopping_cart_items
+      .row
+        %section#cart-module
+          .buttons
+            %a.btn.btn-primary{href: order_path}
+              %i.icon-white.icon-check
+                Comanda Produsele
+            %a.btn{href: products_index_path}
+              %i.icon-white.icon-shopping-cart
+                Continua Cumparaturile
+        %section#total-cart
+          %table#total
             %tbody
-              = render :partial => 'shared/shopping_carts/shopping_cart_item', :collection => @shopping_cart.shopping_cart_items
-    .row
-      %section#cart-module.col-sm-6
-        .contentset What would you like to do next?
-      %section#total-cart.col-sm-6
-        %table#total
-          %tbody
-            %tr
-              %td.right
-                %b Sub-Total:
-              %td.right $4,598.00
-            %tr
-              %td.right
-                %b Total:
-              %td.right $4,598.00
-        .buttons
-          %span.cart
-            %a#button-checkout.button{href: "#"} Checkout
-          %a#continue-shopping.button.button-default{href: "#"} Continue Shopping
+              %tr
+                %td.right
+                  %b Sub-Total:
+                %td.right
+                  = @shopping_cart.total
+              %tr
+                %td.right
+                  %b Total:
+                %td.right
+                  = @shopping_cart.total
+    - else
+      .mainborder
+        #toggle_sidebar
+        .empty
+          %p Cosul dumneavoastra e gol!
+          .buttons
+            %a.btn.btn-primary{href: products_index_path}
+              %i.icon-white.icon-shopping-cart
+                Continua Cumparaturile

@@ -1,0 +1,14 @@
+- content_for(:title) do
+  %title Magazin bijuterii
+- content_for(:header) do
+  = render :partial => 'shared/top_header'
+  = render :partial => 'shared/menu_header'
+- content_for(:sidebar) do
+  - content_for(:types) do
+    = render :partial => 'shared/products/types'
+  = render :partial => 'shared/categories'
+  - if !is_logged_in
+    = render :partial => 'shared/login_box'
+
+- content_for(:content) do
+  = render :partial => 'shared/shopping_carts/checkout'

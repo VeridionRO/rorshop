@@ -29,7 +29,3 @@ div.mainborder div.row{
 td.total, td.price{
     width: 90px;
 }
-#cart-info td {
-    vertical-align: middle;
-    background: #FFF !important;
-}

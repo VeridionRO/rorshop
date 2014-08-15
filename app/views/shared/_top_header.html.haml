@@ -15,8 +15,11 @@
             %h3 Bine ai venit vizitatorule
       .cart
         .moduletable2
-          = @shopping_cart.total_unique_items
-          item(s) -
-          = @shopping_cart.total
-
-          %a{href: "#{shopping_cart_path(@shopping_cart)}"} Vizualizeaza
+          - if @shopping_cart.total_unique_items != 0
+            = @shopping_cart.total_unique_items
+            produs(e) -
+            = @shopping_cart.total
+            RON
+            %a{href: "#{shopping_cart_path(@shopping_cart)}"} Vizualizeaza
+          - else
+            Cosul dumneavoastra e gol
